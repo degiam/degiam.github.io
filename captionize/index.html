@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Captionize</title>
-	<meta name="description" content="Layout your post caption, make your caption to be readable and still beauty.">
+	<meta name="description" content="Layout your Instagram post, make your caption to be readable and still beauty.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Captionize">
-	<meta property="og:description" content="Layout your post caption, make your caption to be readable and still beauty.">
+	<meta property="og:description" content="Layout your Instagram post, make your caption to be readable and still beauty.">
 	<meta property="og:image" content="assets/img/captionize.jpg">
 	<meta property="og:locale" content="en_US">
 	<!-- Favicon -->
@@ -36,77 +36,176 @@
 
 <main>
 	<div class="container" id="app">
-		<div class="row">
-			<div class="column column-md-50">
-				<form spellcheck="false" class="sticky">
-					<fieldset>
-						<label for="image">Image</label>
-						<div class="upload">
-							<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" @change="onFileChange">
-							<span class="upload-label"><span>{{ filename }}</span></span>
-						</div>
-					</fieldset>
-					<fieldset>
-						<label for="caption">Caption</label>
-						<textarea id="caption" rows="10" placeholder="Type your caption..." v-model="caption" ref="caption"></textarea>
-						<div class="emoji" v-if="!isMobile()">
-							<emoji-picker @emoji="append" :search="search">
-								<div class="emoji-invoker" slot="emoji-invoker" slot-scope="{ events: { click: clickEvent } }" @click.stop="clickEvent">
-									<svg viewBox="0 0 24 24" height="24" width="24">
-										<path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-									</svg>
+		<div class="tab-button">
+			<button data-id="tab-1" class="active">Post</button>
+			<button data-id="tab-2">Feed</button>
+		</div>
+		<div class="tab-content">
+			<div class="show" id="tab-1">
+				<div class="row">
+					<div class="column column-md-50">
+						<form spellcheck="false" class="sticky">
+							<fieldset>
+								<label for="image">Image</label>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="previewChange">
+									<span class="upload-label"><span>{{ previewname }}</span></span>
 								</div>
-								<div slot="emoji-picker" slot-scope="{ emojis, insert, display }">
-									<div class="emoji-picker" :style="{ top: display.y + 'px', left: display.x + 'px' }">
-										<div class="emoji-picker__search">
-											<input type="text" v-model="search" v-focus>
-										</div>
-										<div>
-											<div v-for="(emojiGroup, category) in emojis" :key="category">
-												<h5>{{ category }}</h5>
-												<div class="emojis">
-													<span v-for="(emoji, emojiName) in emojiGroup" :key="emojiName" @click="insert(emoji)" :title="emojiName">{{ emoji }}</span>
+							</fieldset>
+							<fieldset>
+								<label for="caption">Caption</label>
+								<textarea id="caption" rows="10" placeholder="Type your caption..." v-model="caption" ref="caption" v-bind:style="{ 'height': height }"></textarea>
+							</fieldset>
+							<fieldset>
+								<div class="additional">
+									<div class="emoji" v-if="!isMobile()">
+										<emoji-picker @emoji="append" :search="search">
+											<div class="emoji-invoker" slot="emoji-invoker" slot-scope="{ events: { click: clickEvent } }" @click.stop="clickEvent">
+												<svg viewBox="0 0 24 24" height="24" width="24">
+													<path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+												</svg>
+											</div>
+											<div slot="emoji-picker" slot-scope="{ emojis, insert, display }">
+												<div class="emoji-picker" :style="{ top: display.y + 'px', left: display.x + 'px' }">
+													<div class="emoji-picker__search">
+														<input type="text" v-model="search" v-focus>
+													</div>
+													<div>
+														<div v-for="(emojiGroup, category) in emojis" :key="category">
+															<h5>{{ category }}</h5>
+															<div class="emojis">
+																<span v-for="(emoji, emojiName) in emojiGroup" :key="emojiName" @click="insert(emoji)" :title="emojiName">{{ emoji }}</span>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
+										</emoji-picker>
+									</div>
+									<div class="timeline">
+										<input type="checkbox" id="timeline" v-on:input="timeline()">
+										<label for="timeline">View as Timeline</label>
 									</div>
 								</div>
-							</emoji-picker>
-						</div>
-					</fieldset>
-				</form>
-			</div>
-			<div class="column column-md-50">
-				<label for="result">Result</label>
-				<div class="layout">
-					<img class="preview" v-show="preview" :src="preview"/>
-					<div class="attribute" v-show="preview !== null">
-						<span>
-							<svg aria-label="Like" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
-								<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
-							</svg>
-							<svg aria-label="Comment" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
-								<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
-							</svg>
-							<svg aria-label="Share Post" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
-								<path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
-							</svg>
-						</span>
-						<span>
-							<svg aria-label="Save" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
-								<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path>
-							</svg>
-						</span>
+							</fieldset>
+							<button type="reset" @click="previewReset">Reset</button>
+						</form>
 					</div>
-					<div class="content">
-						<div class="placeholder" v-show="caption.length == 0">{{ placeholder }}</div>
-						<div class="caption" v-show="caption.length > 0">{{ caption }}</div>
-						<div class="time" v-show="caption.length > 0 && preview !== null"><small>{{ time }}</small></div>
+					<div class="column column-md-50">
+						<label for="result">Result</label>
+						<div class="layout">
+							<img class="preview" v-show="preview" :src="preview"/>
+							<div class="attribute" v-show="preview !== null">
+								<span>
+									<svg aria-label="Like" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
+										<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
+									</svg>
+									<svg aria-label="Comment" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
+										<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+									</svg>
+									<svg aria-label="Share Post" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
+										<path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path>
+									</svg>
+								</span>
+								<span>
+									<svg aria-label="Save" fill="currentColor" viewBox="0 0 48 48" width="24" height="24">
+										<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path>
+									</svg>
+								</span>
+							</div>
+							<div class="content">
+								<div class="placeholder" v-show="caption.length == 0">{{ placeholder }}</div>
+								<div class="caption" v-show="caption.length > 0" :class="{truncate: timelinemode}">{{ caption }}</div>
+								<div class="time" v-show="caption.length > 0 && preview !== null"><small>{{ time }}</small></div>
+							</div>
+						</div>
+						<div class="action">
+							<button onclick="copyToClipboard('.caption')">Copy Caption</button>
+							<small class="alert-success">{{ copied }}</small>
+						</div>
 					</div>
 				</div>
-				<div class="action">
-					<button onclick="copyToClipboard('.caption')">Copy Caption</button>
-					<small class="alert-success">{{ copied }}</small>
+			</div>
+			<div id="tab-2">
+				<div class="row">
+					<div class="column column-md-50">
+						<form spellcheck="false" class="sticky">
+							<label for="image">Image</label>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed1Change">
+									<span class="upload-label"><span>{{ feed1name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed2Change">
+									<span class="upload-label"><span>{{ feed2name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed3Change">
+									<span class="upload-label"><span>{{ feed3name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed4Change">
+									<span class="upload-label"><span>{{ feed4name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed5Change">
+									<span class="upload-label"><span>{{ feed5name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed6Change">
+									<span class="upload-label"><span>{{ feed6name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed7Change">
+									<span class="upload-label"><span>{{ feed7name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed8Change">
+									<span class="upload-label"><span>{{ feed8name }}</span></span>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="upload">
+									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed9Change">
+									<span class="upload-label"><span>{{ feed9name }}</span></span>
+								</div>
+							</fieldset>
+							<button type="reset" @click="feedReset">Reset</button>
+						</form>
+					</div>
+					<div class="column column-md-50">
+						<label>Result</label>
+						<div class="row">
+							<div class="column">
+								<div class="feed">
+									<img class="feed-item" :src="feed1 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed2 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed3 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed4 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed5 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed6 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed7 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed8 || 'assets/img/feed.svg'">
+									<img class="feed-item" :src="feed9 || 'assets/img/feed.svg'">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -116,10 +215,10 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="column column-md-75">
-				<small>&copy; <script>document.write(new Date().getFullYear())</script> Captionize by <a href="https://degiam.github.io">Degiam</a></small>
+			<div class="column column-75">
+				<small>&copy; <script>document.write(new Date().getFullYear())</script> Captionize by <a href="https://degiam.github.io" target="_blank">Degiam</a></small>
 			</div>
-			<div class="column column-md-25 language">
+			<div class="column column-25 language">
 				<small>
 					<span title="English">En</span>
 					<a title="Indonesia" href="/captionize/id">Id</a>
@@ -132,6 +231,147 @@
 <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/vue-emoji-picker/dist/vue-emoji-picker.js"></script>
 <script type="text/javascript" src="assets/js/main.min.js"></script>
+<script type="text/javascript">
+	Vue.use(EmojiPicker)
 
+	new Vue({
+		el: '#app',
+		data() {
+			return {
+				search: '',
+				caption: '',
+				height: '',
+				preview: null,
+				previewname: 'Choose your image...',
+				time: '3 minutes ago',
+				placeholder: 'Caption is empty, please type your caption...',
+				copied: 'Caption has been copied',
+				timelinemode: false,
+				feed1: null,
+				feed2: null,
+				feed3: null,
+				feed4: null,
+				feed5: null,
+				feed6: null,
+				feed7: null,
+				feed8: null,
+				feed9: null,
+				feed1name: 'Choose your image...',
+				feed2name: 'Choose your image...',
+				feed3name: 'Choose your image...',
+				feed4name: 'Choose your image...',
+				feed5name: 'Choose your image...',
+				feed6name: 'Choose your image...',
+				feed7name: 'Choose your image...',
+				feed8name: 'Choose your image...',
+				feed9name: 'Choose your image...',
+			}
+		},
+		methods: {
+			timeline() {
+				this.timelinemode = !this.timelinemode;
+			},
+			previewChange(e) {
+				const file = e.target.files[0];
+				this.preview = URL.createObjectURL(file);
+				this.previewname = file.name;
+			},
+			previewReset(e) {
+				this.caption = '',
+				this.height = '187px';
+				this.preview = null;
+				this.previewname = 'Choose your image...';
+			},
+			feed1Change(e) {
+				const file = e.target.files[0];
+				this.feed1 = URL.createObjectURL(file);
+				this.feed1name = file.name;
+			},
+			feed2Change(e) {
+				const file = e.target.files[0];
+				this.feed2 = URL.createObjectURL(file);
+				this.feed2name = file.name;
+			},
+			feed3Change(e) {
+				const file = e.target.files[0];
+				this.feed3 = URL.createObjectURL(file);
+				this.feed3name = file.name;
+			},
+			feed4Change(e) {
+				const file = e.target.files[0];
+				this.feed4 = URL.createObjectURL(file);
+				this.feed4name = file.name;
+			},
+			feed5Change(e) {
+				const file = e.target.files[0];
+				this.feed5 = URL.createObjectURL(file);
+				this.feed5name = file.name;
+			},
+			feed6Change(e) {
+				const file = e.target.files[0];
+				this.feed6 = URL.createObjectURL(file);
+				this.feed6name = file.name;
+			},
+			feed7Change(e) {
+				const file = e.target.files[0];
+				this.feed7 = URL.createObjectURL(file);
+				this.feed7name = file.name;
+			},
+			feed8Change(e) {
+				const file = e.target.files[0];
+				this.feed8 = URL.createObjectURL(file);
+				this.feed8name = file.name;
+			},
+			feed9Change(e) {
+				const file = e.target.files[0];
+				this.feed9 = URL.createObjectURL(file);
+				this.feed9name = file.name;
+			},
+			feedReset(e) {
+				this.feed1 = null;
+				this.feed2 = null;
+				this.feed3 = null;
+				this.feed4 = null;
+				this.feed5 = null;
+				this.feed6 = null;
+				this.feed7 = null;
+				this.feed8 = null;
+				this.feed9 = null;
+				this.feed1name = 'Choose your image...';
+				this.feed2name = 'Choose your image...';
+				this.feed3name = 'Choose your image...';
+				this.feed4name = 'Choose your image...';
+				this.feed5name = 'Choose your image...';
+				this.feed6name = 'Choose your image...';
+				this.feed7name = 'Choose your image...';
+				this.feed8name = 'Choose your image...';
+				this.feed9name = 'Choose your image...';
+			},
+			append(emoji) {
+				let textarea = this.$refs.caption;
+				let cursorPosition = textarea.selectionStart;
+				const currentCursor = this.$refs.caption.selectionStart;
+				
+				console.log(currentCursor + emoji);
+
+				this.caption += emoji
+			},
+			isMobile() {
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					return true
+				} else {
+					return false
+				}
+			},
+		},
+		directives: {
+			focus: {
+				inserted(el) {
+					el.focus()
+				},
+			},
+		},
+	})
+</script>
 </body>
 </html>

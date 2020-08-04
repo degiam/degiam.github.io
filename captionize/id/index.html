@@ -47,16 +47,27 @@
 <main>
 	<div class="container" id="app">
 		<div class="tab-button">
-			<button data-id="tab-1" class="active">Post</button>
-			<button data-id="tab-2">Feed</button>
+			<div>
+				<button data-id="tab-1" class="active">Post</button>
+				<button data-id="tab-2">Feed</button>
+			</div>
+			<div class="checkbox only-result" v-if="isMobile()">
+				<input type="checkbox" id="onlyResult" v-on:input="onlyResult()">
+				<label for="onlyResult">Lihat Hasil Saja</label>
+			</div>
 		</div>
 		<div class="tab-content">
 			<div class="show" id="tab-1">
 				<div class="row">
-					<div class="column column-md-50">
+					<div class="column column-md-50" :class="{hide: onlyresult}">
 						<form spellcheck="false" class="sticky">
 							<fieldset>
-								<label for="image">Gambar</label>
+								<label for="username">Nama Pengguna</label>
+								<input type="text" id="username" placeholder="Silakan ketikkan nama pengguna..." required v-model="username">
+							</fieldset>
+							<fieldset>
+								<label>Gambar</label>
+								<label class="detail">{{ previewsize }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="previewChange">
 									<span class="upload-label"><span>{{ previewname }}</span></span>
@@ -64,7 +75,8 @@
 							</fieldset>
 							<fieldset>
 								<label for="caption">Caption</label>
-								<textarea id="caption" rows="10" placeholder="Silakan ketikkan caption..." v-model="caption" ref="caption" v-bind:style="{ 'height': height }"></textarea>
+								<label class="detail">{{ totalcharacter }}</label>
+								<textarea id="caption" rows="10" placeholder="Silakan ketikkan caption..." required v-model="caption" ref="caption" @keyup="charCount()" v-bind:style="{ 'height': height }"></textarea>
 							</fieldset>
 							<fieldset>
 								<div class="additional">
@@ -92,8 +104,8 @@
 											</div>
 										</emoji-picker>
 									</div>
-									<div class="timeline">
-										<input type="checkbox" id="timeline" v-on:input="timeline()">
+									<div class="checkbox timeline">
+										<input type="checkbox" id="timeline" v-on:input="viewTimeline()">
 										<label for="timeline">Tampilan di Linimasa</label>
 									</div>
 								</div>
@@ -124,13 +136,13 @@
 								</span>
 							</div>
 							<div class="content">
-								<div class="placeholder" v-show="caption.length == 0">{{ placeholder }}</div>
-								<div class="caption" v-show="caption.length > 0" :class="{truncate: timelinemode}">{{ caption }}</div>
+								<div class="placeholder" v-show="username.length == 0 && caption.length == 0">{{ placeholder }}</div>
+								<div class="caption" v-show="username.length > 0 || caption.length > 0" :class="{truncate: timelinemode}"><strong>{{ username }}</strong> <span class="caption-content">{{ caption }}</span></div>
 								<div class="time" v-show="caption.length > 0 && preview !== null"><small>{{ time }}</small></div>
 							</div>
 						</div>
 						<div class="action">
-							<button onclick="copyToClipboard('.caption')">Salin Caption</button>
+							<button onclick="copyToClipboard('.caption-content')">Salin Caption</button>
 							<small class="alert-success">{{ copied }}</small>
 						</div>
 					</div>
@@ -138,58 +150,75 @@
 			</div>
 			<div id="tab-2">
 				<div class="row">
-					<div class="column column-md-50">
+					<div class="column column-md-50" :class="{hide: onlyresult}">
 						<form spellcheck="false" class="sticky">
-							<label for="image">Gambar</label>
 							<fieldset>
+								<label>Gambar 1</label>
+								<label class="detail">{{ feed1size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed1Change">
 									<span class="upload-label"><span>{{ feed1name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 2</label>
+								<label class="detail">{{ feed2size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed2Change">
 									<span class="upload-label"><span>{{ feed2name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 3</label>
+								<label class="detail">{{ feed3size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed3Change">
 									<span class="upload-label"><span>{{ feed3name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 4</label>
+								<label class="detail">{{ feed4size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed4Change">
 									<span class="upload-label"><span>{{ feed4name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 5</label>
+								<label class="detail">{{ feed5size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed5Change">
 									<span class="upload-label"><span>{{ feed5name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 6</label>
+								<label class="detail">{{ feed6size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed6Change">
 									<span class="upload-label"><span>{{ feed6name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 7</label>
+								<label class="detail">{{ feed7size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed7Change">
 									<span class="upload-label"><span>{{ feed7name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 8</label>
+								<label class="detail">{{ feed8size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed8Change">
 									<span class="upload-label"><span>{{ feed8name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Gambar 9</label>
+								<label class="detail">{{ feed9size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed9Change">
 									<span class="upload-label"><span>{{ feed9name }}</span></span>
@@ -249,14 +278,18 @@
 		data() {
 			return {
 				search: '',
+				username: '',
 				caption: '',
 				height: '',
 				preview: null,
 				previewname: 'Silakan pilih gambar...',
+				previewsize: '',
 				time: '3 menit yang lalu',
 				placeholder: 'Caption kosong, silakan ketikkan caption...',
 				copied: 'Caption telah tersalin',
+				totalcharacter: '',
 				timelinemode: false,
+				onlyresult: false,
 				feed1: null,
 				feed2: null,
 				feed3: null,
@@ -266,76 +299,100 @@
 				feed7: null,
 				feed8: null,
 				feed9: null,
-				feed1name: 'Silakan pilih gambar...',
-				feed2name: 'Silakan pilih gambar...',
-				feed3name: 'Silakan pilih gambar...',
-				feed4name: 'Silakan pilih gambar...',
-				feed5name: 'Silakan pilih gambar...',
-				feed6name: 'Silakan pilih gambar...',
-				feed7name: 'Silakan pilih gambar...',
-				feed8name: 'Silakan pilih gambar...',
-				feed9name: 'Silakan pilih gambar...',
+				feed1name: 'Silakan pilih gambar 1...',
+				feed2name: 'Silakan pilih gambar 2...',
+				feed3name: 'Silakan pilih gambar 3...',
+				feed4name: 'Silakan pilih gambar 4...',
+				feed5name: 'Silakan pilih gambar 5...',
+				feed6name: 'Silakan pilih gambar 6...',
+				feed7name: 'Silakan pilih gambar 7...',
+				feed8name: 'Silakan pilih gambar 8...',
+				feed9name: 'Silakan pilih gambar 9...',
+				feed1size: '',
+				feed2size: '',
+				feed3size: '',
+				feed4size: '',
+				feed5size: '',
+				feed6size: '',
+				feed7size: '',
+				feed8size: '',
+				feed9size: '',
 			}
 		},
 		methods: {
-			timeline() {
+			onlyResult() {
+				this.onlyresult = !this.onlyresult;
+			},
+			viewTimeline() {
 				this.timelinemode = !this.timelinemode;
 			},
 			previewChange(e) {
 				const file = e.target.files[0];
 				this.preview = URL.createObjectURL(file);
 				this.previewname = file.name;
+				this.previewsize = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			previewReset(e) {
-				this.caption = '',
+				this.username = '';
+				this.caption = '';
 				this.height = '187px';
 				this.preview = null;
 				this.previewname = 'Silakan pilih gambar...';
+				this.previewsize = '';
 			},
 			feed1Change(e) {
 				const file = e.target.files[0];
 				this.feed1 = URL.createObjectURL(file);
 				this.feed1name = file.name;
+				this.feed1size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed2Change(e) {
 				const file = e.target.files[0];
 				this.feed2 = URL.createObjectURL(file);
 				this.feed2name = file.name;
+				this.feed2size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed3Change(e) {
 				const file = e.target.files[0];
 				this.feed3 = URL.createObjectURL(file);
 				this.feed3name = file.name;
+				this.feed3size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed4Change(e) {
 				const file = e.target.files[0];
 				this.feed4 = URL.createObjectURL(file);
 				this.feed4name = file.name;
+				this.feed4size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed5Change(e) {
 				const file = e.target.files[0];
 				this.feed5 = URL.createObjectURL(file);
 				this.feed5name = file.name;
+				this.feed5size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed6Change(e) {
 				const file = e.target.files[0];
 				this.feed6 = URL.createObjectURL(file);
 				this.feed6name = file.name;
+				this.feed6size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed7Change(e) {
 				const file = e.target.files[0];
 				this.feed7 = URL.createObjectURL(file);
 				this.feed7name = file.name;
+				this.feed7size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed8Change(e) {
 				const file = e.target.files[0];
 				this.feed8 = URL.createObjectURL(file);
 				this.feed8name = file.name;
+				this.feed8size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed9Change(e) {
 				const file = e.target.files[0];
 				this.feed9 = URL.createObjectURL(file);
 				this.feed9name = file.name;
+				this.feed9size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feedReset(e) {
 				this.feed1 = null;
@@ -347,15 +404,27 @@
 				this.feed7 = null;
 				this.feed8 = null;
 				this.feed9 = null;
-				this.feed1name = 'Silakan pilih gambar...';
-				this.feed2name = 'Silakan pilih gambar...';
-				this.feed3name = 'Silakan pilih gambar...';
-				this.feed4name = 'Silakan pilih gambar...';
-				this.feed5name = 'Silakan pilih gambar...';
-				this.feed6name = 'Silakan pilih gambar...';
-				this.feed7name = 'Silakan pilih gambar...';
-				this.feed8name = 'Silakan pilih gambar...';
-				this.feed9name = 'Silakan pilih gambar...';
+				this.feed1name = 'Silakan pilih gambar 1...';
+				this.feed2name = 'Silakan pilih gambar 2...';
+				this.feed3name = 'Silakan pilih gambar 3...';
+				this.feed4name = 'Silakan pilih gambar 4...';
+				this.feed5name = 'Silakan pilih gambar 5...';
+				this.feed6name = 'Silakan pilih gambar 6...';
+				this.feed7name = 'Silakan pilih gambar 7...';
+				this.feed8name = 'Silakan pilih gambar 8...';
+				this.feed9name = 'Silakan pilih gambar 9...';
+				this.feed1size = '';
+				this.feed2size = '';
+				this.feed3size = '';
+				this.feed4size = '';
+				this.feed5size = '';
+				this.feed6size = '';
+				this.feed7size = '';
+				this.feed8size = '';
+				this.feed9size = '';
+			},
+			charCount: function(){
+				this.totalcharacter = this.caption.length + ' Karakter';
 			},
 			append(emoji) {
 				let textarea = this.$refs.caption;
@@ -383,5 +452,6 @@
 		},
 	})
 </script>
+
 </body>
 </html>

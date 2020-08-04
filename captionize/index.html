@@ -37,16 +37,27 @@
 <main>
 	<div class="container" id="app">
 		<div class="tab-button">
-			<button data-id="tab-1" class="active">Post</button>
-			<button data-id="tab-2">Feed</button>
+			<div>
+				<button data-id="tab-1" class="active">Post</button>
+				<button data-id="tab-2">Feed</button>
+			</div>
+			<div class="checkbox only-result" v-if="isMobile()">
+				<input type="checkbox" id="onlyResult" v-on:input="onlyResult()">
+				<label for="onlyResult">View Result Only</label>
+			</div>
 		</div>
 		<div class="tab-content">
 			<div class="show" id="tab-1">
 				<div class="row">
-					<div class="column column-md-50">
+					<div class="column column-md-50" :class="{hide: onlyresult}">
 						<form spellcheck="false" class="sticky">
 							<fieldset>
-								<label for="image">Image</label>
+								<label for="username">Username</label>
+								<input type="text" id="username" placeholder="Type your username..." required v-model="username">
+							</fieldset>
+							<fieldset>
+								<label>Image</label>
+								<label class="detail">{{ previewsize }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="previewChange">
 									<span class="upload-label"><span>{{ previewname }}</span></span>
@@ -54,7 +65,8 @@
 							</fieldset>
 							<fieldset>
 								<label for="caption">Caption</label>
-								<textarea id="caption" rows="10" placeholder="Type your caption..." v-model="caption" ref="caption" v-bind:style="{ 'height': height }"></textarea>
+								<label class="detail">{{ totalcharacter }}</label>
+								<textarea id="caption" rows="10" placeholder="Type your caption..." required v-model="caption" ref="caption" @keyup="charCount()" v-bind:style="{ 'height': height }"></textarea>
 							</fieldset>
 							<fieldset>
 								<div class="additional">
@@ -82,8 +94,8 @@
 											</div>
 										</emoji-picker>
 									</div>
-									<div class="timeline">
-										<input type="checkbox" id="timeline" v-on:input="timeline()">
+									<div class="checkbox timeline">
+										<input type="checkbox" id="timeline" v-on:input="viewTimeline()">
 										<label for="timeline">View as Timeline</label>
 									</div>
 								</div>
@@ -114,13 +126,13 @@
 								</span>
 							</div>
 							<div class="content">
-								<div class="placeholder" v-show="caption.length == 0">{{ placeholder }}</div>
-								<div class="caption" v-show="caption.length > 0" :class="{truncate: timelinemode}">{{ caption }}</div>
+								<div class="placeholder" v-show="username.length == 0 && caption.length == 0">{{ placeholder }}</div>
+								<div class="caption" v-show="username.length > 0 || caption.length > 0" :class="{truncate: timelinemode}"><strong>{{ username }}</strong> <span class="caption-content">{{ caption }}</span></div>
 								<div class="time" v-show="caption.length > 0 && preview !== null"><small>{{ time }}</small></div>
 							</div>
 						</div>
 						<div class="action">
-							<button onclick="copyToClipboard('.caption')">Copy Caption</button>
+							<button onclick="copyToClipboard('.caption-content')">Copy Caption</button>
 							<small class="alert-success">{{ copied }}</small>
 						</div>
 					</div>
@@ -128,58 +140,75 @@
 			</div>
 			<div id="tab-2">
 				<div class="row">
-					<div class="column column-md-50">
+					<div class="column column-md-50" :class="{hide: onlyresult}">
 						<form spellcheck="false" class="sticky">
-							<label for="image">Image</label>
 							<fieldset>
+								<label>Image 1</label>
+								<label class="detail">{{ feed1size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed1Change">
 									<span class="upload-label"><span>{{ feed1name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 2</label>
+								<label class="detail">{{ feed2size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed2Change">
 									<span class="upload-label"><span>{{ feed2name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 3</label>
+								<label class="detail">{{ feed3size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed3Change">
 									<span class="upload-label"><span>{{ feed3name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 4</label>
+								<label class="detail">{{ feed4size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed4Change">
 									<span class="upload-label"><span>{{ feed4name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 5</label>
+								<label class="detail">{{ feed5size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed5Change">
 									<span class="upload-label"><span>{{ feed5name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 6</label>
+								<label class="detail">{{ feed6size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed6Change">
 									<span class="upload-label"><span>{{ feed6name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 7</label>
+								<label class="detail">{{ feed7size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed7Change">
 									<span class="upload-label"><span>{{ feed7name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 8</label>
+								<label class="detail">{{ feed8size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed8Change">
 									<span class="upload-label"><span>{{ feed8name }}</span></span>
 								</div>
 							</fieldset>
 							<fieldset>
+								<label>Image 9</label>
+								<label class="detail">{{ feed9size }}</label>
 								<div class="upload">
 									<input type="file" class="upload-input" id="image" accept="image/png,image/jpeg,application/.jpeg,.jpg,.png" required @change="feed9Change">
 									<span class="upload-label"><span>{{ feed9name }}</span></span>
@@ -239,14 +268,18 @@
 		data() {
 			return {
 				search: '',
+				username: '',
 				caption: '',
 				height: '',
 				preview: null,
 				previewname: 'Choose your image...',
+				previewsize: '',
 				time: '3 minutes ago',
 				placeholder: 'Caption is empty, please type your caption...',
 				copied: 'Caption has been copied',
+				totalcharacter: '',
 				timelinemode: false,
+				onlyresult: false,
 				feed1: null,
 				feed2: null,
 				feed3: null,
@@ -256,76 +289,100 @@
 				feed7: null,
 				feed8: null,
 				feed9: null,
-				feed1name: 'Choose your image...',
-				feed2name: 'Choose your image...',
-				feed3name: 'Choose your image...',
-				feed4name: 'Choose your image...',
-				feed5name: 'Choose your image...',
-				feed6name: 'Choose your image...',
-				feed7name: 'Choose your image...',
-				feed8name: 'Choose your image...',
-				feed9name: 'Choose your image...',
+				feed1name: 'Choose your image 1...',
+				feed2name: 'Choose your image 2...',
+				feed3name: 'Choose your image 3...',
+				feed4name: 'Choose your image 4...',
+				feed5name: 'Choose your image 5...',
+				feed6name: 'Choose your image 6...',
+				feed7name: 'Choose your image 7...',
+				feed8name: 'Choose your image 8...',
+				feed9name: 'Choose your image 9...',
+				feed1size: '',
+				feed2size: '',
+				feed3size: '',
+				feed4size: '',
+				feed5size: '',
+				feed6size: '',
+				feed7size: '',
+				feed8size: '',
+				feed9size: '',
 			}
 		},
 		methods: {
-			timeline() {
+			onlyResult() {
+				this.onlyresult = !this.onlyresult;
+			},
+			viewTimeline() {
 				this.timelinemode = !this.timelinemode;
 			},
 			previewChange(e) {
 				const file = e.target.files[0];
 				this.preview = URL.createObjectURL(file);
 				this.previewname = file.name;
+				this.previewsize = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			previewReset(e) {
-				this.caption = '',
+				this.username = '';
+				this.caption = '';
 				this.height = '187px';
 				this.preview = null;
 				this.previewname = 'Choose your image...';
+				this.previewsize = '';
 			},
 			feed1Change(e) {
 				const file = e.target.files[0];
 				this.feed1 = URL.createObjectURL(file);
 				this.feed1name = file.name;
+				this.feed1size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed2Change(e) {
 				const file = e.target.files[0];
 				this.feed2 = URL.createObjectURL(file);
 				this.feed2name = file.name;
+				this.feed2size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed3Change(e) {
 				const file = e.target.files[0];
 				this.feed3 = URL.createObjectURL(file);
 				this.feed3name = file.name;
+				this.feed3size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed4Change(e) {
 				const file = e.target.files[0];
 				this.feed4 = URL.createObjectURL(file);
 				this.feed4name = file.name;
+				this.feed4size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed5Change(e) {
 				const file = e.target.files[0];
 				this.feed5 = URL.createObjectURL(file);
 				this.feed5name = file.name;
+				this.feed5size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed6Change(e) {
 				const file = e.target.files[0];
 				this.feed6 = URL.createObjectURL(file);
 				this.feed6name = file.name;
+				this.feed6size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed7Change(e) {
 				const file = e.target.files[0];
 				this.feed7 = URL.createObjectURL(file);
 				this.feed7name = file.name;
+				this.feed7size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed8Change(e) {
 				const file = e.target.files[0];
 				this.feed8 = URL.createObjectURL(file);
 				this.feed8name = file.name;
+				this.feed8size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feed9Change(e) {
 				const file = e.target.files[0];
 				this.feed9 = URL.createObjectURL(file);
 				this.feed9name = file.name;
+				this.feed9size = (file.size/1024/1024).toFixed(2) + ' MB';
 			},
 			feedReset(e) {
 				this.feed1 = null;
@@ -337,15 +394,27 @@
 				this.feed7 = null;
 				this.feed8 = null;
 				this.feed9 = null;
-				this.feed1name = 'Choose your image...';
-				this.feed2name = 'Choose your image...';
-				this.feed3name = 'Choose your image...';
-				this.feed4name = 'Choose your image...';
-				this.feed5name = 'Choose your image...';
-				this.feed6name = 'Choose your image...';
-				this.feed7name = 'Choose your image...';
-				this.feed8name = 'Choose your image...';
-				this.feed9name = 'Choose your image...';
+				this.feed1name = 'Choose your image 1...';
+				this.feed2name = 'Choose your image 2...';
+				this.feed3name = 'Choose your image 3...';
+				this.feed4name = 'Choose your image 4...';
+				this.feed5name = 'Choose your image 5...';
+				this.feed6name = 'Choose your image 6...';
+				this.feed7name = 'Choose your image 7...';
+				this.feed8name = 'Choose your image 8...';
+				this.feed9name = 'Choose your image 9...';
+				this.feed1size = '';
+				this.feed2size = '';
+				this.feed3size = '';
+				this.feed4size = '';
+				this.feed5size = '';
+				this.feed6size = '';
+				this.feed7size = '';
+				this.feed8size = '';
+				this.feed9size = '';
+			},
+			charCount: function(){
+				this.totalcharacter = this.caption.length + ' Characters';
 			},
 			append(emoji) {
 				let textarea = this.$refs.caption;
@@ -373,5 +442,6 @@
 		},
 	})
 </script>
+
 </body>
 </html>

@@ -76,7 +76,7 @@
 							<fieldset>
 								<label for="caption">Caption</label>
 								<label class="detail">{{ totalcharacter }}</label>
-								<textarea id="caption" rows="10" placeholder="Silakan ketikkan caption..." required v-model="caption" ref="caption" @keyup="charCount()" v-bind:style="{ 'height': height }"></textarea>
+								<textarea id="caption" rows="10" placeholder="Silakan ketikkan caption..." required v-model="caption" ref="caption" @keyup="charCount()" :class="{disabled: timelinemode}" :readonly="timelinemode == true" v-bind:style="{ 'height': height }"></textarea>
 							</fieldset>
 							<fieldset>
 								<div class="additional">
@@ -137,7 +137,7 @@
 							</div>
 							<div class="content">
 								<div class="placeholder" v-show="username.length == 0 && caption.length == 0">{{ placeholder }}</div>
-								<div class="caption" v-show="username.length > 0 || caption.length > 0" :class="{truncate: timelinemode}"><strong>{{ username }}</strong> <span class="caption-content">{{ caption }}</span></div>
+								<div class="caption" v-show="username.length > 0 || caption.length > 0"><strong>{{ username }}</strong> <span class="caption-content">{{ caption }}</span></div>
 								<div class="time" v-show="caption.length > 0 && preview !== null"><small>{{ time }}</small></div>
 							</div>
 						</div>
@@ -319,12 +319,27 @@
 				feed9size: '',
 			}
 		},
+		filters: {
+			truncate: function (value, limit) {
+				if (value.length > limit) {
+					value = value.substring(0, (limit - 8)) + '... selengkapnya';
+				}
+				return value
+			}
+		},
 		methods: {
 			onlyResult() {
 				this.onlyresult = !this.onlyresult;
 			},
 			viewTimeline() {
 				this.timelinemode = !this.timelinemode;
+				if ( this.timelinemode == true ) {
+					localStorage.setItem('caption', this.caption);
+					this.caption = this.$options.filters.truncate(this.caption, 75);
+				} else {
+					this.caption = localStorage.getItem('caption');
+					localStorage.removeItem('caption');
+				}
 			},
 			previewChange(e) {
 				const file = e.target.files[0];
@@ -336,6 +351,7 @@
 				this.username = '';
 				this.caption = '';
 				this.height = '187px';
+				this.timelinemode = false;
 				this.preview = null;
 				this.previewname = 'Silakan pilih gambar...';
 				this.previewsize = '';

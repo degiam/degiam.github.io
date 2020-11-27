@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless" dir="LTR" loc="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>WhatsApp</title><meta name="viewport" content="width=device-width"><meta name="google" content="notranslate"><meta name="format-detection" content="telephone=no"><meta name="description" content="Quickly send and receive WhatsApp messages right from your computer."><meta name="og:description" content="Quickly send and receive WhatsApp messages right from your computer."><meta name="og:url" content="https://web.whatsapp.com/"><meta name="og:title" content="WhatsApp Web"><meta name="og:image" content="https://static.facebook.com/images/whatsapp/www/whatsapp-promo.png"><link rel="apple-touch-icon" sizes="194x194" href="https://web.whatsapp.com/apple-touch-icon.png" type="image/png"><link rel="stylesheet" href="assets/cssm_qr.css">
+	<style>
+		html, body, #app {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
+
+		#app {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#startup, #initial_startup {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: #f0f0f0;
+
+			-moz-user-select: none;
+			-webkit-user-select: none;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: -webkit-box;
+			display: -webkit-flex;
+			-webkit-align-items: center;
+			-webkit-justify-content: center;
+			flex-direction: column;
+			-webkit-flex-direction: column;
+		}
+
+		.spinner-container {
+			-webkit-animation: rotate 2s linear infinite;
+			animation: rotate 2s linear infinite;
+			z-index: 2;
+		}
+
+		.spinner-path {
+			stroke-dasharray: 1,150; /* 1%, 101% circumference */
+			stroke-dashoffset: 0;
+			stroke: #acb9bf;
+			stroke-linecap: round;
+			-webkit-animation: dash 1.5s ease-in-out infinite;
+			animation: dash 1.5s ease-in-out infinite;
+		}
+
+		@keyframes rotate {
+			100% { transform: rotate(360deg); }
+		}
+		@-webkit-keyframes rotate{
+			100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes dash {
+			0% {
+				stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90,150; /* 70%, 101% circumference */
+				stroke-dashoffset: -35;   /* 25% circumference */
+			}
+			100% {
+				stroke-dasharray: 90,150; /* 70%, 101% circumference */
+				stroke-dashoffset: -124;  /* -99% circumference */
+			}
+		}
+		@-webkit-keyframes dash {
+			0% {
+				stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90,150; /* 70%, 101% circumference */
+				stroke-dashoffset: -35;   /* 25% circumference */
+			}
+			100% {
+				stroke-dasharray: 90,150; /* 70%, 101% circumference */
+				stroke-dashoffset: -124;  /* -99% circumference */
+			}
+		}
+
+		.progress-container {
+			width: 360px;
+			position: fixed;
+			padding-top: 120px;
+			top: 50%;
+			left: 50%;
+			margin-left: -180px;
+		}
+
+		progress {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 100%;
+			height: 3px;
+			border: none;
+			margin: 0;
+			color: #00d9bb;
+			background-color: #e6e6e6;
+		}
+
+		progress[value]::-webkit-progress-bar {
+			background-color: #e6e6e6;
+		}
+
+		progress[value]::-webkit-progress-value {
+			background-color: #00d9bb;
+			transition: width 0.3s ease;
+		}
+
+		progress[value]::-moz-progress-bar {
+			background-color: #00d9bb;
+		}
+	</style>
+	<link id="progress_script_/cssm_app.8b9334bb4e2e0edfda4e93b0d4ec05e1.css" rel="stylesheet" href="assets/cssm_app.css">
+	<style id="asset-style" type="text/css"></style>
+	<link id="favicon" rel="shortcut icon" type="image/png" href="https://web.whatsapp.com/img/favicon_c5088e888c97ad440a61d247596f88e5.png" src="/img/favicon_c5088e888c97ad440a61d247596f88e5.png">
+</head>
+
+<body class="web">
+
+	<div id="app" data-app-size="2383197" data-vendor1-size="1262117" data-vendor2-size="79722" data-cssm-app="/cssm_app.8b9334bb4e2e0edfda4e93b0d4ec05e1.css"><div class="_347-w _2UMYL app-wrapper-web os-mac"><span></span><span></span><span></span><span></span><span></span><div tabindex="-1" class="h70RQ two"><div class="_29RFr"></div><div class="YD4Yw"><div class="_1-iDe _1xXdX"><span class="_1V8rX"></span></div><div class="_1-iDe Wu52Z"><span class="_1V8rX"></span></div><div class="_1-iDe _14VS3"><span class="_1V8rX"></span></div></div>
+
+		<div class="_1-iDe Wu52Z"><div id="main" class="_2WG1s"><div class="_27lSL" data-asset-chat-background-light="true"></div><header class="_1iFv8"><div class="m7liR" role="button"><div class="_1BjNO" style="height: 40px; width: 40px;"><img src="assets/daia.jpg" draggable="false" class="_2goTk _1Jdop _3Whw5" style="visibility: visible;">
+
+		<div class="_1V82l"><span data-testid="default-user" data-icon="default-user" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" width="212" height="212"><path fill="#DFE5E7" class="background" d="M106.251.5C164.653.5 212 47.846 212 106.25S164.653 212 106.25 212C47.846 212 .5 164.654.5 106.25S47.846.5 106.251.5z"></path><path fill="#FFF" class="primary" d="M173.561 171.615a62.767 62.767 0 0 0-2.065-2.955 67.7 67.7 0 0 0-2.608-3.299 70.112 70.112 0 0 0-3.184-3.527 71.097 71.097 0 0 0-5.924-5.47 72.458 72.458 0 0 0-10.204-7.026 75.2 75.2 0 0 0-5.98-3.055c-.062-.028-.118-.059-.18-.087-9.792-4.44-22.106-7.529-37.416-7.529s-27.624 3.089-37.416 7.529c-.338.153-.653.318-.985.474a75.37 75.37 0 0 0-6.229 3.298 72.589 72.589 0 0 0-9.15 6.395 71.243 71.243 0 0 0-5.924 5.47 70.064 70.064 0 0 0-3.184 3.527 67.142 67.142 0 0 0-2.609 3.299 63.292 63.292 0 0 0-2.065 2.955 56.33 56.33 0 0 0-1.447 2.324c-.033.056-.073.119-.104.174a47.92 47.92 0 0 0-1.07 1.926c-.559 1.068-.818 1.678-.818 1.678v.398c18.285 17.927 43.322 28.985 70.945 28.985 27.678 0 52.761-11.103 71.055-29.095v-.289s-.619-1.45-1.992-3.778a58.346 58.346 0 0 0-1.446-2.322zM106.002 125.5c2.645 0 5.212-.253 7.68-.737a38.272 38.272 0 0 0 3.624-.896 37.124 37.124 0 0 0 5.12-1.958 36.307 36.307 0 0 0 6.15-3.67 35.923 35.923 0 0 0 9.489-10.48 36.558 36.558 0 0 0 2.422-4.84 37.051 37.051 0 0 0 1.716-5.25c.299-1.208.542-2.443.725-3.701.275-1.887.417-3.827.417-5.811s-.142-3.925-.417-5.811a38.734 38.734 0 0 0-1.215-5.494 36.68 36.68 0 0 0-3.648-8.298 35.923 35.923 0 0 0-9.489-10.48 36.347 36.347 0 0 0-6.15-3.67 37.124 37.124 0 0 0-5.12-1.958 37.67 37.67 0 0 0-3.624-.896 39.875 39.875 0 0 0-7.68-.737c-21.162 0-37.345 16.183-37.345 37.345 0 21.159 16.183 37.342 37.345 37.342z"></path></svg></span></div></div></div><div class="_33QME" role="button"><div class="_2FCjS"><div class="DP7CM">
+
+<span dir="auto" title="John" class="_3ko75 _5h6Y_ _3Whw5">
+	Promo Daia
+</span>
+
+</div></div></div><div class="_3nq_A"><div class="_3All_ _3NrAe"><div class="PVMjB"><div role="button" title="Search…"><span data-testid="search-alt" data-icon="search-alt" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="width:30px;height:30px;margin-top:-2.5px;"><path fill="currentColor" d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" /></svg></span></div><span></span></div><div class="PVMjB"><div role="button" title="Attach"><span data-testid="clip" data-icon="clip" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg></span></div><span></span></div><div class="PVMjB"><div role="button" title="Menu"><span data-testid="menu" data-icon="menu" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg></span></div><span></span></div></div></div></header><span class="_6PvwY"></span><div class="_6PvwY"><span></span></div><div class="_3h-WS"><div class="_1LkpH copyable-area"><span></span><span></span><div class="_2-aNW" tabindex="0"><div class="_2S4JS"></div><div tabindex="-1" class="z_tTQ" data-tab="2" role="region" aria-label="Message list. Press right arrow key on a message to open message context menu.">
+
+<div class="_2hqOq _2qhWD focusable-list-item" tabindex="-1"><div class="_2et95 _1E1g0"><span dir="auto" class="_3Whw5">TODAY</span></div></div>
+
+<div tabindex="-1" class="_2hqOq message-out focusable-list-item" data-id="true_628123456789@c.us_3A4FC6D4707C6ACBEB6F"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] Jane Doe: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Indonesia BerDaia</span></span><span class="_2oWZe _2HWXK"></span></div></div><div class="_2frDn"><div class="VGBA3" role="button"><span class="_18lLQ" dir="auto">9:03 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Selamat Datang di Promo <strong>Indonesia BerDaia</strong>!
+
+Silakan kirimkan <strong>Nama Lengkap</strong> (sesuai KTP) dan <strong>Email</strong> (jika ada), dengan format sebagai berikut:
+[NAMA LENGKAP] spasi [EMAIL]
+
+Contoh :
+RIAN WICAKSONO rianwcksn@gmail.com</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:03 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-out focusable-list-item" data-id="true_628123456789@c.us_3AD42EDA4324D4658047"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] Jane Doe: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>ANI WIDYASTUTI aniwidya@gmail.com</span></span><span class="_2oWZe _2HWXK"></span></div></div><div class="_2frDn"><div class="VGBA3" role="button"><span class="_18lLQ" dir="auto">9:04 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Silakan kirimkan <strong>Nomor Telepon Seluler</strong> yang dapat dihubungi via telepon.
+
+Contoh :
+08123456789</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:04 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-out focusable-list-item" data-id="true_628123456789@c.us_3AD42EDA4324D4658047"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] Jane Doe: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>081987654321</span></span><span class="_2oWZe _2HWXK"></span></div></div><div class="_2frDn"><div class="VGBA3" role="button"><span class="_18lLQ" dir="auto">9:04 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Silakan kirimkan <strong>Alamat Tempat Tinggal</strong> saat ini (dikirim dalam satu kali chat) dengan format sebagai berikut:
+[ALAMAT] spasi [KECAMATAN] spasi [KOTA/KABUPATEN] spasi [PROVINSI] spasi [KODE POS]
+
+Contoh :
+JL. TIPAR CAKUNG BLOK F NO. 32 KEC. CAKUNG KOTA JAKARTA TIMUR DKI JAKARTA 13910</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:05 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-out focusable-list-item" data-id="true_628123456789@c.us_3AD42EDA4324D4658047"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] Jane Doe: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>JL. PERINTIS KEMERDEKAAN NO. 33 KEC. UMBULHARJO KOTA YOGYAKARTA D.I. YOGYAKARTA 55161</span></span><span class="_2oWZe _2HWXK"></span></div></div><div class="_2frDn"><div class="VGBA3" role="button"><span class="_18lLQ" dir="auto">9:05 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Silakan kirimkan <strong>Scan / Foto KTP</strong> Anda.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:06 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-out focusable-list-item" data-id="true_628123456789@c.us_3AD42EDA4324D4658047"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] Jane Doe: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>No KTP 3591271890002</span></span><span class="_2oWZe _2HWXK"></span></div></div><div class="_2frDn"><div class="VGBA3" role="button"><span class="_18lLQ" dir="auto">9:06 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Silakan kirimkan <strong>Scan / Foto KTP</strong> Anda.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:06 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq serpP message-out focusable-list-item" data-id="true_628123456789@c.us_3EB01EA1F1DB7713B000"><span></span><div class="_2et95 _302_B _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="xOg_4"><div><div role="button" class="Yik3W" style="width: 330px; height: 214px;"><div class="_1iHeu"><div class="_2kLly"><img src="assets/ktp-blur.jpg" class="_39rvu _20GbR" style="height: 100%;"></div><div class="_2kLly"><img src="assets/ktp-blur.jpg" class="_39rvu" style="height: 100%;"></div></div><div class="_1wnLy"></div></div><div class="_3yTyY"><div class="VGBA3 _3S403" role="button"><span class="_18lLQ" dir="auto">9:15 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div></div><span></span></div><div class="_29g--" role="button"><span data-testid="forward-chat" data-icon="forward-chat" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25"><path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M14.248 6.973a.688.688 0 0 1 1.174-.488l5.131 5.136a.687.687 0 0 1 0 .973l-5.131 5.136a.688.688 0 0 1-1.174-.488v-2.319c-4.326 0-7.495 1.235-9.85 3.914-.209.237-.596.036-.511-.268 1.215-4.391 4.181-8.492 10.361-9.376v-2.22z"></path></svg></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>KTP telah diterima. Kami akan memverifikasi bukti KTP Anda dalam 3 x 24 jam.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:16 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Silakan kirimkan <strong>Scan / Foto Struk Belanja</strong> Produk Daia.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">9:16 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq serpP message-out focusable-list-item" data-id="true_628123456789@c.us_3EB01EA1F1DB7713B000"><span></span><div class="_2et95 _302_B _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="xOg_4"><div><div role="button" class="Yik3W" style="width: 330px; height: 330px;"><div class="_1iHeu"><div class="_2kLly"><img src="assets/struk.jpeg" class="_39rvu _20GbR" style="width: 100%;"></div><div class="_2kLly"><img src="assets/struk.jpeg" class="_39rvu" style="width: 100%;"></div></div><div class="_1wnLy"></div></div><div class="_3yTyY"><div class="VGBA3 _3S403" role="button"><span class="_18lLQ" dir="auto">10:01 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div></div><span></span></div><div class="_29g--" role="button"><span data-testid="forward-chat" data-icon="forward-chat" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25"><path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M14.248 6.973a.688.688 0 0 1 1.174-.488l5.131 5.136a.687.687 0 0 1 0 .973l-5.131 5.136a.688.688 0 0 1-1.174-.488v-2.319c-4.326 0-7.495 1.235-9.85 3.914-.209.237-.596.036-.511-.268 1.215-4.391 4.181-8.492 10.361-9.376v-2.22z"></path></svg></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Struk belanja No. 1 telah diterima. Kami akan memverifikasi bukti struk belanja Anda dalam 3 x 24 jam.
+
+Apabila ada pertanyaan mengenai Daia / promo konsumen ini, silakan menghubungi Daia melalui Direct Message Instagram <strong>@daiadetergent</strong></span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">10:04 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Mohon maaf, Scan / Foto KTP yang Anda kirimkan tidak terbaca / blur sehingga data Anda belum valid.
+
+Silakan kirim ulang <strong>Scan / Foto KTP</strong> Anda untuk diverifikasi kembali.
+
+Apabila ada pertanyaan mengenai Daia / promo konsumen ini, silakan menghubungi Daia melalui Direct Message Instagram <strong>@daiadetergent</strong></span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:00 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq serpP message-out focusable-list-item" data-id="true_628123456789@c.us_3EB01EA1F1DB7713B000"><span></span><div class="_2et95 _302_B _1dvTE"><span data-testid="tail-out" data-icon="tail-out" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path><path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="You:"></span><div class="xOg_4"><div><div role="button" class="Yik3W" style="width: 330px; height: 214px;"><div class="_1iHeu"><div class="_2kLly"><img src="assets/ktp.jpg" class="_39rvu _20GbR" style="height: 100%;"></div><div class="_2kLly"><img src="assets/ktp.jpg" class="_39rvu" style="height: 100%;"></div></div><div class="_1wnLy"></div></div><div class="_3yTyY"><div class="VGBA3 _3S403" role="button"><span class="_18lLQ" dir="auto">11:00 AM</span><div class="_1qPwk"><span data-testid="msg-dblcheck" aria-label=" Delivered " data-icon="msg-dblcheck"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15"><path fill="currentColor" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path></svg></span></div></div></div></div></div><span></span></div><div class="_29g--" role="button"><span data-testid="forward-chat" data-icon="forward-chat" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25"><path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M14.248 6.973a.688.688 0 0 1 1.174-.488l5.131 5.136a.687.687 0 0 1 0 .973l-5.131 5.136a.688.688 0 0 1-1.174-.488v-2.319c-4.326 0-7.495 1.235-9.85 3.914-.209.237-.596.036-.511-.268 1.215-4.391 4.181-8.492 10.361-9.376v-2.22z"></path></svg></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>KTP telah diterima. Kami akan memverifikasi bukti KTP Anda dalam 3 x 24 jam.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:00 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span><strong>Selamat!</strong> Struk Belanja No. 1 telah terverifikasi dan Anda mendapatkan 1 kupon undian Indonesia BerDaia. Saat ini total kupon undian Anda adalah 1 kupon.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:18 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Anda dapat berpartisipasi lagi dan mendapatkan kupon undian sebanyak-banyaknya, dengan cara:
+
+1. Kirimkan pesan TAMBAH STRUK untuk mendapatkan kupon undian lagi.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:18 AM</span></div></div></div><span></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq serpP message-in focusable-list-item" data-id="false_6282135876003@c.us_D3BAEDB2C4335E140C11E94A54A3A84A"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="Istri:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[7:31 PM, 8/4/2020] Istri: "><div class="_3Zoil"><div class="SjSeX _4vJUr"><img class="_3k4oG" src="assets/daia.jpg"><div class="_151kh"><div class="_1vUBq" title="Daia Detergent (@daiadetergent) • Instagram photos and videos"><span dir="auto" class="_3Whw5">Daia Detergent (@daiadetergent) • Instagram photos and videos</span></div><div class="_2mpex"><span dir="auto" title="14.2k Followers, 2 Following, 516 Posts - See Instagram photos and videos from Daia Detergent (@daiadetergent)" class="_3Whw5">14.2k Followers, 2 Following, 516 Posts - See Instagram photos and videos from Daia Detergent (@daiadetergent)</span></div><div class="NW966"><span dir="auto" class="_3Whw5">www.instagram.com</span></div></div></div></div><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>2. Follow Instagram Daia <strong>@daiadetergent</strong>! <a href="https://www.instagram.com/daiadetergent" title="https://www.instagram.com/daiadetergent" target="_blank" rel="noopener noreferrer" class="_3Whw5 selectable-text invisible-space copyable-text">https://www.instagram.com/daiadetergent</a>
+
+Kirimkan bukti screen capture bahwa Anda telah follow Instagram Daia dan dapatkan 1 kupon undian tambahan.</span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:18 AM</span></div></div></div><span></span></div><div class="_29g--" role="button"><span data-testid="forward-chat" data-icon="forward-chat" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25"><path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M14.248 6.973a.688.688 0 0 1 1.174-.488l5.131 5.136a.687.687 0 0 1 0 .973l-5.131 5.136a.688.688 0 0 1-1.174-.488v-2.319c-4.326 0-7.495 1.235-9.85 3.914-.209.237-.596.036-.511-.268 1.215-4.391 4.181-8.492 10.361-9.376v-2.22z"></path></svg></span></div></div></div>
+
+<div tabindex="-1" class="_2hqOq message-in focusable-list-item" data-id="false_628123456789@c.us_3EB0C38874FDC00F0165"><span></span><div class="_2et95 _3c94e _1dvTE"><span data-testid="tail-in" data-icon="tail-in" class="_2-dPL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path opacity=".13" fill="#0000000" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="currentColor" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span><div class="_3sKvP wQZ0F"><span aria-label="John:"></span><div class="_274yw"><div class="copyable-text" data-pre-plain-text="[6:03 AM, 8/4/2020] John: "><div class="eRacY" dir="ltr"><span dir="ltr" class="_3Whw5 selectable-text invisible-space copyable-text"><span>Apabila ada pertanyaan mengenai Daia / promo konsumen ini, silakan menghubungi Daia melalui Direct Message Instagram <strong>@daiadetergent</strong></span></span><span class="_2oWZe"></span></div></div><div class="_2frDn"><div class="VGBA3"><span class="_18lLQ" dir="auto">11:18 AM</span></div></div></div><span></span></div></div></div>
+
+</div>
+	</div>
+		</div></div><div style="height: 0px;" class="_3cG5o"></div><footer tabindex="-1" class="_2vJ01"><div class="_3ee1T _1LkpH copyable-area"><div tabindex="-1" class="_3uMse"><div tabindex="-1" class="_2FVVk _2UL8j">
+			<div class="_3DRT">
+				<button tabindex="-1" class="FIHAk _3fM82 a37s7 _2Q56Q _2TkoI" aria-label="Open emojis panel" data-tab="5"><span data-testid="smiley" data-icon="smiley" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M9.153 11.603c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962zm-3.204 1.362c-.026-.307-.131 5.218 6.063 5.551 6.066-.25 6.066-5.551 6.066-5.551-6.078 1.416-12.129 0-12.129 0zm11.363 1.108s-.669 1.959-5.051 1.959c-3.505 0-5.388-1.164-5.607-1.959 0 0 5.912 1.055 10.658 0zM11.804 1.011C5.609 1.011.978 6.033.978 12.228s4.826 10.761 11.021 10.761S23.02 18.423 23.02 12.228c.001-6.195-5.021-11.217-11.216-11.217zM12 21.354c-5.273 0-9.381-3.886-9.381-9.159s3.942-9.548 9.215-9.548 9.548 4.275 9.548 9.548c-.001 5.272-4.109 9.159-9.382 9.159zm3.108-9.751c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962z"></path></svg></span></button>
+				<div class="_2FbwG" style="visibility: visible;">Type a message</div>
+			</div>
+			<div class="_3DRT">
+				<div class="PVMjB FIHAk"><div role="button" title="Attach"><span data-testid="clip" data-icon="clip" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path></svg></span></div><span></span></div>
+				<div class="PVMjB FIHAk"><div role="button" title="Attach"><span data-testid="clip" data-icon="clip" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z" /></svg></span></div><span></span></div>
+			</div>
+		</div></div><div class="_1JNuk"><div class="_3TDpK"><span><button class="_2r1fJ"><span data-testid="ptt" data-icon="ptt" class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M11.999 14.942c2.001 0 3.531-1.53 3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531S8.469 2.35 8.469 4.35v7.061c0 2.001 1.53 3.531 3.53 3.531zm6.238-3.53c0 3.531-2.942 6.002-6.237 6.002s-6.237-2.471-6.237-6.002H3.761c0 4.001 3.178 7.297 7.061 7.885v3.884h2.354v-3.884c3.884-.588 7.061-3.884 7.061-7.885h-2z"></path></svg></span></button></span></div></div></div><div class="rlE2w"><div class="_1WWP0"><div class="_1qDvT"><div class="_2NIgT"></div></div><div class="_1qDvT"><div class="_2NIgT"></div></div><div class="_1qDvT"><div class="_2NIgT"></div></div><div class="_1qDvT"><div class="_2NIgT"></div></div><div class="_1qDvT"><div class="_2NIgT"></div></div></div></div><div class="_3V3__"></div><div class="_3FUzQ"></div></footer><span></span></div></div></div></div></div><div id="hard_expire_time" data-time="1611605442.532"></div>
+
+<style>
+	[data-asset-chat-background-light] {
+		background-image: url("assets/bg-chat-tile-light_9e8a2898faedb7db9bf5638405cf81ae.png");
+	}
+	html[dir] ._2et95:last-of-type {
+		max-width: 75%;
+	}
+	._1qPwk {
+		color: var(--icon-ack);
+	}
+	.h70RQ {
+		min-width: initial;
+	}
+	html[dir] ._1iFv8 {
+		background-color: #075e55;
+	}
+	html[dir] ._2vJ01,
+	html[dir] ._3ee1T {
+		background-color: transparent;
+	}
+	._3NrAe,
+	.DP7CM {
+		color: #fff;
+	}
+	html[dir] .FIHAk,
+	html[dir=ltr] ._2FVVk ._2FbwG {
+		position: relative;
+		bottom: 0;
+	}
+	html[dir] ._3uMse {
+		padding: 5px 12px;
+	}
+	._2FVVk,
+	._3DRT {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	._3DRT>*:last-child {
+		margin-left: 7px;
+	}
+	html[dir] ._1JNuk {
+		padding-left: 0;
+		padding-top: 0;
+	}
+	html[dir] ._3TDpK {
+		width: 45px;
+		padding: 0;
+	}
+	._2r1fJ {
+		color: #fff;
+		background-color: #00897a;
+		padding: 13px;
+		border-radius: 50%;
+		position: relative;
+		top: 0;
+	}
+</style>
+
+</body>
+</html>

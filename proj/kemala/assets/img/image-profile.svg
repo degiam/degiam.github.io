@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+	<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="3.365130e-09" y1="100" x2="100" y2="3.366893e-09">
+		<stop offset="0" style="stop-color:#ff7600"/>
+		<stop offset="1" style="stop-color:#ffc107"/>
+	</linearGradient>
+	<rect fill="url(#gradient)" x="0" width="100" height="100"/>
+	<path fill="#ffffff" d="M50,17.2c-9.1,0-16.5,7.4-16.5,16.5S40.9,50.2,50,50.2s16.5-7.4,16.5-16.5S59.1,17.2,50,17.2z M50,45.3 c-6.4,0-11.7-5.2-11.7-11.7S43.6,22,50,22s11.7,5.2,11.7,11.7S56.4,45.3,50,45.3z M50,56c-14.5,0-25.9,11.8-25.9,26.8h4.9 c0-12.5,9.1-21.9,21.1-21.9s21.1,9.4,21.1,21.9h4.9C75.9,67.8,64.5,56,50,56z"/>
+</svg>

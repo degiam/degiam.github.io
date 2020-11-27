@@ -772,7 +772,7 @@
 							<div class="invalid-feedback">Kata sandi salah</div>
 						</div>
 						<div class="form-group">
-							<div class="g-recaptcha" data-sitekey="6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc"></div>
+							<div id="recaptcha-1"></div>
 						</div>
 						<button type="submit" class="btn btn-secondary">Masuk</button>
 					</form>
@@ -823,7 +823,7 @@
 							<input type="email" class="form-control" placeholder="Email" required>
 						</div>
 						<div class="form-group">
-							<div class="g-recaptcha" data-sitekey="6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc"></div>
+							<div id="recaptcha-2"></div>
 						</div>
 						<button type="submit" class="btn btn-secondary">Atur Ulang Kata Sandi</button>
 					</form>
@@ -899,7 +899,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="g-recaptcha" data-sitekey="6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc"></div>
+							<div id="recaptcha-3"></div>
 						</div>
 						<div class="form-group form-check">
 							<input type="checkbox" class="form-check-input" id="agreement">
@@ -962,6 +962,25 @@
 	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
 	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 	<script defer type="text/javascript" src="assets/js/main.min.js"></script>
+	<script defer type="text/javascript">
+		var verifyCallback = function(response) {
+			alert(response);
+		};
+		var widgetId1;
+		var widgetId2;
+		var onloadCallback = function() {
+			widgetId1 = grecaptcha.render('recaptcha-1', {
+				'sitekey' : '6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc'
+			});
+			widgetId2 = grecaptcha.render(document.getElementById('recaptcha-2'), {
+				'sitekey' : '6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc'
+			});
+			grecaptcha.render('recaptcha-3', {
+				'sitekey' : '6Lf1hSUTAAAAAAf7arB9eAlvOYPNXlWWOe0oVxcc',
+				'callback' : verifyCallback
+			});
+		};
+	</script>
 	<script defer type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async></script>
 </section>

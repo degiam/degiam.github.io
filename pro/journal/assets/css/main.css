@@ -1,0 +1,87 @@
+/*
+ * UAD Journal
+ * Design by Degiam
+ * https://degiam.github.io
+ * Copyright (c) 2020
+ */
+
+/* Base */
+	:root {
+		--bs-primary: #023466;
+	}
+
+	body {
+		font-family: 'Work Sans', sans-serif;
+		font-size: .875rem;
+	}
+
+/* Navbar & Sidebar */
+	header,
+	aside {
+		background-color: var(--bs-primary);
+	}
+
+	header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	aside .btn span {
+		width: calc(100% - 30px);
+	}
+	aside .btn svg {
+		transition: transform .25s ease;
+	}
+	aside .btn[aria-expanded="true"] svg {
+		transform: rotate(-180deg);
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media (max-width: 767px) {
+		body {
+			padding-top: 56px;
+		}
+		aside {
+			position: fixed;
+			top: 56px;
+			width: 100%;
+			overflow: auto;
+			max-height: calc(100vh - 56px);
+		}
+	}
+
+	@media (min-width: 768px) {
+		aside {
+			position: fixed;
+			width: 250px;
+			height: 100%;
+		}
+		main {
+			width: calc(100% - 250px);
+			margin-left: auto;
+		}
+		.menu {
+			height: 100vh;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		aside {
+			width: 300px;
+		}
+		main {
+			width: calc(100% - 300px);
+		}
+	}
+
+/* Button */
+	.btn:focus,
+	.btn-check:focus+.btn {
+		box-shadow: none;
+	}
+

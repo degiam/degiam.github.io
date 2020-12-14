@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ site.name }}</title>
+	<meta name="title" content="{{ site.name }}">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="keywords" content="{{ site.keywords }}">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Open Graph -->
+	<meta property="og:title" content="{{ site.name }}">
+	<meta property="og:description" content="{{ site.description }}">
+	<meta property="og:image" content="assets/img/ogp.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{ site.name }}">
+	<meta property="og:url" content="{{ site.url }}">
+	<meta property="twitter:image" content="assets/img/ogp.jpg">
+	<!-- Canonical -->
+	<link rel="canonical" href="{{ site.url }}">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
+	<!-- Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+	<link rel="apple-touch-icon" href="assets/icon/icon-72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/icon-512x512.png">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#FFFFFF">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="theme-color" content="#FFFFFF">
+	<!-- Preload -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+	<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="style" href="assets/css/main.css">
+	<link rel="preload" as="script" href="assets/js/main.js">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<header>
+	<div class="d-flex align-items-center justify-content-between py-2 ps-3 pe-2 d-md-none">
+		<a class="navbar-brand text-white d-flex align-items-center m-0" href="#">
+			<img width="30" height="30" src="assets/img/logo-uad.svg" alt="Universitas Ahmad Dahlan">
+			<span class="ms-2">SSE Journal</span>
+		</a>
+		<button class="btn btn-clear btn-sm text-white" type="button" data-bs-toggle="collapse" data-bs-target=".menu" aria-expanded="false" aria-controls="menu">
+			<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
+				<path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
+			</svg>
+		</button>
+	</div>
+</header>
+
+<aside>
+	<div class="collapse menu">
+		<a class="navbar-brand text-white d-none d-md-flex align-items-center m-0 p-3" href="#">
+			<img width="50" height="50" src="assets/img/logo-uad.svg" alt="Universitas Ahmad Dahlan">
+			<span class="ms-2">SSE Journal</span>
+		</a>
+		<ul class="list-unstyled text-white mb-0 mb-md-3">
+			<li class="d-grid">
+				<a class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" href="#">
+					Beranda
+				</a>
+			</li>
+			<li class="d-grid">
+				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target=".nav-link-1" aria-expanded="false" aria-controls="nav-link-1">
+					<span>Jurnal</span>
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+					</svg>
+				</button>
+				<div class="collapse nav-link-1">
+					<div class="d-grid pb-1 px-3">
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							nav-link-sub-1
+						</a>
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							nav-link-sub-2
+						</a>
+					</div>
+				</div>
+			</li>
+			<li class="d-grid">
+				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target=".nav-link-2" aria-expanded="false" aria-controls="nav-link-2">
+					<span>Pengajuan</span>
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+					</svg>
+				</button>
+				<div class="collapse nav-link-2">
+					<div class="d-grid pb-1 px-3">
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							nav-link-sub-1
+						</a>
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							nav-link-sub-2
+						</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<a class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3 p-md-3 mt-auto mb-3 mb-md-0" href="#">
+			<span>Keluar</span>
+		</a>
+	</div>
+</aside>
+
+<main>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<b>Culpa</b> in id ea est culpa cillum laborum dolore consequat voluptate et id nisi ut occaecat labore exercitation. Lorem ipsum cillum veniam sint consectetur magna tempor pariatur officia nulla est. Adipisicing deserunt et elit qui nulla quis dolore sunt sed deserunt tempor excepteur. Nisi do occaecat eu velit ex quis excepteur eu consequat. Magna cupidatat duis duis laborum ea aliqua ullamco aliquip. In sit ullamco ex ut laboris veniam nostrud aliqua voluptate in deserunt. Pariatur in qui commodo aliquip cillum velit non tempor reprehenderit non fugiat proident do sed dolor do nisi. Pariatur consectetur qui officia velit in sint ex ullamco tempor sint nisi minim sint adipisicing. Lorem ipsum reprehenderit ut fugiat id eu incididunt id laboris officia voluptate. Lorem ipsum officia eu aliqua nisi sed proident voluptate commodo minim pariatur do occaecat non est laboris anim consequat. Consequat laboris in ad excepteur tempor veniam labore dolore culpa et ut dolor pariatur in fugiat do pariatur. Ad non laboris proident ea anim do aliquip dolore ut nulla deserunt deserunt reprehenderit eu officia. Lorem ipsum commodo ut occaecat minim cillum deserunt dolor voluptate consectetur aute proident sed ea excepteur nostrud et. Consequat magna ut sed elit irure esse nulla ad eiusmod magna id duis voluptate ea ullamco proident. Lorem ipsum eu excepteur nulla dolore veniam non mollit aute esse sed esse consectetur adipisicing occaecat ut et eiusmod. Lorem ipsum in irure dolor voluptate labore voluptate veniam ex sunt occaecat non ex velit laboris dolore. Fugiat sit exercitation sint et cupidatat nulla magna officia sit tempor ea reprehenderit irure qui. Id nisi et sed laborum dolore magna est ut sunt excepteur ut adipisicing mollit duis nostrud aute adipisicing. Mollit eiusmod anim reprehenderit consequat tempor cillum adipisicing proident velit eiusmod commodo. Irure culpa in exercitation irure non consequat ut in in ex do ut quis commodo esse tempor laboris ut. Tempor occaecat est sed pariatur nulla irure consequat dolor enim. Cupidatat in qui quis qui culpa sunt ex ullamco enim consectetur aliqua nulla eu labore dolor mollit cupidatat. Dolor aliquip laboris elit veniam veniam eiusmod anim ullamco consequat aliqua eu nisi. Ullamco est laboris dolor esse duis consequat ut fugiat eu deserunt pariatur. Et qui aliquip in est dolore excepteur dolor elit aliqua non duis. Occaecat magna nostrud incididunt commodo incididunt occaecat sunt eiusmod officia consequat aliquip culpa deserunt anim sit. Est ex fugiat excepteur in ullamco voluptate sit ut qui in consequat elit pariatur proident laborum dolore mollit. Nostrud nostrud et quis irure consequat aliquip et labore exercitation labore consectetur est ullamco dolore. Magna ut commodo sit reprehenderit adipisicing irure exercitation magna. Non ut in magna esse tempor in nulla do velit adipisicing id adipisicing. Nulla nostrud deserunt sunt consequat nostrud excepteur amet laborum cillum. Labore sed anim proident consectetur excepteur in mollit sed do proident deserunt consequat occaecat id dolore enim laborum. Magna reprehenderit nostrud consequat mollit id minim ut est consectetur sint in incididunt sed commodo. Quis ullamco excepteur veniam ea in sunt incididunt mollit nulla dolor pariatur cillum. Minim eiusmod in consectetur consectetur minim reprehenderit anim cillum aute elit aute mollit. Lorem ipsum aute sed tempor mollit ea proident deserunt eu aliquip veniam sit voluptate sint anim aliqua fugiat. Ullamco incididunt nulla duis in adipisicing magna laboris id in esse ut occaecat elit reprehenderit in reprehenderit dolor commodo. Eiusmod in exercitation adipisicing sed ut magna ex velit. Est velit ut nisi in ut reprehenderit ex sed et pariatur qui exercitation laborum velit. Lorem ipsum anim veniam minim culpa pariatur aute excepteur eiusmod ex dolor fugiat. Officia dolore quis in in pariatur occaecat magna esse adipisicing cupidatat voluptate consectetur amet veniam laboris est duis. Veniam velit ut reprehenderit in sint minim cillum aliquip proident incididunt in ad et adipisicing.
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer></footer>
+
+<section>
+	<!-- Main -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
+	<script src="assets/js/main.js" defer></script>
+	<!-- Progressive Web App -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker
+				.register('service-worker.js')
+				.then(res => console.log('service worker registered'))
+				.catch(err => console.log('service worker not registered', err))
+			})
+		}
+	</script>
+	<script src="service-worker.js"></script>
+</section>
+
+</body>
+</html>

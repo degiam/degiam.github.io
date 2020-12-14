@@ -86,17 +86,17 @@
 							<li><a href="#">Announcement</a></li>
 						</ul>
 					</li>
-					<li class="sub-menu open">
+					<li class="sub-menu">
 						<div>
 							<a href="#"><i class="fa fa-chalkboard-teacher"></i> Course</a>
 							<i class="fas fa-sort-down"></i>
 						</div>
 						<ul>
-							<li class="active"><a href="course.html">My Course</a></li>
+							<li><a href="course.html">My Course</a></li>
 							<li><a href="course-all.html">All Courses</a></li>
 						</ul>
 					</li>
-					<li>
+					<li class="active">
 						<a href="exam.html">
 							<i class="fa fa-pencil-alt"></i> Exam
 						</a>
@@ -123,15 +123,13 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Course</a></li>
-						<li class="breadcrumb-item active" aria-current="page">My Course</li>
+						<li class="breadcrumb-item active" aria-current="page">Exam</li>
 					</ol>
 				</nav>
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
-					<h1>My Course</h1>
-					<a class="btn btn-outline-primary ml-4 mt-1 min-w-auto font-size-12" href="course-all.html">Add Course</a>
+					<h1>Exam</h1>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -157,8 +155,7 @@
 				<thead class="table-primary">
 					<tr>
 						<th class="text-right" width="50">#</th>
-						<th style="min-width:200px">Course Title</th>
-						<th width="20%">Speaker</th>
+						<th style="min-width:200px">Exam Title</th>
 						<th>Status</th>
 						<th class="text-center">Detail</th>
 					</tr>
@@ -167,23 +164,26 @@
 					<tr>
 						<td class="text-right">1</td>
 						<td>Ut officia exercitation elit consequat laboris esse in consectetur exercitation laborum</td>
-						<td>Irman Yusman</td>
 						<td><div class="d-flex align-items-center justify-content-start text-danger"><i class="fas fa-times mr-1"></i>Failed</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+						<td><a class="btn btn-outline-primary font-sm" href="exam-detail.html">Reexam</div></a></td>
 					</tr>
 					<tr>
 						<td class="text-right">2</td>
 						<td>Non esse fugiat minim irure ut elit deserunt irure nisi dolore in ut in cillum tempor ut ut</td>
-						<td>Noor Fauzia</td>
 						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-check mr-1"></i>Done</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+						<td><a class="btn btn-outline-primary font-sm" href="exam-detail.html">Result</a></td>
 					</tr>
 					<tr>
 						<td class="text-right">3</td>
 						<td>Irure labore veniam dolor exercitation proident nulla sed ullamco in irure est quis sunt deserunt veniam</td>
-						<td>Gilbert Zazeka</td>
-						<td><div class="d-flex align-items-center justify-content-start">Taken</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+						<td><div class="d-flex align-items-center justify-content-start">Available</div></td>
+						<td><a class="btn btn-outline-primary font-sm" href="exam-detail.html">Start Exam</a></td>
+					</tr>
+					<tr>
+						<td class="text-right">3</td>
+						<td>Nostrud enim deserunt voluptate dolore sint non sint in sunt</td>
+						<td><div class="d-flex align-items-center justify-content-start">Unvailable</div></td>
+						<td><a class="btn btn-outline-primary font-sm disabled" href="exam-detail.html">Start Exam</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -192,7 +192,10 @@
 		<div class="d-md-flex justify-content-between py-4">
 			<div class="d-md-flex align-items-center rounded font-sm mb-4 pb-2 mb-md-3 pb-md-0 list-desc">
 				<a href="#">
-					Taken (1)
+					Available (1)
+				</a>
+				<a href="#">
+					Unavailable (1)
 				</a>
 				<a href="#">
 					Done (1)
@@ -202,7 +205,7 @@
 				</a>
 
 				<i class="fas fa-grip-lines-vertical separator"></i>
-				Total 3
+				Total 4
 			</div>
 		</div>
 

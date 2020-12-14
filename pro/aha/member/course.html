@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AHA Centre</title>
+    <meta name="description" content="JogjaCamp Instant Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="zJdnlkkUoGsTQhCaWkRxz8aWh0X4hz1KE65LFZ44">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ahacentre.org/wp-content/uploads/2018/01/favicon-16.png">
+    <meta name="theme-color" content="#1e354c">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap">
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Main -->
+    <link rel="stylesheet" type="text/css" href="https://kelimutu.wunik.id/themes/backend/default/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/additional.css"/>
+    <script type="text/javascript" src="https://kelimutu.wunik.id/themes/backend/default/js/main.js"></script>
+</head>
+
+<body>
+
+<div id="navbar">
+	<div data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu" id="buttonMenu">
+		<span class="buttonMenuImage"></span><span class="buttonMenuText d-none d-sm-block"></span>
+	</div>
+
+	<div id="brand">
+		<img class="brand-image default" src="https://wordpress-144887-1597394.cloudwaysapps.com/wp-content/uploads/revslider/aha-landing-page-1-1/aha-logo-black.png" alt="AHA Centre">
+		<a class="btn btn-primary d-none d-lg-inline-block visit-site" href="register.html" target="_blank">Visit Site</a>
+	</div>
+
+	<div id="user" class="d-flex align-items-center">
+		<div class="position-relative">
+			<div data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser" id="buttonNavUser">
+				<span class="d-none d-sm-block username">Adrian</span>
+				<img class="avatar-icon default" src="https://kelimutu.wunik.id/themes/backend/default/img/user.svg">
+			</div>
+			<div class="collapse fade popfade" id="collapseUser">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<a class="d-flex align-items-center" href="https://kelimutu.wunik.id/admin/user/manage/1/change_password">
+							<i class="fas fa-unlock"></i> Change Password
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a class="d-flex align-items-center" href="login.html">
+							<i class="fas fa-sign-out-alt"></i> Logout
+						</a>
+					</li>
+				</ul>
+
+				<form id="logout-form" action="https://kelimutu.wunik.id/logout" method="POST" style="display: none;">
+					<input type="hidden" name="_token" value="RdoWKqoWs5lYGp3n9Bx1DiVGGazXKQp4aFNW9Zl2">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="main-content">
+	<div class="menubar">
+		<div class="collapse" id="collapseMenu">
+			<nav id="mainmenu">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fa fa-home"></i> Home
+						</a>
+					</li>
+					<li class="sub-menu">
+						<div>
+							<a href="#"><i class="fa fa-bookmark"></i> Registration</a>
+							<i class="fas fa-sort-down"></i>
+						</div>
+						<ul>
+							<li><a href="#">Registration Detail</a></li>
+							<li><a href="#">Registration Result</a></li>
+							<li><a href="#">ASCEND Standard</a></li>
+							<li><a href="#">Announcement</a></li>
+						</ul>
+					</li>
+					<li class="sub-menu open">
+						<div>
+							<a href="#"><i class="fa fa-chalkboard-teacher"></i> Course</a>
+							<i class="fas fa-sort-down"></i>
+						</div>
+						<ul>
+							<li class="active"><a href="course.html">My Course</a></li>
+							<li><a href="course-all.html">All Courses</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="exam.html">
+							<i class="fa fa-pencil-alt"></i> Exam
+						</a>
+					</li>
+					<li>
+						<a href="score.html">
+							<i class="fa fa-star"></i> Score
+						</a>
+					</li>
+					<li>
+						<a href="certificate.html">
+							<i class="fa fa-medal"></i> Certificate
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="content">
+
+		<div class="row my-5 min-h-title">
+			<div class="col-12">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item"><a href="#">Course</a></li>
+						<li class="breadcrumb-item active" aria-current="page">My Course</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
+					<h1>My Course</h1>
+					<a class="btn btn-outline-primary ml-4 mt-1 min-w-auto font-size-12" href="course-all.html">Add Course</a>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
+					<form id="search" action="https://kelimutu.wunik.id/admin/user/manage" method="GET">
+						<div class="d-flex align-items-center justify-content-between justify-content-sm-end">
+							<div class="input-group">
+								<input type="text" id="searching" class="form-control" name="search" value="" placeholder="Type your keywords">
+								<div class="input-group-append">
+									<button class="btn btn-primary btn-icon" type="submit">
+										<i class="fas fa-search mx-2"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="table-responsive px-1">
+			<table class="table table-striped rounded bg-white shadow">
+				<thead class="table-primary">
+					<tr>
+						<th class="text-right" width="50">#</th>
+						<th style="min-width:200px">Course Title</th>
+						<th width="20%">Speaker</th>
+						<th class="text-center">Status</th>
+						<th class="text-center">Detail</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-right">1</td>
+						<td>Ut officia exercitation elit consequat laboris esse in consectetur exercitation laborum</td>
+						<td>Irman Yusman</td>
+						<td><div class="d-flex align-items-center justify-content-start text-danger"><i class="fas fa-circle mr-1"></i>Failed</div></td>
+						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+					</tr>
+					<tr>
+						<td class="text-right">2</td>
+						<td>Non esse fugiat minim irure ut elit deserunt irure nisi dolore in ut in cillum tempor ut ut</td>
+						<td>Noor Fauzia</td>
+						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-circle mr-1"></i>Done</div></td>
+						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+					</tr>
+					<tr>
+						<td class="text-right">3</td>
+						<td>Irure labore veniam dolor exercitation proident nulla sed ullamco in irure est quis sunt deserunt veniam</td>
+						<td>Gilbert Zazeka</td>
+						<td><div class="d-flex align-items-center justify-content-start"><i class="far fa-circle mr-1"></i>Taken</div></td>
+						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="d-md-flex justify-content-between py-4">
+			<div class="d-md-flex align-items-center rounded font-sm mb-4 pb-2 mb-md-3 pb-md-0 list-desc">
+				<a href="#">
+					Taken (1)
+				</a>
+				<a href="#">
+					Done (1)
+				</a>
+				<a href="#">
+					Failed (1)
+				</a>
+
+				<i class="fas fa-grip-lines-vertical separator"></i>
+				Total 3
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		&copy; 2020 <strong><a href="https://wunik.id" target="_blank">WUNIK.ID</a></strong>
+	</div>
+</div>
+
+</body>
+</html>

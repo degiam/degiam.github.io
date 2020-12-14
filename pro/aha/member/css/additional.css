@@ -1,0 +1,23 @@
+/* Table */
+.table.rounded tbody tr:last-child {
+	border-radius: 0 0 .5rem .5rem;
+}
+.table-primary,
+.table-primary > td,
+.table-primary > th {
+	color: #fff;
+	background-color: #577ea5;
+	border-color: #dee2e6;
+}
+@media (max-width: 991px) {
+	.table-responsive tbody tr > *:first-child {
+		width: initial;
+	}
+}
+
+/* Embed */
+@media (max-width: 768px) {
+	.embed iframe {
+		width: 100%;
+	}
+}

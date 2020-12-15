@@ -70,7 +70,7 @@
 			<nav id="mainmenu">
 				<ul>
 					<li>
-						<a href="#">
+						<a href="index.html">
 							<i class="fa fa-home"></i> Home
 						</a>
 					</li>
@@ -101,12 +101,12 @@
 							<i class="fa fa-pencil-alt"></i> Exam
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="score.html">
 							<i class="fa fa-star"></i> Score
 						</a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="certificate.html">
 							<i class="fa fa-medal"></i> Certificate
 						</a>
@@ -123,88 +123,48 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Score</li>
+						<li class="breadcrumb-item"><a href="#">Certificate</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Detail</li>
 					</ol>
 				</nav>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
-					<h1>Score</h1>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
-					<form id="search" action="https://kelimutu.wunik.id/admin/user/manage" method="GET">
-						<div class="d-flex align-items-center justify-content-between justify-content-sm-end">
-							<div class="input-group">
-								<input type="text" id="searching" class="form-control" name="search" value="" placeholder="Type your keywords">
-								<div class="input-group-append">
-									<button class="btn btn-primary btn-icon" type="submit">
-										<i class="fas fa-search mx-2"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
+					<h1>Ut mollit excepteur aliquip officia</h1>
 				</div>
 			</div>
 		</div>
 
-		<div class="table-responsive px-1">
-			<table class="table table-striped rounded bg-white shadow">
-				<thead class="table-primary">
-					<tr>
-						<th class="text-right" width="50">#</th>
-						<th style="min-width:200px">Exam Title</th>
-						<th style="min-width:125px">Date</th>
-						<th>Online Exam</th>
-						<th style="min-width:100px">Hands-on Exercise</th>
-						<th style="min-width:100px">Status</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="text-right">1</td>
-						<td>Ut officia exercitation elit consequat laboris esse in consectetur exercitation laborum</td>
-						<td>2 Dec 2020</td>
-						<td>43</td>
-						<td>56</td>
-						<td><div class="d-flex align-items-center justify-content-start text-danger"><i class="fas fa-times mr-1"></i>Failed</div></td>
-					</tr>
-					<tr>
-						<td class="text-right">2</td>
-						<td>Non esse fugiat minim irure ut elit deserunt irure nisi dolore in ut in cillum tempor ut ut</td>
-						<td>31 Dec 2020</td>
-						<td>85</td>
-						<td>90</td>
-						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-check mr-1"></i>Passed</div></td>
-					</tr>
-					<tr>
-						<td class="text-right">3</td>
-						<td>Irure labore veniam dolor exercitation proident nulla sed ullamco in irure est quis sunt deserunt veniam</td>
-						<td>2 Jan 2021</td>
-						<td>77</td>
-						<td></td>
-						<td>In Scoring</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="d-md-flex justify-content-between py-4">
-			<div class="d-md-flex align-items-center rounded font-sm mb-4 pb-2 mb-md-3 pb-md-0 list-desc">
-				<a href="#">
-					In Scoring (1)
-				</a>
-				<a href="#">
-					Passed (1)
-				</a>
-				<a href="#">
-					Failed (1)
-				</a>
-
-				<i class="fas fa-grip-lines-vertical separator"></i>
-				Total 3
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-12">
+						<p><b>Requirements</b></p>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item d-flex align-items-start justify-content-between px-0">
+								Esse sint occaecat ex sed do cillum dolor in dolore nisi in ut culpa aute sed eu eiusmod do
+								<div class="d-flex align-items-center justify-content-start text-success ml-3"><i class="fas fa-check mr-1"></i>Passed</div>
+							</li>
+							<li class="list-group-item d-flex align-items-start justify-content-between px-0">
+								Lorem ipsum esse cillum est anim elit sit ex commodo adipisicing
+								<div class="d-flex align-items-center justify-content-start text-success ml-3"><i class="fas fa-check mr-1"></i>Passed</div>
+							</li>
+							<li class="list-group-item d-flex align-items-start justify-content-between px-0">
+								Lorem ipsum consectetur dolor dolore occaecat ut incididunt esse tempor in laborum ad minim velit quis
+								<div class="d-flex align-items-center justify-content-start text-success ml-3"><i class="fas fa-check mr-1"></i>Passed</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex align-items-center justify-content-between">
+					You have fulfilled the requirements
+					<a class="btn btn-light" href="exam-detail.html">
+						<i class="fas fa-download mr-1"></i>
+						Download Certificate
+					</a>
+				</div>
 			</div>
 		</div>
 

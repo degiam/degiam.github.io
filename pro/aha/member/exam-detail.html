@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AHA Centre</title>
+    <meta name="description" content="JogjaCamp Instant Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="zJdnlkkUoGsTQhCaWkRxz8aWh0X4hz1KE65LFZ44">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ahacentre.org/wp-content/uploads/2018/01/favicon-16.png">
+    <meta name="theme-color" content="#1e354c">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap">
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Main -->
+    <link rel="stylesheet" type="text/css" href="https://kelimutu.wunik.id/themes/backend/default/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/additional.css"/>
+    <script type="text/javascript" src="https://kelimutu.wunik.id/themes/backend/default/js/main.js"></script>
+</head>
+
+<body>
+
+<div id="navbar">
+	<div data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu" id="buttonMenu">
+		<span class="buttonMenuImage"></span><span class="buttonMenuText d-none d-sm-block"></span>
+	</div>
+
+	<div id="brand">
+		<img class="brand-image default" src="https://wordpress-144887-1597394.cloudwaysapps.com/wp-content/uploads/revslider/aha-landing-page-1-1/aha-logo-black.png" alt="AHA Centre">
+		<a class="btn btn-primary d-none d-lg-inline-block visit-site" href="register.html" target="_blank">Visit Site</a>
+	</div>
+
+	<div id="user" class="d-flex align-items-center">
+		<div class="position-relative">
+			<div data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser" id="buttonNavUser">
+				<span class="d-none d-sm-block username">Adrian</span>
+				<img class="avatar-icon default" src="https://kelimutu.wunik.id/themes/backend/default/img/user.svg">
+			</div>
+			<div class="collapse fade popfade" id="collapseUser">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<a class="d-flex align-items-center" href="https://kelimutu.wunik.id/admin/user/manage/1/change_password">
+							<i class="fas fa-unlock"></i> Change Password
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a class="d-flex align-items-center" href="login.html">
+							<i class="fas fa-sign-out-alt"></i> Logout
+						</a>
+					</li>
+				</ul>
+
+				<form id="logout-form" action="https://kelimutu.wunik.id/logout" method="POST" style="display: none;">
+					<input type="hidden" name="_token" value="RdoWKqoWs5lYGp3n9Bx1DiVGGazXKQp4aFNW9Zl2">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="main-content">
+	<div class="menubar">
+		<div class="collapse" id="collapseMenu">
+			<nav id="mainmenu">
+				<ul>
+					<li>
+						<a href="index.html">
+							<i class="fa fa-home"></i> Home
+						</a>
+					</li>
+					<li class="sub-menu">
+						<div>
+							<a href="#"><i class="fa fa-bookmark"></i> Registration</a>
+							<i class="fas fa-sort-down"></i>
+						</div>
+						<ul>
+							<li><a href="#">Registration Detail</a></li>
+							<li><a href="#">Registration Result</a></li>
+							<li><a href="#">ASCEND Standard</a></li>
+							<li><a href="#">Announcement</a></li>
+						</ul>
+					</li>
+					<li class="sub-menu">
+						<div>
+							<a href="#"><i class="fa fa-chalkboard-teacher"></i> Course</a>
+							<i class="fas fa-sort-down"></i>
+						</div>
+						<ul>
+							<li><a href="course.html">My Course</a></li>
+							<li><a href="course-all.html">All Courses</a></li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="exam.html">
+							<i class="fa fa-pencil-alt"></i> Exam
+						</a>
+					</li>
+					<li>
+						<a href="score.html">
+							<i class="fa fa-star"></i> Score
+						</a>
+					</li>
+					<li>
+						<a href="certificate.html">
+							<i class="fa fa-medal"></i> Certificate
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="content">
+
+		<div class="row my-5 min-h-title">
+			<div class="col-12">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item"><a href="#">Exam</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Online Exam</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col-md-8">
+				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
+					<h1>Irure labore veniam dolor exercitation</h1>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
+					<a class="btn btn-danger d-none stop-exam" href="exam.html">Cancel</a>
+					<button type="button" class="btn btn-primary mx-0" onclick="countdown();$('.countdown,.stop-exam').removeClass('d-none');$(this).addClass('d-none')">Start</button>
+					<div class="countdown ml-2 d-none">
+						<script>
+							var setTime = "90:00";
+							document.querySelector('.countdown').innerHTML = setTime;
+							function countdown() {
+								var interval = setInterval(function() {
+									var timer = setTime.split(':');
+									var minutes = parseInt(timer[0], 10);
+									var seconds = parseInt(timer[1], 10);
+									--seconds;
+									minutes = (seconds < 0) ? --minutes : minutes;
+									if (minutes < 0) clearInterval(interval);
+									seconds = (seconds < 0) ? 59 : seconds;
+									seconds = (seconds < 10) ? '0' + seconds : seconds;
+									document.querySelector('.countdown').innerHTML = minutes + ':' + seconds;
+									setTime = minutes + ':' + seconds;
+								}, 1000);
+							};
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form spellcheck="false">
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex">
+						<div>1.</div>
+						<div class="w-100 ml-2">
+							<div class="mb-2">
+								Ea consequat nulla culpa do in exercitation velit dolore. Do consequat id ea in ut exercitation dolore excepteur. Lorem ipsum magna elit laboris velit laborum sit in non laborum veniam reprehenderit do tempor?
+							</div>
+							<div class="d-md-flex flex-wrap">
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-1" id="answer-1-a" value="option-1">
+									<label class="form-check-label ml-2" for="answer-1-a">
+										Option 1
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-1" id="answer-1-b" value="option-2">
+									<label class="form-check-label ml-2" for="answer-1-b">
+										Option 2
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-1" id="answer-1-c" value="option-3">
+									<label class="form-check-label ml-2" for="answer-1-c">
+										Option 3
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-1" id="answer-1-d" value="option-4">
+									<label class="form-check-label ml-2" for="answer-1-d">
+										Option 4
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex">
+						<div>2.</div>
+						<div class="w-100 ml-2">
+							<div class="mb-2">
+								Aliqua ullamco consectetur anim eiusmod qui nostrud anim amet reprehenderit?
+							</div>
+							<div class="d-md-flex flex-wrap">
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-2" id="answer-2-a" value="option-1">
+									<label class="form-check-label ml-2" for="answer-2-a">
+										Option 1
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-2" id="answer-2-b" value="option-2">
+									<label class="form-check-label ml-2" for="answer-2-b">
+										Option 2
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-2" id="answer-2-c" value="option-3">
+									<label class="form-check-label ml-2" for="answer-2-c">
+										Option 3
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-2" id="answer-2-d" value="option-4">
+									<label class="form-check-label ml-2" for="answer-2-d">
+										Option 4
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex">
+						<div>3.</div>
+						<div class="w-100 ml-2">
+							<div class="mb-2">
+								Ex sit deserunt aliquip sed cillum enim sed pariatur incididunt culpa consectetur in incididunt exercitation?
+							</div>
+							<div class="d-md-flex flex-wrap">
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-3" id="answer-3-a" value="option-1">
+									<label class="form-check-label ml-2" for="answer-3-a">
+										Option 1
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-3" id="answer-3-b" value="option-2">
+									<label class="form-check-label ml-2" for="answer-3-b">
+										Option 2
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-3" id="answer-3-c" value="option-3">
+									<label class="form-check-label ml-2" for="answer-3-c">
+										Option 3
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-3" id="answer-3-d" value="option-4">
+									<label class="form-check-label ml-2" for="answer-3-d">
+										Option 4
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex">
+						<div>4.</div>
+						<div class="w-100 ml-2">
+							<div class="mb-2">
+								Consectetur dolor duis ut ut aliquip sunt culpa sint pariatur sit cupidatat esse esse officia ea pariatur?
+							</div>
+							<div class="d-md-flex flex-wrap">
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-4" id="answer-4-a" value="option-1">
+									<label class="form-check-label ml-2" for="answer-4-a">
+										Option 1
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-4" id="answer-4-b" value="option-2">
+									<label class="form-check-label ml-2" for="answer-4-b">
+										Option 2
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-4" id="answer-4-c" value="option-3">
+									<label class="form-check-label ml-2" for="answer-4-c">
+										Option 3
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-4" id="answer-4-d" value="option-4">
+									<label class="form-check-label ml-2" for="answer-4-d">
+										Option 4
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex">
+						<div>5.</div>
+						<div class="w-100 ml-2">
+							<div class="mb-2">
+								Excepteur aliquip aliqua nulla occaecat dolore velit sed eu veniam culpa exercitation in duis cupidatat eiusmod minim fugiat?
+							</div>
+							<div class="d-md-flex flex-wrap">
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-5" id="answer-5-a" value="option-1">
+									<label class="form-check-label ml-2" for="answer-5-a">
+										Option 1
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-5" id="answer-5-b" value="option-2">
+									<label class="form-check-label ml-2" for="answer-5-b">
+										Option 2
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-1">
+									<input class="form-check-input position-relative" type="radio" name="answer-5" id="answer-5-c" value="option-3">
+									<label class="form-check-label ml-2" for="answer-5-c">
+										Option 3
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-start my-2 pr-4 order-md-2">
+									<input class="form-check-input position-relative" type="radio" name="answer-5" id="answer-5-d" value="option-4">
+									<label class="form-check-label ml-2" for="answer-5-d">
+										Option 4
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-md-right mb-3">
+				<button type="submit" class="btn btn-success">Finish</button>
+			</div>
+		</form>
+
+	</div>
+
+	<div class="footer">
+		&copy; 2020 <strong><a href="https://wunik.id" target="_blank">WUNIK.ID</a></strong>
+	</div>
+</div>
+
+</body>
+</html>

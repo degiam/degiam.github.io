@@ -31,3 +31,24 @@
 		flex: 0 0 50%;
 	}
 }
+
+/* Countdown */
+.countdown {
+	position: fixed;
+	top: 4.5rem;
+	right: .75rem;
+	padding: .45rem .75rem;
+	border-radius: .3rem;
+	text-align: center;
+	font-size: 14px;
+	width: 90px;
+	color: #fff;
+	background-color: #577ea5;
+	z-index: 1;
+}
+@media (min-width: 768px) {
+	.countdown {
+		top: 5.5rem;
+		right: 1.25rem;
+	}
+}

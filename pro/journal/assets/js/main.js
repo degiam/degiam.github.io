@@ -57,29 +57,21 @@
 	}
 
 // Menu
-	function desktop() {
-		addClass('.menu', 'show')
-	}
-
 	function mobile() {
 		removeClass('.menu', 'show')
 	}
 
-	var screenWidth = window.innerWidth || document.documentElement.clientWidth
-
-	if (screenWidth > 768) desktop()
-
 // Responsive
 	var viewportWidth;
-	var setViewportWidth = function () {
+	var setViewportWidth = function() {
 		viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 	}
 
-	var logWidth = function () {
+	var logWidth = function() {
 		if (viewportWidth < 768) {
 			mobile()
 		} else {
-			desktop()
+
 		}
 	}
 

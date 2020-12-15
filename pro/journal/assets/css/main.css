@@ -8,11 +8,16 @@
 /* Base */
 	:root {
 		--bs-primary: #023466;
+		--bs-warning: #ffd400;
 	}
 
 	body {
 		font-family: 'Work Sans', sans-serif;
 		font-size: .875rem;
+	}
+
+	.bg-warning {
+		background-color: var(--bs-warning) !important;
 	}
 
 /* Navbar & Sidebar */
@@ -27,19 +32,26 @@
 		width: 100%;
 	}
 
-	aside .btn span {
-		width: calc(100% - 30px);
+	aside {
+		overflow: auto;
 	}
-	aside .btn svg {
+
+	aside .btn div {
+		width: calc(100% - 50px);
+	}
+	aside .btn > svg:last-child {
 		transition: transform .25s ease;
 	}
-	aside .btn[aria-expanded="true"] svg {
+	aside .btn[aria-expanded="true"] > svg:last-child {
 		transform: rotate(-180deg);
 	}
 
 	.menu {
 		display: flex;
 		flex-direction: column;
+	}
+	.menu li .collapse .btn.active {
+		color: var(--bs-warning) !important;
 	}
 
 	@media (max-width: 767px) {
@@ -50,7 +62,6 @@
 			position: fixed;
 			top: 56px;
 			width: 100%;
-			overflow: auto;
 			max-height: calc(100vh - 56px);
 		}
 	}
@@ -67,6 +78,9 @@
 		}
 		.menu {
 			height: 100vh;
+		}
+		.menu.collapse:not(.show) {
+			display: flex;
 		}
 	}
 

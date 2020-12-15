@@ -68,7 +68,7 @@
 			<img width="30" height="30" src="assets/img/logo-uad.svg" alt="Universitas Ahmad Dahlan">
 			<span class="ms-2">SSE Journal</span>
 		</a>
-		<button class="btn btn-clear btn-sm text-white" type="button" data-bs-toggle="collapse" data-bs-target=".menu" aria-expanded="false" aria-controls="menu" aria-label="menu">
+		<button class="btn btn-clear btn-sm text-white button-menu" type="button" data-bs-toggle="collapse" data-bs-target=".menu" aria-expanded="false" aria-controls="menu" aria-label="menu">
 			<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
 				<path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
 			</svg>
@@ -84,50 +84,104 @@
 		</a>
 		<ul class="list-unstyled text-white mb-0 mb-md-3">
 			<li class="d-grid">
-				<a class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" href="#">
-					Beranda
+				<a class="btn btn-clear btn-sm d-flex text-start text-white py-2 px-3 mb-1" href="#">
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+						<path d="M7,17L10.2,10.2L17,7L13.8,13.8L7,17M12,11.1A0.9,0.9 0 0,0 11.1,12A0.9,0.9 0 0,0 12,12.9A0.9,0.9 0 0,0 12.9,12A0.9,0.9 0 0,0 12,11.1M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
+					</svg>
+					<div>
+						Beranda
+					</div>
 				</a>
 			</li>
 			<li class="d-grid">
-				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target=".nav-link-1" aria-expanded="false" aria-controls="nav-link-1">
-					<span>Jurnal</span>
+				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3 mb-1" type="button" data-bs-toggle="collapse" data-bs-target=".dropdown-1" aria-expanded="false" aria-controls="dropdown-1">
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+						<path d="M17,4V10L15,8L13,10V4H9V20H19V4H17M3,7V5H5V4C5,2.89 5.9,2 7,2H19C20.05,2 21,2.95 21,4V20C21,21.05 20.05,22 19,22H7C5.95,22 5,21.05 5,20V19H3V17H5V13H3V11H5V7H3M5,5V7H7V5H5M5,19H7V17H5V19M5,13H7V11H5V13Z"/>
+					</svg>
+					<div>
+						Terbitan
+					</div>
 					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
 					</svg>
 				</button>
-				<div class="collapse nav-link-1">
-					<div class="d-grid pb-1 px-3">
+				<div class="collapse dropdown-1">
+					<div class="d-grid pb-1 pe-3 ps-4 ms-1">
 						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
-							nav-link-sub-1
+							dropdown-sub-1
 						</a>
 						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
-							nav-link-sub-2
+							dropdown-sub-2
 						</a>
 					</div>
 				</div>
 			</li>
 			<li class="d-grid">
-				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target=".nav-link-2" aria-expanded="false" aria-controls="nav-link-2">
-					<span>Pengajuan</span>
+				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3 mb-1" type="button" data-bs-toggle="collapse" data-bs-target=".dropdown-2" aria-expanded="false" aria-controls="dropdown-2">
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+						<path d="M22,3H5A2,2 0 0,0 3,5V9H5V5H22V19H5V15H3V19A2,2 0 0,0 5,21H22A2,2 0 0,0 24,19V5A2,2 0 0,0 22,3M7,15V13H0V11H7V9L11,12L7,15M20,13H13V11H20V13M20,9H13V7H20V9M17,17H13V15H17V17Z"/>
+					</svg>
+					<div>
+						Usulan Penilaian
+					</div>
 					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
 						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
 					</svg>
 				</button>
-				<div class="collapse nav-link-2">
-					<div class="d-grid pb-1 px-3">
+				<div class="collapse dropdown-2">
+					<div class="d-grid pb-1 pe-3 ps-4 ms-1">
 						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
-							nav-link-sub-1
+							dropdown-sub-1
 						</a>
 						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
-							nav-link-sub-2
+							dropdown-sub-2
+						</a>
+					</div>
+				</div>
+			</li>
+			<li class="d-grid">
+				<button class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3 mb-1" type="button" data-bs-toggle="collapse" data-bs-target=".dropdown-3" aria-expanded="false" aria-controls="dropdown-3">
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+						<path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/>
+					</svg>
+					<div>
+						Bantuan
+					</div>
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+						<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+					</svg>
+				</button>
+				<div class="collapse dropdown-3">
+					<div class="d-grid pb-1 pe-3 ps-4 ms-1">
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							dropdown-sub-1
+						</a>
+						<a class="btn btn-clear btn-sm text-start text-white px-3" href="#">
+							dropdown-sub-2
 						</a>
 					</div>
 				</div>
 			</li>
 		</ul>
-		<a class="btn btn-clear btn-sm d-flex justify-content-between text-start text-white py-2 px-3 p-md-3 mt-auto mb-3 mb-md-0" href="#">
-			<span>Keluar</span>
-		</a>
+		<div class="mt-auto mb-3">
+			<a class="btn btn-clear btn-sm d-flex text-start text-white py-2 px-3 mb-1" href="#">
+				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+					<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"/>
+				</svg>
+				<div>
+					<span class="me-1">Eliza</span>
+					<span class="badge bg-warning text-dark">Pengusul</span>
+				</div>
+			</a>
+			<a class="btn btn-clear btn-sm d-flex text-start text-white py-2 px-3 mb-1" href="#">
+				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="me-1">
+					<path d="M14.08,15.59L16.67,13H7V11H16.67L14.08,8.41L15.5,7L20.5,12L15.5,17L14.08,15.59M19,3A2,2 0 0,1 21,5V9.67L19,7.67V5H5V19H19V16.33L21,14.33V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19Z"/>
+				</svg>
+				<div>
+					Keluar
+				</div>
+			</a>
+		</div>
 	</div>
 </aside>
 

@@ -16,8 +16,18 @@
 }
 
 /* Embed */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.embed iframe {
 		width: 100%;
+	}
+}
+
+/* Radio */
+.form-check-input.position-relative {
+	margin-top: 3px;
+}
+@media (min-width: 768px) {
+	.flex-wrap .form-check {
+		flex: 0 0 50%;
 	}
 }

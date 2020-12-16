@@ -9,6 +9,10 @@
 	background-color: #577ea5;
 	border-color: #dee2e6;
 }
+.table .valign-top th,
+.table .valign-top td {
+	vertical-align: top;
+}
 @media (max-width: 991px) {
 	.table-responsive tbody tr > *:first-child {
 		width: initial;
@@ -20,6 +24,11 @@
 	.embed iframe {
 		width: 100%;
 	}
+}
+
+/* Image */
+.object-fit-cover {
+	object-fit: cover;
 }
 
 /* Radio */

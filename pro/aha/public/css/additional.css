@@ -1,0 +1,15 @@
+.btn-theme:hover,
+.btn-theme:focus {
+	color: var(--white);
+	background-color: var(--danger);
+	border-color: var(--danger);
+}
+.bg-transparent {
+	background-color: transparent !important;
+}
+.btn-light[aria-expanded="true"] {
+	background-color: #e2e6ea;
+}
+[data-toggle="collapse"] {
+	cursor: pointer;
+}

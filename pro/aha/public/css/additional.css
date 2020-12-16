@@ -1,9 +1,52 @@
+:root {
+	--red: #ef3e33;
+	--blue: #0d65a6;
+	--danger: #d13a39;
+	--primary: #0c5b95;
+}
+
+a {
+	color: var(--red);
+}
+
+.bg-theme {
+	background-color: var(--blue);
+}
+.bg-danger {
+	background-color: var(--danger);
+}
+
+.btn.focus, .btn:focus {
+	box-shadow: none;
+}
+.btn-theme {
+	color: var(--white);
+	background-color: var(--red);
+	border-color: var(--red);
+}
 .btn-theme:hover,
 .btn-theme:focus {
 	color: var(--white);
 	background-color: var(--danger);
 	border-color: var(--danger);
 }
+.btn-primary {
+	color: var(--white);
+	background-color: var(--blue);
+	border-color: var(--blue);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+	color: var(--white);
+	background-color: var(--primary);
+	border-color: var(--primary);
+}
+@media (max-width: 991px) {
+	.nav-item.border-right {
+		border-right: none !important;
+	}
+}
+
 .bg-transparent {
 	background-color: transparent !important;
 }

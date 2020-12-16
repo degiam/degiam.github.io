@@ -130,11 +130,11 @@
 			</div>
 			<div class="col-md-4">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
-					<a class="btn btn-danger d-none stop-exam" href="exam.html">Cancel</a>
-					<button type="button" class="btn btn-primary mx-0" onclick="countdown();$('.countdown,.stop-exam').removeClass('d-none');$(this).addClass('d-none')">Start</button>
-					<div class="countdown ml-2 d-none">
+					<a class="btn btn-danger d-none stop-exam" href="exam.html">Stop</a>
+					<button type="button" class="btn btn-primary mx-0" onclick="countdown();$('.stop-exam').removeClass('d-none');$(this).addClass('d-none');$('.question').slideDown()">Start</button>
+					<div class="countdown ml-2">
 						<script>
-							var setTime = "90:00";
+							var setTime = "30:00";
 							document.querySelector('.countdown').innerHTML = setTime;
 							function countdown() {
 								var interval = setInterval(function() {
@@ -156,7 +156,7 @@
 			</div>
 		</div>
 
-		<form spellcheck="false">
+		<form class="question" spellcheck="false">
 			<div class="card">
 				<div class="card-body">
 					<div class="d-flex">
@@ -356,6 +356,7 @@
 				<button type="submit" class="btn btn-success">Finish</button>
 			</div>
 		</form>
+		<script>$('.question').hide()</script>
 
 	</div>
 

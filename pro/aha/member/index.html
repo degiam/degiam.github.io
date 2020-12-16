@@ -69,7 +69,7 @@
 		<div class="collapse" id="collapseMenu">
 			<nav id="mainmenu">
 				<ul>
-					<li>
+					<li class="active">
 						<a href="index.html">
 							<i class="fa fa-user"></i> Profile
 						</a>
@@ -86,13 +86,13 @@
 							<li><a href="#">Announcement</a></li>
 						</ul>
 					</li>
-					<li class="sub-menu open">
+					<li class="sub-menu">
 						<div>
 							<a href="#"><i class="fa fa-chalkboard-teacher"></i> Course</a>
 							<i class="fas fa-sort-down"></i>
 						</div>
 						<ul>
-							<li class="active"><a href="course.html">My Course</a></li>
+							<li><a href="course.html">My Course</a></li>
 							<li><a href="course-all.html">All Courses</a></li>
 						</ul>
 					</li>
@@ -123,71 +123,63 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Course</a></li>
-						<li class="breadcrumb-item active" aria-current="page">My Course</li>
+						<li class="breadcrumb-item active" aria-current="page">Profile</li>
 					</ol>
 				</nav>
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
-					<h1>My Course</h1>
-					<a class="btn btn-outline-primary ml-4 mt-1 min-w-auto font-size-12" href="course-all.html">Add Course</a>
+					<h1>Profile</h1>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
-					<form id="search" action="https://kelimutu.wunik.id/admin/user/manage" method="GET">
-						<div class="d-flex align-items-center justify-content-between justify-content-sm-end">
-							<div class="input-group">
-								<input type="text" id="searching" class="form-control" name="search" value="" placeholder="Type your keywords">
-								<div class="input-group-append">
-									<button class="btn btn-primary btn-icon" type="submit">
-										<i class="fas fa-search mx-2"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
+					<a class="btn btn-outline-primary" href="#">Edit</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="table-responsive px-1">
-			<table class="table table-striped rounded bg-white shadow">
-				<thead class="table-primary">
-					<tr>
-						<th class="text-right" width="50">#</th>
-						<th style="min-width:200px">Course Title</th>
-						<th width="20%">Speaker</th>
-						<th class="text-center" width="125">Detail</th>
-					</tr>
-				</thead>
-				<tbody class="valign-top">
-					<tr>
-						<td class="text-right">1</td>
-						<td>Ut officia exercitation elit consequat laboris esse in consectetur exercitation laborum</td>
-						<td>Irman Yusman</td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
-					</tr>
-					<tr>
-						<td class="text-right">2</td>
-						<td>Non esse fugiat minim irure ut elit deserunt irure nisi dolore in ut in cillum tempor ut ut</td>
-						<td>Noor Fauzia</td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
-					</tr>
-					<tr>
-						<td class="text-right">3</td>
-						<td>Irure labore veniam dolor exercitation proident nulla sed ullamco in irure est quis sunt deserunt veniam</td>
-						<td>Gilbert Zazeka</td>
-						<td><a class="btn btn-outline-primary font-sm" href="course-detail.html">View</a></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="d-md-flex justify-content-between py-4">
-			<div class="d-md-flex align-items-center rounded font-sm mb-4 pb-2 mb-md-3 pb-md-0 list-desc">
-				Total 3
+		<div class="card">
+			<div class="card-body">
+				<div class="d-md-flex">
+					<img class="object-fit-cover rounded-circle mr-md-3 my-3" width="200" height="200" src="https://kelimutu.wunik.id/media/testimonial-s-974a9f73-fd35-4dda-87d1-228127a00774.jpeg" alt="Photo">
+					<table class="table mb-0">
+						<tbody class="valign-top">
+							<tr>
+								<td width="20%" class="opacity-5">Name</td>
+								<td>Adrian Wicaksono</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Email</td>
+								<td>adrian@gmail.com</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Phone</td>
+								<td>+62 812 3456 7890</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Birth</td>
+								<td>Jakarta, 20 Mei 1996</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Gender</td>
+								<td>Men</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Religion</td>
+								<td>Islam</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Nationality</td>
+								<td>Indonesia</td>
+							</tr>
+							<tr>
+								<td class="opacity-5">Address</td>
+								<td>Lorem ipsum dolore sunt culpa mollit in voluptate enim eiusmod nulla non ut fugiat id cillum ut consequat aliquip pariatur qui irure esse</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

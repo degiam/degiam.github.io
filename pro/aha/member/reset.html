@@ -37,32 +37,18 @@
 			<div id="login" class="bg-white p-5 rounded shadow">
 				<center><img class="img-fluid mt-3 mb-5" src="https://ahacentre.org/wp-content/uploads/2020/11/logo-web.png"></center>
 
-				<form spellcheck="false" method="POST" action="https://kelimutu.wunik.id/login">
-					<input type="hidden" name="_token" value="zJdnlkkUoGsTQhCaWkRxz8aWh0X4hz1KE65LFZ44">
+				<form spellcheck="false" method="POST" action="https://kelimutu.wunik.id/password/email">
+					<div class="mb-4 pb-3">
+						Type your email address to reset your password
+					</div>
 					<div class="form-group focus">
-						<input id="username" type="email" class="form-control" name="email" value="" required autocomplete="email" autofocus>
-						<label for="username">Username</label>
+						<input id="email" type="email" name="email" class="form-control" required autofocus value>
+						<label for="email">E-Mail Address</label>
 					</div>
-					<div class="form-group">
-						<input id="password" type="password" class="form-control pr-4" name="password" required autocomplete="current-password">
-						<label for="password">Password</label>
-						<span class="toggle-password hide"></span>
-					</div>
-					<div class="custom-control custom-checkbox">
-						<input type="checkbox" name="remember" class="custom-control-input" id="rememberme">
-						<label class="custom-control-label" for="rememberme">Remember Me</label>
-					</div>
-					<button class="btn btn-primary" type="submit">
-						Login
+					<button class="btn btn-primary mt-3" type="submit">
+						Reset Password
 					</button>
 				</form>
-
-				<div class="mt-4 pt-5">
-					<a class="d-flex align-items-center my-2 text-decoration-none" href="reset.html">
-						<span class="padlock mr-1"></span>
-						Forgot Your Password?
-					</a>
-				</div>
 			</div>
 
 		</div>

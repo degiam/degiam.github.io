@@ -1,19 +1,19 @@
 const app = "uad-journal-v1"
 const assets = [
 	"/",
-	"/index.html",
-	"/assets/css/main.min.css",
-	"/assets/js/main.min.js",
-	"/assets/icon/favicon.ico",
-	"/assets/icon/icon-16x16.png",
-	"/assets/icon/icon-32x32.png",
-	"/assets/icon/icon-72x72.png",
-	"/assets/icon/icon-128x128.png",
-	"/assets/icon/icon-144x144.png",
-	"/assets/icon/icon-152x152.png",
-	"/assets/icon/icon-192x192.png",
-	"/assets/icon/icon-256x256.png",
-	"/assets/icon/icon-512x512.png",
+	"../../index.html",
+	"/css/main.css",
+	"/js/main.js",
+	"/icon/favicon.ico",
+	"/icon/icon-16x16.png",
+	"/icon/icon-32x32.png",
+	"/icon/icon-72x72.png",
+	"/icon/icon-128x128.png",
+	"/icon/icon-144x144.png",
+	"/icon/icon-152x152.png",
+	"/icon/icon-192x192.png",
+	"/icon/icon-256x256.png",
+	"/icon/icon-512x512.png",
 ]
 
 self.addEventListener("install", installEvent => {

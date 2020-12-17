@@ -61,13 +61,18 @@
 		removeClass('.menu', 'show')
 	}
 
+// Dark Mode
+	function darkMode() {
+		toggleClass('body', 'dark')
+	}
+
 // Responsive
 	var viewportWidth;
 	var setViewportWidth = function() {
 		viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 	}
 
-	var logWidth = function() {
+	var logWidthInit = function() {
 		if (viewportWidth < 768) {
 			mobile()
 		} else {
@@ -75,10 +80,19 @@
 		}
 	}
 
+	var logWidth = function() {
+		if (viewportWidth < 768) {
+
+		} else {
+
+		}
+	}
+
 	setViewportWidth();
+	logWidthInit();
 	logWidth();
 
-	window.addEventListener('resize', function () {
+	window.addEventListener('resize', function() {
 		setViewportWidth();
 		logWidth();
 	}, false);

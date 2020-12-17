@@ -9,21 +9,37 @@
 	:root {
 		--bs-primary: #023466;
 		--bs-warning: #ffd400;
+		--bs-blue-dark: #0853c3;
+		--bs-dark-main: #1f262d;
+		--bs-dark-side: #12181d;
 	}
 
 	body {
 		font-family: 'Work Sans', sans-serif;
 		font-size: .875rem;
+		font-weight: 500;
+	}
+	@-moz-document url-prefix() {
+		body {
+			font-weight: 400;
+		}
 	}
 
-	.bg-warning {
-		background-color: var(--bs-warning) !important;
+/* Layout */
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
 	}
 
-/* Navbar & Sidebar */
-	header,
-	aside {
+	footer {
+		margin-top: auto;
+	}
+
+	header, aside {
 		background-color: var(--bs-primary);
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+		z-index: 1;
 	}
 
 	header {
@@ -50,8 +66,13 @@
 		display: flex;
 		flex-direction: column;
 	}
+	.menu li.active > .btn,
 	.menu li .collapse .btn.active {
 		color: var(--bs-warning) !important;
+	}
+
+	.container-fluid {
+		padding: 1.5rem 1.7rem;
 	}
 
 	@media (max-width: 767px) {
@@ -72,7 +93,7 @@
 			width: 250px;
 			height: 100%;
 		}
-		main {
+		main, footer {
 			width: calc(100% - 250px);
 			margin-left: auto;
 		}
@@ -88,14 +109,82 @@
 		aside {
 			width: 300px;
 		}
-		main {
+		main, footer {
 			width: calc(100% - 300px);
 		}
 	}
 
-/* Button */
+/* Color */
+	.bg-warning {
+		background-color: var(--bs-warning) !important;
+	}
+	.bg-theme {
+		background-color: var(--bs-blue);
+		background: linear-gradient(15deg, var(--bs-blue-dark) 0%, var(--bs-blue) 70%);
+	}
+
+/* Focus */
 	.btn:focus,
 	.btn-check:focus+.btn {
 		box-shadow: none;
 	}
 
+	[class^="form-"]:focus {
+		outline: 0;
+		box-shadow: none;
+	}
+
+	[type="checkbox"] {
+		cursor: pointer;
+	}
+
+	.cursor-pointer {
+		cursor: pointer;
+	}
+	.cursor-default {
+		cursor: default;
+	}
+
+/* Typograph */
+	h1, h2, h3, h4, h5, h6 {
+		letter-spacing: -1px;
+	}
+
+/* Opacity */
+	.opacity {
+		opacity: 1;
+	}
+	.opacity-2 {
+		opacity: .2;
+	}
+	.opacity-5 {
+		opacity: .5;
+	}
+
+/* Card */
+	svg.card-img {
+		width: 100%;
+		height: 100px;
+	}
+	@media (min-width: 768px) {
+		svg.card-img {
+			height: 110px;
+		}
+	}
+
+/* Dark Mode */
+	.dark {
+		color: var(--bs-white);
+		background: var(--bs-dark-main);
+		font-weight: 400;
+	}
+	.dark header, .dark aside {
+		background: var(--bs-dark-side);
+	}
+	.dark a {
+		color: var(--bs-warning);
+	}
+	.dark .breadcrumb-item,
+	.dark .breadcrumb-item.active {
+		color: var(--bs-white);
+	}

@@ -1,3 +1,13 @@
+/* Sidebar */
+@media (min-width: 1200px) {
+	.menubar {
+		width: 250px;
+	}
+	.content {
+		width: calc(100% - 250px);
+	}
+}
+
 /* Table */
 .table.rounded tbody tr:last-child {
 	border-radius: 0 0 .5rem .5rem;

@@ -81,14 +81,14 @@
 							<i class="fa fa-user"></i> Profile
 						</a>
 					</li>
-					<li class="sub-menu">
+					<li class="sub-menu open">
 						<div>
 							<a><i class="fa fa-file-alt"></i> Registration</a>
 							<i class="fas fa-sort-down"></i>
 						</div>
 						<ul>
 							<li><a href="registration.html">My Registration</a></li>
-							<li><a href="ascend.html">Competency Standard</a></li>
+							<li class="active"><a href="ascend.html">Competency Standard</a></li>
 						</ul>
 					</li>
 					<li class="sub-menu">
@@ -106,7 +106,7 @@
 							<i class="fa fa-calendar"></i> Schedule
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="exam.html">
 							<i class="fa fa-pencil-alt"></i> Online Exam
 						</a>
@@ -133,84 +133,42 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Online Exam</li>
+						<li class="breadcrumb-item"><a href="#">Registration</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Competency Standard</li>
 					</ol>
 				</nav>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="d-flex align-items-center justify-content-between justify-content-md-start h-100">
-					<h1>Online Exam</h1>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="d-flex align-items-center justify-content-between justify-content-md-end mt-4 mt-md-0 pt-3 pt-md-0 h-md-45">
-					<form id="search" action="https://kelimutu.wunik.id/admin/user/manage" method="GET">
-						<div class="d-flex align-items-center justify-content-between justify-content-sm-end">
-							<div class="input-group">
-								<input type="text" id="searching" class="form-control" name="search" value="" placeholder="Type your keywords">
-								<div class="input-group-append">
-									<button class="btn btn-primary btn-icon" type="submit">
-										<i class="fas fa-search mx-2"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
+					<h1>Competency Standard of ASCEND</h1>
 				</div>
 			</div>
 		</div>
 
-		<div class="table-responsive px-1">
-			<table class="table table-striped rounded bg-white shadow">
-				<thead class="table-primary">
-					<tr>
-						<th class="text-right" width="50">#</th>
-						<th style="min-width:200px">Exam Title</th>
-						<th style="min-width:125px">Date</th>
-						<th>Status</th>
-						<th class="text-center" width="125">Detail</th>
-					</tr>
-				</thead>
-				<tbody class="valign-top">
-					<tr>
-						<td class="text-right">1</td>
-						<td>Ut officia exercitation elit consequat laboris</td>
-						<td>2 Dec 2020</td>
-						<td><div class="d-flex align-items-center justify-content-start text-danger"><i class="fas fa-times mr-1"></i>Failed</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="score.html">Result</div></a></td>
-					</tr>
-					<tr>
-						<td class="text-right">2</td>
-						<td>Non esse fugiat minim irure ut elit deserunt irure</td>
-						<td>31 Dec 2020</td>
-						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-check mr-1"></i>Done</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="score.html">Result</a></td>
-					</tr>
-					<tr>
-						<td class="text-right">3</td>
-						<td>Irure labore veniam dolor exercitation proident nulla</td>
-						<td>2 Jan 2021</td>
-						<td><div class="d-flex align-items-center justify-content-start">Available</div></td>
-						<td><a class="btn btn-outline-primary font-sm" href="exam-detail.html">Start Exam</a></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="d-md-flex justify-content-between py-4">
-			<div class="d-md-flex align-items-center rounded font-sm mb-4 pb-2 mb-md-3 pb-md-0 list-desc">
-				<a href="#">
-					Available (1)
-				</a>
-				<a href="#">
-					Done (1)
-				</a>
-				<a href="#">
-					Failed (1)
-				</a>
-
-				<i class="fas fa-grip-lines-vertical separator"></i>
-				Total 3
+		<div class="card">
+			<div class="card-body">
+				<p><b>Sub Title</b></p>
+				<p>Veniam cupidatat exercitation ut cupidatat aliqua ullamco adipisicing commodo enim quis enim et cillum. Irure nisi aute eiusmod cillum culpa culpa proident pariatur excepteur consectetur laboris occaecat dolore ullamco voluptate ut. Lorem ipsum quis ex ut in qui ullamco laboris cupidatat reprehenderit. Commodo culpa cillum excepteur irure est sit sint duis incididunt.</p>
+				<br>
+				<p><b>Sub Title</b></p>
+				<p>Ullamco cupidatat occaecat tempor consequat ut aute pariatur esse magna magna laborum commodo amet aliquip dolor eiusmod culpa. Aliqua tempor labore ut ad sunt ex cillum veniam ut aliquip reprehenderit velit eu commodo laborum in :</p>
+				<ol class="pl-3">
+					<li>Et proident incididunt nulla nulla irure consequat in consequat consectetur reprehenderit aliqua veniam occaecat quis enim id.</li>
+					<li>Lorem ipsum non labore non proident amet consequat veniam quis et nostrud culpa do.</li>
+					<li>Lorem ipsum ut velit reprehenderit laborum cupidatat aliqua velit excepteur magna officia excepteur.</li>
+					<li>Eu deserunt laborum ut in velit in id in dolor eu qui consequat velit et mollit laboris voluptate nisi.</li>
+					<li>Do laboris veniam ex nostrud dolore laboris enim proident nulla.</li>
+					<li>Culpa elit irure ut elit enim cillum do proident ut amet excepteur tempor nulla fugiat eiusmod reprehenderit est magna.</li>
+				</ol>
+				<br>
+				<p><b>Sub Title</b></p>
+				<p>Nisi velit aliquip irure et velit laborum sit non aute sit irure elit ut ad aliqua nulla ad. Anim duis in aute esse aliqua veniam esse magna officia esse dolor mollit ad magna elit non. Nulla ullamco eiusmod ut incididunt tempor tempor eu consectetur et duis est nulla cupidatat cupidatat officia id est nisi. Lorem ipsum veniam nostrud ut deserunt est nulla anim non velit sint reprehenderit sed duis enim quis reprehenderit nulla voluptate consequat :</p>
+				<ul class="pl-3">
+					<li>Lorem ipsum est et anim ea cillum dolore laboris elit adipisicing aute in minim tempor sint aliquip sit in est.</li>
+					<li>Nulla aliqua minim exercitation consectetur aute mollit commodo in dolore mollit proident labore qui adipisicing irure sed magna in.</li>
+					<li>Aute ea laboris sed in excepteur amet ullamco officia eiusmod in ut nulla ut sunt aliqua anim irure.</li>
+				</ul>
+				<p>In exercitation nulla in veniam dolor sunt ut commodo irure laboris quis elit. Deserunt aute laboris in elit fugiat amet culpa non aute dolore consequat sit. In velit eiusmod reprehenderit nulla nisi labore irure ad labore voluptate in eiusmod dolore veniam. Lorem ipsum nostrud consectetur ea consectetur consectetur minim aute mollit tempor minim incididunt aliquip irure proident eu ex laboris ut labore.</p>
 			</div>
 		</div>
 

@@ -83,7 +83,17 @@
 					</li>
 					<li class="sub-menu">
 						<div>
-							<a href="#"><i class="fa fa-chalkboard-teacher"></i> Course</a>
+							<a><i class="fa fa-file-alt"></i> Registration</a>
+							<i class="fas fa-sort-down"></i>
+						</div>
+						<ul>
+							<li><a href="registration.html">My Registration</a></li>
+							<li><a href="ascend.html">Competency Standard</a></li>
+						</ul>
+					</li>
+					<li class="sub-menu">
+						<div>
+							<a><i class="fa fa-chalkboard-teacher"></i> Course</a>
 							<i class="fas fa-sort-down"></i>
 						</div>
 						<ul>
@@ -92,8 +102,13 @@
 						</ul>
 					</li>
 					<li>
+						<a href="schedule.html">
+							<i class="fa fa-calendar"></i> Schedule
+						</a>
+					</li>
+					<li>
 						<a href="exam.html">
-							<i class="fa fa-pencil-alt"></i> Exam
+							<i class="fa fa-pencil-alt"></i> Online Exam
 						</a>
 					</li>
 					<li>
@@ -151,7 +166,9 @@
 					<tr>
 						<th class="text-right" width="50">#</th>
 						<th style="min-width:200px">Certificate Title</th>
-						<th style="min-width:125px">Date</th>
+						<th style="min-width:125px">Date Released</th>
+						<th style="min-width:125px">Date Expired</th>
+						<th>Status</th>
 						<th class="text-center" width="125">Detail</th>
 					</tr>
 				</thead>
@@ -159,19 +176,25 @@
 					<tr>
 						<td class="text-right">1</td>
 						<td>Ut mollit excepteur aliquip officia</td>
-						<td>2 Dec 2020</td>
-						<td><a class="btn btn-outline-primary font-sm" href="certificate-detail.html">View</a></td>
+						<td>10 Sep 2020</td>
+						<td>10 Nov 2020</td>
+						<td><div class="d-flex align-items-center justify-content-start text-danger"><i class="fas fa-times mr-1"></i>Expired</div></td>
+						<td><a class="btn btn-outline-primary font-sm" href="course-all.html">Take Course</a></td>
 					</tr>
 					<tr>
 						<td class="text-right">2</td>
 						<td>Anim pariatur consectetur eu</td>
-						<td>31 Dec 2020</td>
+						<td>30 Jan 2021</td>
+						<td>30 Apr 2021</td>
+						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-check mr-1"></i>Valid</div></td>
 						<td><a class="btn btn-outline-primary font-sm" href="certificate-detail.html">View</a></td>
 					</tr>
 					<tr>
 						<td class="text-right">3</td>
 						<td>Sit ut ad in cupidatat consequat sunt fugiat</td>
-						<td>2 Jan 2021</td>
+						<td>1 May 2021</td>
+						<td>1 Oct 2021</td>
+						<td><div class="d-flex align-items-center justify-content-start text-success"><i class="fas fa-check mr-1"></i>Valid</div></td>
 						<td><a class="btn btn-outline-primary font-sm" href="certificate-detail.html">View</a></td>
 					</tr>
 				</tbody>

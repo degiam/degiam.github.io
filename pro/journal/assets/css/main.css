@@ -195,10 +195,15 @@
 	.dark header, .dark aside {
 		background: var(--bs-dark-side);
 	}
-	.dark a {
+	.dark a:not(.btn):not(.page-link) {
 		color: var(--bs-warning);
 	}
+	.dark a.nav-link {
+		color: var(--bs-white) !important;
+	}
 	.dark .breadcrumb-item,
-	.dark .breadcrumb-item.active {
+	.dark .breadcrumb-item.active,
+	.dark .table,
+	.dark .table-hover>tbody>tr:hover {
 		color: var(--bs-white);
 	}

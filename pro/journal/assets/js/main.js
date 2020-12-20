@@ -78,8 +78,27 @@
 	}
 
 // Dark Mode
-	function darkMode() {
+	if ( localStorage.getItem('dark') !== null ) {
 		toggleClass('body', 'dark')
+		document.getElementById('dark-mode').setAttribute('checked','true')
+	}
+
+	function darkMode() {
+		if ( localStorage.getItem('dark') === null ) {
+			toggleClass('body', 'transition-off')
+			setTimeout(function() {
+				toggleClass('body', 'dark')
+				toggleClass('body', 'transition-on')
+			}, 75)
+			localStorage.setItem('dark','on')
+		} else {
+			toggleClass('body', 'transition-on')
+			setTimeout(function() {
+				toggleClass('body', 'dark')
+				toggleClass('body', 'transition-off')
+			}, 75)
+			localStorage.removeItem('dark')
+		}
 	}
 
 // Responsive

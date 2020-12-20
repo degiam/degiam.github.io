@@ -61,6 +61,22 @@
 		removeClass('.menu', 'show')
 	}
 
+// Form
+	function showPassword() {
+		var inputPassword = document.getElementById('input-password-show')
+			inputButton = document.getElementById('input-password-button')
+
+		inputButton.onclick = function() {
+			if (inputPassword.getAttribute('type') === 'password') {
+				toggleClass('#input-password-button>svg','d-none')
+				inputPassword.setAttribute('type','text')
+			} else {
+				toggleClass('#input-password-button>svg','d-none')
+				inputPassword.setAttribute('type','password');
+			}
+		}
+	}
+
 // Dark Mode
 	function darkMode() {
 		toggleClass('body', 'dark')

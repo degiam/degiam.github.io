@@ -12,6 +12,7 @@
 		--bs-blue-dark: #0853c3;
 		--bs-dark-main: #1f262d;
 		--bs-dark-side: #12181d;
+		--bs-form-focus: #86b7fe;
 	}
 
 	body {
@@ -23,6 +24,18 @@
 		body {
 			font-weight: 400;
 		}
+	}
+
+	.form-control,
+	.form-select,
+	.input-group-text {
+		font-size: .875rem;
+	}
+	.form-check-label {
+		cursor: pointer;
+	}
+	.form-control:focus + .input-group-text {
+		border-color: var(--bs-form-focus);
 	}
 
 /* Layout */
@@ -125,7 +138,8 @@
 
 /* Focus */
 	.btn:focus,
-	.btn-check:focus+.btn {
+	.btn-check:focus+.btn,
+	.page-link:focus {
 		box-shadow: none;
 	}
 

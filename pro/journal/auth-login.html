@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<title>[[ site.name ]]</title>
+	<meta name="title" content="[[ site.name ]]">
+	<meta name="description" content="[[ site.description ]]">
+	<meta name="keywords" content="[[ site.keywords ]]">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Open Graph -->
+	<meta property="og:title" content="[[ site.name ]]">
+	<meta property="og:description" content="[[ site.description ]]">
+	<meta property="og:image" content="assets/img/ogp.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="[[ site.name ]]">
+	<meta property="og:url" content="[[ site.url ]]">
+	<meta property="twitter:image" content="assets/img/ogp.jpg">
+	<!-- Canonical -->
+	<link rel="canonical" href="[[ site.url ]]">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
+	<!-- Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="[[ site.name ]]">
+	<link rel="apple-touch-icon" href="assets/icon/icon-72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/icon-512x512.png">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#023466">
+	<meta name="msapplication-TileColor" content="#023466">
+	<meta name="theme-color" content="#023466">
+	<!-- Preload -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+	<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="style" href="assets/css/main.css">
+	<link rel="preload" as="script" href="assets/js/main.js">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<main>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 col-lg-5 mx-auto">
+				<div class="card shadow">
+					<div class="card-body p-4">
+
+						<div class="my-3 pb-2">
+							<a class="text-decoration-none" href="index.html">
+								<center>
+									<img width="100" height="100" src="assets/img/logo-uad.svg" alt="Universitas Ahmad Dahlan">
+									<h1 class="fs-3 my-2 fw-bold text-dark">SSE Journal</h1>
+								</center>
+							</a>
+						</div>
+
+						<form spellcheck="false">
+							<div class="mb-3">
+								<label for="input-email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="input-email" placeholder="Ketikkan email Anda">
+							</div>
+							<div class="mb-3">
+								<label for="input-password-show" class="form-label" onclick="showPassword()">Kata Sandi</label>
+								<div class="input-group">
+									<input type="password" class="form-control border-end-0" id="input-password-show" placeholder="Ketikkan kata sandi Anda" aria-describedby="input-password-button" onclick="showPassword()">
+									<span class="input-group-text border-start-0 bg-white" id="input-password-button"onclick="showPassword()">
+										<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" class="d-none">
+											<path d="M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M12,4.5C17,4.5 21.27,7.61 23,12C21.27,16.39 17,19.5 12,19.5C7,19.5 2.73,16.39 1,12C2.73,7.61 7,4.5 12,4.5M3.18,12C4.83,15.36 8.24,17.5 12,17.5C15.76,17.5 19.17,15.36 20.82,12C19.17,8.64 15.76,6.5 12,6.5C8.24,6.5 4.83,8.64 3.18,12Z"/>
+										</svg>
+										<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+											<path d="M2,5.27L3.28,4L20,20.72L18.73,22L15.65,18.92C14.5,19.3 13.28,19.5 12,19.5C7,19.5 2.73,16.39 1,12C1.69,10.24 2.79,8.69 4.19,7.46L2,5.27M12,9A3,3 0 0,1 15,12C15,12.35 14.94,12.69 14.83,13L11,9.17C11.31,9.06 11.65,9 12,9M12,4.5C17,4.5 21.27,7.61 23,12C22.18,14.08 20.79,15.88 19,17.19L17.58,15.76C18.94,14.82 20.06,13.54 20.82,12C19.17,8.64 15.76,6.5 12,6.5C10.91,6.5 9.84,6.68 8.84,7L7.3,5.47C8.74,4.85 10.33,4.5 12,4.5M3.18,12C4.83,15.36 8.24,17.5 12,17.5C12.69,17.5 13.37,17.43 14,17.29L11.72,15C10.29,14.85 9.15,13.71 9,12.28L5.6,8.87C4.61,9.72 3.78,10.78 3.18,12Z"/>
+										</svg>
+									</span>
+								</div>
+							</div>
+							<div class="mb-3 pt-1">
+								<div class="row g-2">
+									<div class="col pt-2">
+										<input class="form-check-input me-1" type="checkbox" id="input-checkbox-1">
+										<label class="form-check-label" for="input-checkbox-1">Ingat Saya</label>
+									</div>
+									<div class="col-auto">
+										<button type="submit" class="btn btn-sm btn-primary rounded-3 py-2 px-3">Masuk</button>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="my-4"><hr></div>
+
+						<div class="row g-2">
+							<div class="col my-2 py-1">
+								<a class="text-decoration-none text-dark" href="auth-forgot.html">
+									<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+										<path d="M18.2,10V6.2C18.2,2.8,15.4,0,12,0S5.8,2.8,5.8,6.2V10c-1.4,1.5-2.2,3.5-2.2,5.6c0,4.6,3.8,8.4,8.4,8.4 s8.4-3.8,8.4-8.4C20.4,13.5,19.5,11.5,18.2,10z M12,2.2c2.2,0,4,1.8,4,4v2.1c-1.2-0.7-2.6-1-4-1c-1.4,0-2.8,0.4-4,1V6.2 C8,4,9.8,2.2,12,2.2z M12,21.8c-3.4,0-6.2-2.8-6.2-6.2S8.6,9.5,12,9.5s6.2,2.8,6.2,6.2S15.4,21.8,12,21.8z M12,12.7 c-1,0-1.8,0.8-1.8,1.8c0,0.6,0.3,1.1,0.7,1.5v1.5c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1V16c0.4-0.3,0.7-0.9,0.7-1.5 C13.8,13.5,13,12.7,12,12.7z"/>
+									</svg>
+									Lupa kata sandi
+								</a>
+							</div>
+							<div class="col-auto my-2 py-1">
+								<a class="text-decoration-none text-dark" href="auth-register.html">
+									<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+										<path d="M15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4M15,5.9C16.16,5.9 17.1,6.84 17.1,8C17.1,9.16 16.16,10.1 15,10.1A2.1,2.1 0 0,1 12.9,8A2.1,2.1 0 0,1 15,5.9M4,7V10H1V12H4V15H6V12H9V10H6V7H4M15,13C12.33,13 7,14.33 7,17V20H23V17C23,14.33 17.67,13 15,13M15,14.9C17.97,14.9 21.1,16.36 21.1,17V18.1H8.9V17C8.9,16.36 12,14.9 15,14.9Z"/>
+									</svg>
+									Daftar
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="text-center mt-4">
+					<small>&copy; 2021 &bullet; <strong>Universitas Ahmad Dahlan</strong></small>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		body {
+			min-height: 630px;
+			justify-content: center;
+			background-color: var(--bs-gray-light);
+		}
+		main {
+			width: 100%;
+		}
+		.container-fluid {
+			padding: 1rem;
+		}
+		@media (max-width: 767px) {
+			body {
+				padding-top: 0;
+			}
+		}
+	</style>
+</main>
+
+<section>
+	<!-- Main -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
+	<script src="assets/js/main.js" defer></script>
+	<!-- Progressive Web App -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker
+				.register('service-worker.js')
+				.then(res => console.log('service worker registered'))
+				.catch(err => console.log('service worker not registered', err))
+			})
+		}
+	</script>
+	<script src="service-worker.js"></script>
+</section>
+
+</body>
+</html>

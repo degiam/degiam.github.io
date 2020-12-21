@@ -4,9 +4,9 @@
 	"description": "{{ site.description }}",
 	"lang": "id-ID",
 	"dir": "ltr",
-	"theme_color": "#FFFFFF",
+	"theme_color": "#023466",
 	"start_url": "index.html",
-	"background_color": "#FFFFFF",
+	"background_color": "#023466",
 	"display": "standalone",
 	"orientation": "portrait-primary",
 	"icons": [{

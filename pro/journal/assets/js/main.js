@@ -61,19 +61,36 @@
 		removeClass('.menu', 'show')
 	}
 
+// Collapse
+	function collapseAll() {
+		addClass('.multi-collapse','show')
+	}
+
 // Form
 	function showPassword() {
-		var inputPassword = document.getElementById('input-password-show')
-			inputButton = document.getElementById('input-password-button')
+		var input0 = document.querySelectorAll('#input-password-show')[0]
+			input1 = document.querySelectorAll('#input-password-show')[1]
+			button0 = document.querySelectorAll('#input-password-button')[0]
+			button1 = document.querySelectorAll('#input-password-button')[1]
 
-		inputButton.onclick = function() {
-			if (inputPassword.getAttribute('type') === 'password') {
+		function showHide() {
+			if (input0.getAttribute('type') === 'password' || input1.getAttribute('type') === 'password') {
 				toggleClass('#input-password-button>svg','d-none')
-				inputPassword.setAttribute('type','text')
+				input0.setAttribute('type','text')
+				input1.setAttribute('type','text')
 			} else {
 				toggleClass('#input-password-button>svg','d-none')
-				inputPassword.setAttribute('type','password');
+				input0.setAttribute('type','password');
+				input1.setAttribute('type','password');
 			}
+		}
+
+		button0.onclick = function() {
+			showHide()
+		}
+
+		button1.onclick = function() {
+			showHide()
 		}
 	}
 

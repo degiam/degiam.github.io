@@ -68,36 +68,45 @@
 
 // Form
 	function showPassword() {
-		var input0 = document.querySelectorAll('#input-password-show')[0]
-			input1 = document.querySelectorAll('#input-password-show')[1]
-			button0 = document.querySelectorAll('#input-password-button')[0]
-			button1 = document.querySelectorAll('#input-password-button')[1]
+		var input = document.querySelectorAll('form [aria-describedby="input-password-button"]')
 
-		function showHide() {
-			if (input0.getAttribute('type') === 'password' || input1.getAttribute('type') === 'password') {
-				toggleClass('#input-password-button>svg','d-none')
-				input0.setAttribute('type','text')
-				input1.setAttribute('type','text')
+		for(var i = 0; i < input.length; i++) {
+			if ( input[i].getAttribute('type') === 'password' ) {
+				input[i].setAttribute('type','text')
 			} else {
-				toggleClass('#input-password-button>svg','d-none')
-				input0.setAttribute('type','password');
-				input1.setAttribute('type','password');
+				input[i].setAttribute('type','password')
 			}
 		}
 
-		button0.onclick = function() {
-			showHide()
+		toggleClass('#input-password-button>svg','d-none')
+	}
+
+	var checkPassword = function() {
+		var input = document.querySelectorAll('form [aria-describedby="input-password-button"]')
+			alert = document.querySelector('form .input-password-alert')
+
+		if ( input.value !== null ) {
+			if ( input[0].value == input[1].value) {
+				alert.style.color = 'var(--bs-green)'
+				alert.innerHTML = 'Kata sandi cocok!'
+			} else {
+				alert.style.color = 'var(--bs-red)'
+				alert.innerHTML = 'Kata sandi belum cocok!'
+			}
 		}
 
-		button1.onclick = function() {
-			showHide()
+		for(var i = 0; i < input.length; i++) {
+			if ( input[i].value.length == 0 ) alert.innerHTML = ''
 		}
 	}
 
 // Dark Mode
 	if ( localStorage.getItem('dark') !== null ) {
 		toggleClass('body', 'dark')
-		document.getElementById('dark-mode').setAttribute('checked','true')
+		var toggle = document.getElementById('dark-mode')
+		if ( toggle !== null ) {
+			toggle.setAttribute('checked','true')
+		}
 	}
 
 	function darkMode() {

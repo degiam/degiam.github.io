@@ -100,6 +100,102 @@
 		}
 	}
 
+	function fileSize(bytes) {
+		var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+		if (bytes == 0) return '0 Byte';
+		var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+		return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+	}
+
+	function uploadFile(upload,element) {
+		var file = upload.target.files[0]
+			reader = new FileReader()
+			parent = document.querySelector('#' + element).closest('.custom-file')
+			input = parent.querySelector('.custom-file-input')
+			label = parent.querySelector('.custom-file-label')
+			size = parent.querySelector('.custom-file-size')
+			alert = parent.querySelector('.custom-file-size-alert')
+			alertNone = parent.querySelector('.custom-file-size-alert.d-none')
+			maxfilesize = 1024 * 1024
+
+		reader.readAsText(file)
+
+		reader.onload = function(e) {
+			if ( sessionStorage.getItem('Browse') === null && sessionStorage.getItem('Size') === null ) {
+				sessionStorage.setItem('Browse',label.innerHTML)
+				sessionStorage.setItem('Size',size.innerHTML)
+			}
+			label.innerHTML = file.name
+			size.innerHTML = fileSize(file.size)
+			if ( file.size > maxfilesize ) {
+				alert.classList.remove('d-none')
+			} else {
+				if ( alertNone === null ) {
+					alert.classList.add('d-none')
+				}
+			}
+		}
+	}
+
+	function uploadImage(upload,element) {
+		var file = upload.target.files[0]
+			reader = new FileReader()
+			parent = document.querySelector('#' + element).closest('.custom-file')
+			input = parent.querySelector('.custom-file-input')
+			label = parent.querySelector('.custom-file-label')
+			size = parent.querySelector('.custom-file-size')
+			thumbnail = parent.querySelector('.custom-file-thumbnail')
+			properties = parent.querySelector('.custom-file-thumbnail-properties')
+			remove = parent.querySelector('.custom-file-thumbnail-remove')
+			alert = parent.querySelector('.custom-file-size-alert')
+			alertNone = parent.querySelector('.custom-file-size-alert.d-none')
+			maxfilesize = 1024 * 1024
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader()
+				reader.onload = function(e) {
+					thumbnail.src = e.target.result
+					thumbnail.classList.remove('d-none')
+					properties.classList.remove('d-none')
+				}
+				reader.readAsDataURL(input.files[0])
+			}
+		}
+
+		readURL(input)
+
+		reader.readAsText(file)
+
+		reader.onload = function(e) {
+			if ( sessionStorage.getItem('Browse') === null && sessionStorage.getItem('Size') === null ) {
+				sessionStorage.setItem('Browse',label.innerHTML)
+				sessionStorage.setItem('Size',size.innerHTML)
+			}
+			label.innerHTML = file.name
+			size.innerHTML = fileSize(file.size)
+			if ( file.size > maxfilesize ) {
+				alert.classList.remove('d-none')
+			} else {
+				if ( alertNone === null ) {
+					alert.classList.add('d-none')
+				}
+			}
+		}
+	}
+
+	function uploadImageRemove(element) {
+		var parent = element.closest('.custom-file')
+		parent.querySelector('.custom-file-input').value = ''
+		parent.querySelector('.custom-file-thumbnail').src = ''
+		parent.querySelector('.custom-file-label').innerHTML = sessionStorage.getItem('Browse')
+		parent.querySelector('.custom-file-size').innerHTML = sessionStorage.getItem('Size')
+		parent.querySelector('.custom-file-thumbnail-properties').classList.add('d-none')
+		if ( parent.querySelector('.custom-file-size-alert.d-none') === null ) {
+			parent.querySelector('.custom-file-size-alert').classList.add('d-none')
+		}
+	}
+
 // Dark Mode
 	if ( localStorage.getItem('dark') !== null ) {
 		toggleClass('body', 'dark')

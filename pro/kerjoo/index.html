@@ -18,7 +18,6 @@
 				height: 0;
 			}
 		}
-
 		body>div.preloader {
 			position: fixed;
 			background: white;
@@ -33,15 +32,12 @@
 			align-items: center;
 			justify-content: center;
 		}
-
 		body:not(.loaded)>div.preloader {
 			opacity: 1;
 		}
-
 		body:not(.loaded) {
 			overflow: hidden;
 		}
-
 		body.loaded>div.preloader {
 			animation: hidePreloader .5s linear .5s forwards;
 		}

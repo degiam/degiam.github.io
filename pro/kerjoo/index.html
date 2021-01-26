@@ -354,24 +354,24 @@
 			<div class="container-fluid">
 				<div class="row py-4 justify-content-md-center align-items-center">
 					<div class="col-md-6">
-						<div class="copyright text-sm font-weight-bold text-center text-md-left">
+						<div class="copyright text-sm font-weight-bold">
 							© 2021 <a href="https://kerjoo.com/absensi" class="font-weight-bold" target="_blank">Kerjoo.com</a> - Aplikasi Absensi Online Untuk Karyawan
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="d-flex justify-content-center justify-content-md-end mt-4 mt-md-0">
-							<div class="d-flex mr-2">
-								<a class="mx-2" target="_blank" rel="noreferrer" href="#">
-									<img alt="Facebook" src="img/icon-facebook.png" height="22px">
+						<div class="d-flex justify-content-between justify-content-md-end mt-4 mt-md-0">
+							<div class="d-flex justify-content-center mr-2">
+								<a class="mx-2 filter-white-unhover" target="_blank" rel="noreferrer" href="#">
+									<img alt="Facebook" src="img/icon-facebook.svg" height="22px">
 								</a>
-								<a class="mx-2" target="_blank" rel="noreferrer" href="#">
-									<img alt="Instagram" src="img/icon-instagram.png" height="22px">
+								<a class="mx-2 filter-white-unhover" target="_blank" rel="noreferrer" href="#">
+									<img alt="Instagram" src="img/icon-instagram.svg" height="22px">
 								</a>
-								<a class="mx-2" target="_blank" rel="noreferrer" href="#">
-									<img alt="Twitter" src="img/icon-twitter.png" height="22px">
+								<a class="mx-2 filter-white-unhover" target="_blank" rel="noreferrer" href="#">
+									<img alt="Twitter" src="img/icon-twitter.svg" height="22px">
 								</a>
 							</div>
-							<img alt="Image placeholder" src="https://kerjoo.com/assets/img/brand/light.svg" height="26px">
+							<img class="filter-white-unhover" alt="Kerjoo" src="img/green.svg" height="26px">
 						</div>
 					</div>
 				</div>
@@ -392,6 +392,9 @@
 
 <!-- Additional Style -->
 	<style type="text/css">
+		.filter-white-unhover:not(:hover) {
+			filter: brightness(0) invert(1);
+		}
 		@media (max-width: 991px) {
 			.navbar-collapse {
 				position: absolute;

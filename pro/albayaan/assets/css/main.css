@@ -248,7 +248,7 @@
 	}
 	@media (max-width: 991px) {
 		.navbar-brand {
-			width: calc(100% - 100px);
+			width: calc(100% - 70px);
 		}
 	}
 
@@ -308,6 +308,9 @@
 /* Footer */
 	footer a:not(:hover) {
 		color: currentColor;
+	}
+	footer a:hover {
+		color: var(--theme-2);
 	}
 
 /* List Item */

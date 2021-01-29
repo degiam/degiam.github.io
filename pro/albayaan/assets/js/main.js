@@ -26,3 +26,25 @@
 			$(this).attr(aosDelay,start++ * aosSecond)
 		})
 	})
+
+// Title
+	$('.main-title').each(function() {
+		var title = $(this)
+			titleHTML = title.html()
+			titleSplit = titleHTML.split(' ')
+			titleAfter = ''
+
+		for (var i=0; i < titleSplit.length; i++) {
+			if (i%2==0) {
+				titleAfter += ' <span class="text-theme-1">';
+			}
+
+			titleAfter += titleSplit[i]
+
+			if (i%2==0) {
+				titleAfter += '</span> '
+			}
+		}
+
+		title.html(titleAfter)
+	})

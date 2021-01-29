@@ -7,26 +7,33 @@
 
 /* Base */
 	:root {
-		--theme-1: #03a19c;
+		--theme-1: #d256a6;
 		--theme-2: #f7b10d;
+		--theme-3: #8344d6;
+
+		--theme-lighten-1: #fff6fc;
+		--theme-lighten-2: #fff6e0;
+		--theme-lighten-3: #f9f5ff;
 
 		--dark: #262a2d;
 		--darker: #1e2023;
 	}
 
 	body {
-		font-family: 'Work Sans', sans-serif;
-		/*font-size: .875rem;*/
+		font-family: 'Fira Sans', sans-serif;
+		font-size: .9rem;
 		color: var(--dark);
 		overflow-x: hidden;
+		padding-top: 140px;
 	}
 
-	/*.form-control,
+	.btn,
+	.form-control,
 	.form-select,
 	.input-group-text,
 	.dropdown-menu {
-		font-size: .875rem;
-	}*/
+		font-size: .9rem;
+	}
 
 	@media (min-width: 1400px) {
 		.container {
@@ -47,6 +54,18 @@
 	.bg-theme-2 {
 		background-color: var(--theme-2);
 	}
+	.bg-theme-3 {
+		background-color: var(--theme-3);
+	}
+	.bg-theme-lighten-1 {
+		background-color: var(--theme-lighten-1);
+	}
+	.bg-theme-lighten-2 {
+		background-color: var(--theme-lighten-2);
+	}
+	.bg-theme-lighten-3 {
+		background-color: var(--theme-lighten-3);
+	}
 	.bg-dark {
 		background-color: var(--dark)!important;
 	}
@@ -59,6 +78,9 @@
 	}
 	.text-theme-2 {
 		color: var(--theme-2);
+	}
+	.text-theme-3 {
+		color: var(--theme-3);
 	}
 
 /* Focus */
@@ -139,16 +161,19 @@
 
 /* Border */
 	.rounded-1 {
-		border-radius: .25rem;
+		border-radius: .3rem;
 	}
 	.rounded-2 {
-		border-radius: .5rem;
+		border-radius: .4rem;
 	}
 	.rounded-3 {
-		border-radius: .75rem;
+		border-radius: .5rem;
 	}
 
 /* Opacity */
+	.opacity-3 {
+		opacity: .3;
+	}
 	.opacity-5 {
 		opacity: .5;
 	}
@@ -160,20 +185,36 @@
 	.btn:hover {
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
 	}
-	.btn-primary,
-	.btn-primary:hover,
-	.btn-primary.focus,
-	.btn-primary:focus {
-		color: var(--dark);
-		background-color: #f4ded3;
-		border-color: #f4ded3;
-	}
 	.btn-light,
 	.btn-light:hover,
 	.btn-light.focus,
 	.btn-light:focus {
 		background-color: var(--white);
 		border-color: var(--white);
+	}
+	.btn-theme-1,
+	.btn-theme-1:hover,
+	.btn-theme-1.focus,
+	.btn-theme-1:focus {
+		color: var(--white);
+		background-color: var(--theme-1);
+		border-color: var(--theme-1);
+	}
+	.btn-theme-2,
+	.btn-theme-2:hover,
+	.btn-theme-2.focus,
+	.btn-theme-2:focus {
+		color: var(--white);
+		background-color: var(--theme-2);
+		border-color: var(--theme-2);
+	}
+	.btn-theme-3,
+	.btn-theme-3:hover,
+	.btn-theme-3.focus,
+	.btn-theme-3:focus {
+		color: var(--white);
+		background-color: var(--theme-3);
+		border-color: var(--theme-3);
 	}
 
 /* Form */
@@ -248,7 +289,13 @@
 	}
 	@media (max-width: 991px) {
 		.navbar-brand {
-			width: calc(100% - 70px);
+			width: 100%;
+			margin: 0;
+			justify-content: center;
+		}
+		.navbar-nav {
+			height: calc(100vh - 148px);
+			overflow: auto;
 		}
 	}
 
@@ -265,7 +312,7 @@
 		border: 0;
 		width: 1rem;
 		height: 1rem;
-		margin-top: 4px;
+		margin-top: 2px;
 		background-repeat: no-repeat;
 		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z'/></svg>");
 	}
@@ -310,7 +357,7 @@
 		color: currentColor;
 	}
 	footer a:hover {
-		color: var(--theme-2);
+		color: var(--theme-1);
 	}
 
 /* List Item */
@@ -341,15 +388,15 @@
 	.bg-theme-1 .list-group-item {
 		border-color: rgba(255,255,255,.25);
 	}
-	#testimonial .card {
+	#testimonial .carousel-item > div {
 		max-width: 500px;
 	}
-	#testimonial .card .ornament {
+	#testimonial .carousel-item .ornament {
 		position: absolute;
-		font-size: 150px;
+		font-size: 90px;
 		opacity: .05;
-		bottom: -1rem;
-		right: 0;
+		top: -28px;
+		left: -44px;
 		line-height: 1;
 	}
 	.modal-close {
@@ -365,10 +412,32 @@
 	.map-embed iframe {
 		width: 100%;
 		height: 300px;
-		border-radius: .5rem;
+		border-radius: .3rem;
 	}
 	.youtube-embed iframe {
 		max-width: 100%;
-		border-radius: .5rem;
+		height: 200px;
+		border-radius: .3rem;
 		background-color: var(--light);
+	}
+	@media (min-width: 576px) {
+		.youtube-embed iframe {
+			height: 280px;
+		}
+	}
+	@media (min-width: 992px) {
+		.youtube-embed iframe {
+			width: 100%;
+			height: 240px;
+		}
+	}
+	@media (min-width: 1200px) {
+		.youtube-embed iframe {
+			height: 290px;
+		}
+	}
+	@media (min-width: 1400px) {
+		.youtube-embed iframe {
+			height: 350px;
+		}
 	}

@@ -48,3 +48,10 @@
 
 		title.html(titleAfter)
 	})
+
+// Search
+	$('[data-target="#search"]').click(function() {
+		setTimeout(function(){
+			$('#search input').focus()
+		},500)
+	})

@@ -128,7 +128,7 @@
 	<section class="slice pt-5 pb-0 bg-custom-2">
 		<div class="container">
 			<div class="row row-grid align-items-center">
-				<div class="col-12 col-lg-8 col-xl-7 pr-md-5">
+				<div class="col-12 col-lg-7">
 					<!-- Heading -->
 					<h1 class="display-4 text-center text-lg-left mb-3">
 						Peluang Karir di Kerjoo
@@ -151,10 +151,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 col-xl-5 text-center">
+				<div class="col-12 col-lg-5 text-center">
 					<!-- Image -->
 					<figure class="w-100">
-						<img alt="Peluang Karir di Kerjoo" src="karir/main.png" class="img-fluid">
+						<img alt="Peluang Karir di Kerjoo" src="karir/main-photo.png" class="img-fluid">
 					</figure>
 				</div>
 			</div>
@@ -380,6 +380,14 @@
 			border-color: transparent;
 		}
 	</style>
+
+<!-- Additional Script -->
+	<script>
+		$(document).on('click', 'a[href^="#"]', function(event) {
+			event.preventDefault()
+			$('html, body').animate({scrollTop: $($.attr(this, 'href')).offset().top}, 500)
+		})
+	</script>
 
 </body>
 </html>

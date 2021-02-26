@@ -214,7 +214,7 @@ Lalu ikuti @twibbonize
 	// Image Download
 		document.querySelector('.download').onclick = function() {
 			document.querySelector('#combine')[0].toBlob(function(blob) {
-				saveAs(blob, name + '.png')
+				saveAs(blob, 'twibboz.png')
 			})
 			section[0].classList.toggle('d-none')
 			section[1].classList.toggle('d-none')

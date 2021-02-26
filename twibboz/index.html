@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<title>Twibboz</title>
+	<meta name="title" content="Twibboz">
+	<meta name="description" content="Buat kampanye kalian menjadi viral!">
+	<meta name="keywords" content="twibbon, gambar, viral, kampanye">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Cache -->
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Wed, 01 Jan 2020 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
+	<!-- Open Graph -->
+	<meta property="og:title" content="Twibboz">
+	<meta property="og:description" content="Buat kampanye kalian menjadi viral!">
+	<meta property="og:image" content="ogp.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Twibboz">
+	<meta property="og:url" content="https://degiam.github.io/twibboz">
+	<meta property="twitter:image" content="ogp.jpg">
+	<!-- Canonical -->
+	<link rel="canonical" href="https://degiam.github.io/twibboz">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="favicon.ico">
+	<!-- Preload -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="script" href="canvas-toBlob.js">
+	<link rel="preload" as="style" href="main.css">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<header>
+	<p>PELAJAR NU</p>
+	<h1>HARLAH IPNU 67</h1>
+	<p>Unggah Foto Terbaikmu Untuk Meramaikan Harlah IPNU ke-67 #harlahipnu67 #TransformasiPelajar #BanggaJadiIPNU</p>
+</header>
+
+<section>
+	<div class="title">
+		<h2>Filter</h2>
+		<p>Pilih fotomu yang paling keren!</p>
+	</div>
+
+	<div class="my-3">
+		<canvas id="combine"></canvas>
+	</div>
+
+	<div class="d-flex">
+		<button type="button" class="button block upload">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M21 6H17.8L16 4H10V6H15.1L17 8H21V20H5V11H3V20C3 21.1 3.9 22 5 22H21C22.1 22 23 21.1 23 20V8C23 6.9 22.1 6 21 6M8 14C8 18.45 13.39 20.69 16.54 17.54C19.69 14.39 17.45 9 13 9C10.24 9 8 11.24 8 14M13 11C14.64 11.05 15.95 12.36 16 14C15.95 15.64 14.64 16.95 13 17C11.36 16.95 10.05 15.64 10 14C10.05 12.36 11.36 11.05 13 11M5 6H8V4H5V1H3V4H0V6H3V9H5"/>
+			</svg>
+			<span>Pilih Foto</span>
+			<input type="file">
+		</button>
+		<button type="button" class="button block download d-none">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z"/>
+			</svg>
+			<span>Unduh</span>
+		</button>
+	</div>
+</section>
+
+<section class="d-none">
+	<div class="title">
+		<h2>Caption</h2>
+		<p>Silakan salin <i>caption</i>-nya!</p>
+	</div>
+
+	<div class="my-3">
+		<textarea spellcheck="false" readonly>Aku Bangga Jadi IPNU
+Salam Belajar Berjuang Bertaqwa
+
+(Tag 3 atau lebih temanmu)
+Dapatkan twibbon ini melalui twibbonize.com/gebyarharlahipnu67
+Lalu ikuti @twibbonize
+
+#gebyarharlahipnu67 #twibbonize</textarea>
+	</div>
+	
+	<div class="d-flex">
+		<button type="button" class="button block copy">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
+			</svg>
+			<span>Salin Caption</span>
+		</button>
+	</div>
+</section>
+
+<section class="d-none">
+	<div class="title">
+		<h2>Terima Kasih</h2>
+		<p>Viralkan kampanye ini ke teman-teman kalian!</p>
+	</div>
+
+	<div class="mt-3">
+		<button type="button" class="button block py-1 mb-2 instagram">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+			</svg>
+			<span>Instagram</span>
+		</button>
+		<button type="button" class="button block py-1 mb-2 facebook">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+			</svg>
+			<span>Facebook</span>
+		</button>
+		<button type="button" class="button block py-1 mb-2 twitter">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
+			</svg>
+			<span>Twitter</span>
+		</button>
+		<button type="button" class="button block py-1 mb-2 share">
+			<svg viewBox="0 0 24 24" width="25" height="25">
+				<path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"/>
+			</svg>
+			<span>Salin Tautan</span>
+		</button>
+	</div>
+</section>
+
+<footer></footer>
+
+<slot>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
+	<script src="canvas-toBlob.js"></script>
+	<script>
+	// Variable
+		var name = 'Twibboz Campaign'
+			color1 = '#4449b7'
+			color2 = '#f2f3ff'
+			imageID = '1iOES-STMbg2ZHxLM4ReEbk8KQrhFZwcD'
+			imageURL = 'https://drive.google.com/uc?export=view&id=' + imageID
+
+	// Color
+		document.addEventListener('DOMContentLoaded', function() {
+			let head = document.querySelector('head')
+			style = document.createElement('style')
+			style.innerHTML = ':root{--primary:' + color1 + ';--secondary:' + color2 + ';}'
+			head.appendChild(style)
+		})
+
+	// Image Canvas
+		var section = document.querySelectorAll('section')
+
+		var canvas = new fabric.Canvas('combine')
+
+		canvas.setWidth(1080)
+		canvas.setHeight(1080)
+
+		var canvasWrapper = document.querySelector('#combine')
+		var canvasWrapperWidth = canvasWrapper.clientWidth
+
+		document.querySelector('[type="file"]').onchange = function() {
+			if (this.files && this.files[0]) {
+				var reader = new FileReader()
+				reader.onload = imageIsLoaded
+				reader.readAsDataURL(this.files[0])
+				document.querySelector('.upload span').innerText = 'Ganti Foto'
+				document.querySelector('.download').classList.remove('d-none')
+			}
+		}
+
+		fabric.Image.fromURL(imageURL,function(img){
+			img.scaleToWidth(canvas.getWidth())
+			canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
+		})
+
+		function imageIsLoaded(e) {
+			fabric.Image.fromURL(e.target.result,function(img){
+				var aspectRatio = 1080/1080;
+				var factor = 1080 / img.width;
+				img.set({
+					scaleX: factor,
+					scaleY: factor 
+				});
+				canvas.add(img);
+				canvas.item(0).set({
+					borderColor: 'gray',
+					cornerColor: 'black',
+					cornerSize: 70,
+					borderScaleFactor: 10,
+					hasBorders: true,
+
+					rotatingPointOffset:200,
+					padding:60, 
+					transparentCorners: true
+				});
+				canvas.setActiveObject(canvas.item(0));
+				this.__canvases.push(canvas);
+				canvas.sendToBack(img);
+			})
+		}
+
+	// Image Download
+		document.querySelector('.download').onclick = function() {
+			document.querySelector('#combine')[0].toBlob(function(blob) {
+				saveAs(blob, name + '.png')
+			})
+			section[0].classList.toggle('d-none')
+			section[1].classList.toggle('d-none')
+		}
+
+	// Canvas Frame
+		function frame() {
+			document.querySelector('.canvas-container').style.height = document.querySelector('.canvas-container').clientWidth + 'px'
+		}
+
+		frame()
+
+	// Caption
+		var textarea = document.querySelector('textarea')
+
+		if (textarea.clientHeight < textarea.scrollHeight) {
+			textarea.style.height = textarea.scrollHeight + 'px'
+		}
+
+		document.querySelector('.copy').onclick = function() {
+			let clipboard = document.createElement('textarea')
+				clipboard.style.opacity = '0'
+				clipboard.style.position = 'absolute'
+			clipboard.innerHTML = textarea.innerHTML
+			document.body.appendChild(clipboard)
+			clipboard.select()
+			document.execCommand('copy')
+			document.body.removeChild(clipboard)
+			section[1].classList.toggle('d-none')
+			section[2].classList.toggle('d-none')
+		}
+
+	// Share
+		document.querySelector('.share').onclick = function() {
+			let clipboard = document.createElement('input')
+				clipboard.style.opacity = '0'
+				clipboard.style.position = 'absolute'
+			clipboard.value = window.location.href
+			document.body.appendChild(clipboard)
+			clipboard.select()
+			document.execCommand('copy')
+			document.body.removeChild(clipboard)
+		}
+
+	// Copyright
+		document.querySelector('footer').innerHTML = '© ' + new Date().getFullYear() + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
+
+	// Responsive
+		var viewportWidth
+		var setViewportWidth = function () {
+			viewportWidth = window.innerWidth || document.documentElement.clientWidth
+		}
+
+		var logWidth = function () {
+			if (viewportWidth < 768) {
+				frame()
+			} else {
+				frame()
+			}
+		}
+
+		setViewportWidth()
+		logWidth()
+
+		window.addEventListener('resize', function () {
+			setViewportWidth()
+			logWidth()
+		}, false)
+	</script>
+</slot>
+
+</body>
+</html>

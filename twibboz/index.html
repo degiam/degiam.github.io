@@ -133,7 +133,7 @@
 		// 	});
 		// });
 		document.querySelector('.download').onclick = function() {
-			document.querySelector('#combine')[0].toBlob(function(blob) {
+			document.querySelector('#c')[0].toBlob(function(blob) {
 				let fileName = name.split(' ').join('-').toLowerCase() + '.png'
 				saveAs(blob, fileName)
 			})

@@ -145,7 +145,7 @@ Lalu ikuti @twibbonize
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
 	<script src="canvas-toBlob.js"></script>
 	<script>
-	// Variable
+	// Data
 		var name = 'Twibboz Campaign'
 			color1 = '#4449b7'
 			color2 = '#f2f3ff'
@@ -159,9 +159,11 @@ Lalu ikuti @twibbonize
 			head.appendChild(style)
 		})
 
-	// Image Canvas
+	// Variable
 		var section = document.querySelectorAll('section')
+			textarea = document.querySelector('textarea')
 
+	// Image Canvas
 		var canvas = new fabric.Canvas('combine')
 			canvasWrapper = document.querySelector('#combine')
 			canvasWrapperWidth = canvasWrapper.clientWidth
@@ -180,7 +182,7 @@ Lalu ikuti @twibbonize
 		}
 
 		function generate() {
-			fabric.Image.fromURL('twibbon.png',function(img) {
+			fabric.Image.fromURL(imageURL,function(img) {
 				canvas.clear()
 				img.scaleToWidth(canvas.getWidth())
 				canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
@@ -231,6 +233,9 @@ Lalu ikuti @twibbonize
 				saveAs(blob, fileName)
 				section[0].classList.toggle('d-none')
 				section[1].classList.toggle('d-none')
+				if (textarea.clientHeight < textarea.scrollHeight) {
+					textarea.style.height = textarea.scrollHeight + 'px'
+				}
 			})
 		})
 
@@ -242,12 +247,6 @@ Lalu ikuti @twibbonize
 		frame()
 
 	// Caption
-		var textarea = document.querySelector('textarea')
-
-		if (textarea.clientHeight < textarea.scrollHeight) {
-			textarea.style.height = textarea.scrollHeight + 'px'
-		}
-
 		document.querySelector('.copy').onclick = function() {
 			let clipboard = document.createElement('textarea')
 				clipboard.style.opacity = '0'

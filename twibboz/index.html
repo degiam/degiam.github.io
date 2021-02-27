@@ -77,6 +77,7 @@
 </section>
 
 <slot>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
 	<script src="canvas-toBlob.js"></script>
@@ -129,13 +130,13 @@
 					transparentCorners: true
 				})
 				canvas.setActiveObject(canvas.item(0))
-				this.__canvases.push(canvas)
+				this.canvases.push(canvas)
 				canvas.sendToBack(img)
 			})
 		}
 
-		document.querySelector('.download').onclick = function() {
-			document.getElementById('editor')[0].toBlob(function(blob) {
+		$('.download').onclick = function() {
+			$('#editor').get(0).toBlob(function(blob) {
 				saveAs(blob, 'myIMG.png')
 			})
 		}

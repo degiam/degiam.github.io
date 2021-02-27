@@ -160,176 +160,57 @@ Lalu ikuti @twibbonize
 			head.appendChild(style)
 		})
 
-	// Image Canvas
-		var section = document.querySelectorAll('section')
-
+	// Canvas
 		var canvas = new fabric.Canvas('combine')
-			canvasWrapper = document.querySelector('#combine')
-			canvasWrapperWidth = canvasWrapper.clientWidth
 
 		canvas.setWidth(1080)
 		canvas.setHeight(1080)
 
-		// canvas.on({
-		// 	'touch:gesture': function() {
-		// 		var text = document.createTextNode(' Gesture ');
-		// 		info.insertBefore(text, info.firstChild);
-		// 	},
-		// 	'touch:drag': function() {
-		// 		var text = document.createTextNode(' Dragging ');
-		// 		info.insertBefore(text, info.firstChild);
-		// 	},
-		// 	'touch:orientation': function() {
-		// 		var text = document.createTextNode(' Orientation ');
-		// 		info.insertBefore(text, info.firstChild);
-		// 	},
-		// 	'touch:shake': function() {
-		// 		var text = document.createTextNode(' Shaking ');
-		// 		info.insertBefore(text, info.firstChild);
-		// 	},
-		// 	'touch:longpress': function() {
-		// 		var text = document.createTextNode(' Longpress ');
-		// 		info.insertBefore(text, info.firstChild);
-		// 	}
-		// });
-
-		// canvas.on({
-		// 	'touch:gesture': function(e) {
-		// 		if (e.e.touches && e.e.touches.length == 2) {
-		// 			pausePanning = true
-		// 			var point = new fabric.Point(e.self.x, e.self.y)
-		// 			if (e.self.state == "start") {
-		// 				zoomStartScale = self.canvas.getZoom()
-		// 			}
-		// 			var delta = zoomStartScale * e.self.scale;
-		// 			self.canvas.zoomToPoint(point, delta)
-		// 			pausePanning = false
-		// 		}
-		// 	},
-		// 	'object:selected': function() {
-		// 		pausePanning = true
-		// 	},
-		// 	'selection:cleared': function() {
-		// 		pausePanning = false
-		// 	},
-		// 	'touch:drag': function(e) {
-		// 		if (pausePanning == false && undefined != e.e.layerX && undefined != e.e.layerY) {
-		// 			currentX = e.e.layerX
-		// 			currentY = e.e.layerY
-		// 			xChange = currentX - lastX
-		// 			yChange = currentY - lastY
-
-		// 			if ( (Math.abs(currentX - lastX) <= 50) && (Math.abs(currentY - lastY) <= 50) ) {
-		// 				var delta = new fabric.Point(xChange, yChange)
-		// 				canvas.relativePan(delta)
-		// 			}
-
-		// 			lastX = e.e.layerX
-		// 			lastY = e.e.layerY
-		// 		}
-		// 	}
-		// })
+		var canvasWrapper = document.querySelector('#combine')
+			canvasWrapperWidth = canvasWrapper.clientWidth
 
 		document.querySelector('[type="file"]').onchange = function() {
 			if (this.files && this.files[0]) {
 				var reader = new FileReader()
 				reader.onload = imageIsLoaded
 				reader.readAsDataURL(this.files[0])
-				document.querySelector('.upload span').innerText = 'Ganti Foto'
-				document.querySelector('.download').classList.remove('d-none')
 			}
 		}
 
-		// function generate() {
-			fabric.Image.fromURL(imageURL,function(img) {
-				// canvas.clear()
-				img.scaleToWidth(canvas.getWidth())
-				canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
-			})
-		// }
-
-		// generate()
+		fabric.Image.fromURL(imageURL,function(img) {
+			img.scaleToWidth(canvas.getWidth())
+			canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
+		})
 
 		function imageIsLoaded(e) {
-			// generate()
 			fabric.Image.fromURL(e.target.result,function(img) {
-				var aspectRatio = 1080/1080
-					factor = 1080 / img.width
-
+				var aspectRatio = 1080/1080;
+				var factor = 1080 / img.width;
 				img.set({
 					scaleX: factor,
-					scaleY: factor
+					scaleY: factor 
 				})
-
 				canvas.add(img)
-
-				if ( img.width > img.height ) {
-					var y = (canvas.getHeight() - (img.height/2)) / 2
-				} else if ( img.width < img.height ) {
-					let x = ((img.width/2) - canvas.getWidth()) / 2
-					var y = ( x / 2 ) - x
-				} else {
-					var y = 0
-				}
-
 				canvas.item(0).set({
-					top: y,
-					cornerColor: '#275fdc',
-					cornerSize: 25,
-					transparentCorners: false
+					borderColor: 'gray',
+					cornerColor: 'black',
+					cornerSize: 70,
+					borderScaleFactor: 10,
+					hasBorders: true,
+					rotatingPointOffset:200,
+					padding:60, 
+					transparentCorners: true
 				})
-
-				// canvas.on({
-				// 	'touch:gesture': function(e) {
-				// 		if (e.e.touches && e.e.touches.length == 2) {
-				// 			pausePanning = true
-				// 			var point = new fabric.Point(e.self.x, e.self.y)
-				// 			if (e.self.state == "start") {
-				// 				zoomStartScale = canvas.getZoom()
-				// 			}
-				// 			var delta = zoomStartScale * e.self.scale
-				// 			canvas.zoomToPoint(point, delta)
-				// 			pausePanning = false
-				// 		}
-				// 	},
-				// 	'object:selected': function() {
-				// 		pausePanning = true
-				// 	},
-				// 	'selection:cleared': function() {
-				// 		pausePanning = false
-				// 	},
-				// 	'touch:drag': function(e) {
-				// 		if (pausePanning == false && undefined != e.self.x && undefined != e.self.x) {
-				// 			currentX = e.self.x
-				// 			currentY = e.self.y
-				// 			xChange = currentX - lastX
-				// 			yChange = currentY - lastY
-
-				// 			if ( (Math.abs(currentX - lastX) <= 50) && (Math.abs(currentY - lastY) <= 50) ) {
-				// 				var delta = new fabric.Point(xChange, yChange)
-				// 				canvas.relativePan(delta)
-				// 			}
-
-				// 			lastX = e.self.x
-				// 			lastY = e.self.y
-				// 		}
-				// 	}
-				// })
-
 				canvas.setActiveObject(canvas.item(0))
 				this.__canvases.push(canvas)
 				canvas.sendToBack(img)
 			})
 		}
 
-	// Image Download
 		document.querySelector('.download').onclick = function() {
 			document.querySelector('#combine')[0].toBlob(function(blob) {
-				let fileName = name.split(' ').join('-').toLowerCase() + '.png'
-				saveAs(blob, fileName)
+				saveAs(blob, 'fileName.png')
 			})
-			section[0].classList.toggle('d-none')
-			section[1].classList.toggle('d-none')
 		}
 
 	// Canvas Frame

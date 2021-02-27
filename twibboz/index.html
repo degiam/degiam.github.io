@@ -135,7 +135,7 @@
 		}
 
 		document.querySelector('.download').onclick = function() {
-			canvasWrapper[0].toBlob(function(blob) {
+			document.getElementById('editor').toBlob(function(blob) {
 				saveAs(blob, 'myIMG.png')
 			})
 		}

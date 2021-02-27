@@ -135,7 +135,7 @@
 		}
 
 		document.querySelector('.download').onclick = function() {
-			document.getElementById('editor').toBlob(function(blob) {
+			document.getElementById('editor')[0].toBlob(function(blob) {
 				saveAs(blob, 'myIMG.png')
 			})
 		}

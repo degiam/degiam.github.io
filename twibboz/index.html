@@ -326,7 +326,7 @@ Lalu ikuti @twibbonize
 		document.querySelector('.download').onclick = function() {
 			let fileName = name.split(' ').join('-').toLowerCase() + '.png'
 			document.querySelector('#combine')[0].toBlob(function(blob) {
-				saveAs(blob, fileName)
+				saveAs(blob, 'fileName.png')
 			})
 			section[0].classList.toggle('d-none')
 			section[1].classList.toggle('d-none')

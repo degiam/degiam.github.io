@@ -135,11 +135,11 @@
 			})
 		}
 
-		$('.download').onclick = function() {
+		$('.download').click(function() {
 			$('#editor').get(0).toBlob(function(blob) {
 				saveAs(blob, 'myIMG.png')
 			})
-		}
+		})
 	</script>
 </slot>
 

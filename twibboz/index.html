@@ -240,18 +240,18 @@ Lalu ikuti @twibbonize
 			}
 		}
 
-		function generate() {
+		// function generate() {
 			fabric.Image.fromURL(imageURL,function(img) {
-				canvas.clear()
+				// canvas.clear()
 				img.scaleToWidth(canvas.getWidth())
 				canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
 			})
-		}
+		// }
 
-		generate()
+		// generate()
 
 		function imageIsLoaded(e) {
-			generate()
+			// generate()
 			fabric.Image.fromURL(e.target.result,function(img) {
 				var aspectRatio = 1080/1080
 					factor = 1080 / img.width

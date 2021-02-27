@@ -77,7 +77,7 @@
 </section>
 
 <slot>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js" integrity="sha512-3KSCKtGNyFpYAh0N2MFQMqQSqGpHa7Cn5YC7yTjVbCQ2CBA1LfP/ZgID0TEq7IikLqn/jy3uoexY6RU5Eco7CQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js" integrity="sha512-ACqMrfAtm537AWzgx/xQ57JnFxXeq8RylQMGg4y/e6M2ew4Z8NycE8aId/Bt2ZE+w1gNsox3MgwxKl7SGMRdtA==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
 	<script src="canvas-toBlob.js"></script>
@@ -97,13 +97,15 @@
 		var canvasWrapper = document.getElementById('editor')
 			canvasWrapperWidth = canvasWrapper.clientWidth
 
-		document.querySelector('[type="file"]').onchange = function() {
-			if (this.files && this.files[0]) {
-				var reader = new FileReader()
-				reader.onload = imageIsLoaded
-				reader.readAsDataURL(this.files[0])
-			}
-		}
+		$(function() {
+			$(':file').change(function () {
+				if (this.files && this.files[0]) {
+					var reader = new FileReader()
+					reader.onload = imageIsLoaded
+					reader.readAsDataURL(this.files[0])
+				}
+			})
+		})
 
 		fabric.Image.fromURL('https://drive.google.com/uc?export=view&id=1iOES-STMbg2ZHxLM4ReEbk8KQrhFZwcD',function(img) {
 			img.scaleToWidth(canvas.getWidth())

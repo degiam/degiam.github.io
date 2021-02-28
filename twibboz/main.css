@@ -191,6 +191,21 @@ textarea {
 	overflow: hidden;
 }
 
+.bar {
+	width: 100%;
+	height: 10px;
+	border-radius: 10px;
+	background-color: var(--primary);
+}
+.bar:not(.active) {
+	opacity: .25;
+}
+.bar:not(:first-child),
+.bar:not(:last-child) {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 .title {
 	text-align: center;
 }

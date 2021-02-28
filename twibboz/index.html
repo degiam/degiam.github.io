@@ -45,8 +45,15 @@
 
 <header>
 	<p>PELAJAR NU</p>
-	<h1>HARLAH IPNU 67</h1>
-	<p>Unggah Foto Terbaikmu Untuk Meramaikan Harlah IPNU ke-67 #harlahipnu67 #TransformasiPelajar #BanggaJadiIPNU</p>
+	<div class="title">
+		<h1>HARLAH IPNU 67</h1>
+		<p>Unggah Foto Terbaikmu Untuk Meramaikan Harlah IPNU ke-67 #harlahipnu67 #TransformasiPelajar #BanggaJadiIPNU</p>
+	</div>
+	<div class="d-flex mt-3">
+		<div class="bar active"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+	</div>
 </header>
 
 <section>
@@ -146,21 +153,20 @@ Lalu ikuti @twibbonize
 	<script src="canvas-toBlob.js"></script>
 	<script>
 	// Data
-		var name = 'Twibboz Campaign'
+		var imageName = 'Twibboz Campaign'
+			imageURL = 'twibbon.png'
 			color1 = '#4449b7'
 			color2 = '#f2f3ff'
-			imageURL = 'twibbon.png'
 
 	// Color
-		document.addEventListener('DOMContentLoaded', function() {
-			let head = document.querySelector('head')
+		let head = document.querySelector('head')
 			style = document.createElement('style')
 			style.innerHTML = ':root{--primary:' + color1 + ';--secondary:' + color2 + ';}'
-			head.appendChild(style)
-		})
+		head.appendChild(style)
 
 	// Variable
-		var section = document.querySelectorAll('section')
+		var bar = document.querySelectorAll('.bar')
+			section = document.querySelectorAll('section')
 			textarea = document.querySelector('textarea')
 
 	// Image Canvas
@@ -193,6 +199,7 @@ Lalu ikuti @twibbonize
 
 		function imageIsLoaded(e) {
 			generate()
+
 			fabric.Image.fromURL(e.target.result,function(img) {
 				var aspectRatio = 1080/1080
 					factor = 1080 / img.width
@@ -217,45 +224,58 @@ Lalu ikuti @twibbonize
 					top: y,
 					cornerColor: '#275fdc',
 					cornerSize: 25,
+					padding: 13,
 					transparentCorners: false
 				})
 
-				canvas.setActiveObject(canvas.item(0))
+				// canvas.setActiveObject(canvas.item(0))
 				this.__canvases.push(canvas)
 				canvas.sendToBack(img)
 			})
 		}
 
-	// Image Download
-		$('.download').click(function(){
-			$('#combine').get(0).toBlob(function(blob) {
-				let fileName = name.split(' ').join('-').toLowerCase() + '.png'
-				saveAs(blob, fileName)
-				section[0].classList.toggle('d-none')
-				section[1].classList.toggle('d-none')
-				if (textarea.clientHeight < textarea.scrollHeight) {
-					textarea.style.height = textarea.scrollHeight + 'px'
-				}
-			})
-		})
-
 	// Canvas Frame
 		function frame() {
 			document.querySelector('.canvas-container').style.height = document.querySelector('.canvas-container').clientWidth + 'px'
 		}
-
 		frame()
 
 	// Caption
+		function caption() {
+			if (textarea.clientHeight < textarea.scrollHeight) {
+				textarea.style.height = textarea.scrollHeight + 'px'
+			}
+		}
+		caption()
+
+	// Button
+		document.querySelector('.download').onclick = function() {
+			$('#combine').get(0).toBlob(function(blob) {
+				let fileName = imageName.split(' ').join('-').toLowerCase() + '.png'
+				saveAs(blob, fileName)
+
+				caption()
+
+				window.scrollTo(0,0)
+				bar[1].classList.toggle('active')
+				section[0].classList.toggle('d-none')
+				section[1].classList.toggle('d-none')
+			})
+		}
+
 		document.querySelector('.copy').onclick = function() {
 			let clipboard = document.createElement('textarea')
 				clipboard.style.opacity = '0'
 				clipboard.style.position = 'absolute'
+
 			clipboard.innerHTML = textarea.innerHTML
 			document.body.appendChild(clipboard)
 			clipboard.select()
 			document.execCommand('copy')
 			document.body.removeChild(clipboard)
+
+			window.scrollTo(0,0)
+			bar[2].classList.toggle('active')
 			section[1].classList.toggle('d-none')
 			section[2].classList.toggle('d-none')
 		}
@@ -273,7 +293,8 @@ Lalu ikuti @twibbonize
 		}
 
 	// Copyright
-		document.querySelector('footer').innerHTML = '© ' + new Date().getFullYear() + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
+		let year = new Date().getFullYear()
+		document.querySelector('footer').innerHTML = '© ' + year + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
 
 	// Responsive
 		var viewportWidth

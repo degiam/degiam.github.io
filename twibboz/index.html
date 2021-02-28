@@ -79,177 +79,179 @@ Lalu ikuti @degiam
 	</div>
 </header>
 
-<section>
-	<div class="title">
-		<h2>Filter</h2>
-		<p>Pilih fotomu yang paling keren!</p>
-	</div>
+<main>
+	<section>
+		<div class="title">
+			<h2>Filter</h2>
+			<p>Pilih fotomu yang paling keren!</p>
+		</div>
 
-	<div class="my-3">
-		<canvas id="layer"></canvas>
-	</div>
+		<div class="my-3">
+			<canvas id="layer"></canvas>
+		</div>
 
-	<div class="d-flex">
-		<button type="button" class="button block upload">
+		<div class="d-flex">
+			<button type="button" class="button block upload">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M21 6H17.8L16 4H10V6H15.1L17 8H21V20H5V11H3V20C3 21.1 3.9 22 5 22H21C22.1 22 23 21.1 23 20V8C23 6.9 22.1 6 21 6M8 14C8 18.45 13.39 20.69 16.54 17.54C19.69 14.39 17.45 9 13 9C10.24 9 8 11.24 8 14M13 11C14.64 11.05 15.95 12.36 16 14C15.95 15.64 14.64 16.95 13 17C11.36 16.95 10.05 15.64 10 14C10.05 12.36 11.36 11.05 13 11M5 6H8V4H5V1H3V4H0V6H3V9H5"/>
+				</svg>
+				<span>Pilih Foto</span>
+				<input type="file" accept="image/png,image/jpeg,image/jpg,application/.png,.jpeg,.jpg">
+			</button>
+			<button type="button" class="button block green download d-none">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z"/>
+				</svg>
+				<span>Unduh</span>
+			</button>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="title">
+			<h2>Caption</h2>
+			<p>Silakan salin captionnya!</p>
+			<button type="button" class="d-flex back">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+				</svg>
+			</button>
+		</div>
+
+		<div class="my-3">
+			<textarea spellcheck="false" readonly></textarea>
+		</div>
+		
+		<div class="d-flex">
+			<button type="button" class="button block copy">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
+				</svg>
+				<span>Salin Caption</span>
+			</button>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="title">
+			<h2>Posting</h2>
+			<p>Pilih aplikasi dimana kamu akan posting!</p>
+			<button type="button" class="d-flex back">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+				</svg>
+			</button>
+		</div>
+
+		<div class="mt-3 mb-2 app">
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Facebook" href="facebook://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Twitter" href="twitter://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Instagram" href="instagram://user">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Pinterest" href="pinterest://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M9.04,21.54C10,21.83 10.97,22 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.83 11.83,13.06 11.54,14.24C11.37,15.22 12.06,16.08 13.06,16.08C14.84,16.08 16.22,14.18 16.22,11.5C16.22,9.1 14.5,7.46 12.03,7.46C9.21,7.46 7.55,9.56 7.55,11.77C7.55,12.63 7.83,13.5 8.29,14.07C8.38,14.13 8.38,14.21 8.35,14.36L8.06,15.45C8.06,15.62 7.95,15.68 7.78,15.56C6.5,15 5.76,13.18 5.76,11.71C5.76,8.55 8,5.68 12.32,5.68C15.76,5.68 18.44,8.15 18.44,11.43C18.44,14.87 16.31,17.63 13.26,17.63C12.29,17.63 11.34,17.11 11,16.5L10.33,18.87C10.1,19.73 9.47,20.88 9.04,21.57V21.54Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="LinkedIn" href="linkedin://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="WhatsApp" href="whatsapp://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Telegram" href="telegram://app">
+					<svg viewBox="0 0 28 24" width="40" height="40">
+						<path fill="currentColor" d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"/>
+					</svg>
+				</a>
+			</div>
+
+			<div class="d-inline-block mb-1">
+				<a class="button circle py-1 my-1 mx-1" aria-label="Line" href="line://app">
+					<svg viewBox="0 0 24 24" width="40" height="40">
+						<path fill="currentColor" d="M22,10.8c0-4.5-4.5-8.2-10-8.2S2,6.4,2,10.8c0,4,3.7,7.2,8.3,7.9c1.3,0.2,1.1,1.2,0.8,2.2C11,21.3,11,22,12,21.5 C19.9,17.1,22,13.6,22,10.8z M8.5,13.1c0,0.1-0.1,0.2-0.2,0.2H5.6l0,0c-0.2,0-0.3-0.1-0.3-0.3l0,0V8.7c0-0.1,0.1-0.2,0.2-0.2h0.7 c0.1,0,0.2,0.1,0.2,0.2v3.5h1.9c0.1,0,0.2,0.1,0.2,0.2C8.5,12.4,8.5,13.1,8.5,13.1z M10.2,13.1c0,0.1-0.1,0.2-0.2,0.2H9.3 c-0.1,0-0.2-0.1-0.2-0.2V8.7c0-0.1,0.1-0.2,0.2-0.2H10c0.1,0,0.2,0.1,0.2,0.2V13.1L10.2,13.1z M14.9,13.1c0,0.1-0.1,0.2-0.2,0.2 c0,0-0.5,0-0.6,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0c0,0-0.1,0-0.2-0.1l-2-2.7v2.6c0,0.1-0.1,0.2-0.2,0.2H11c-0.1,0-0.2-0.1-0.2-0.2 V8.7c0-0.1,0.1-0.2,0.2-0.2c0,0,0.4,0,0.6,0c0.2,0,0.2,0.1,0.3,0.2c0.1,0.1,1.9,2.6,1.9,2.6V8.7c0-0.1,0.1-0.2,0.2-0.2h0.7 c0.2,0,0.2,0.2,0.2,0.2L14.9,13.1z M16,8.5L16,8.5h2.7c0.1,0,0.2,0.1,0.2,0.2v0.7c0,0.1-0.1,0.2-0.2,0.2h-1.9v0.7h1.9 c0.1,0,0.2,0.1,0.2,0.2v0.7c0,0.1-0.1,0.2-0.2,0.2h-1.9v0.7h1.9c0.1,0,0.2,0.1,0.2,0.2v0.8c0,0.1-0.1,0.2-0.2,0.2h-2.8l0,0 c-0.2,0-0.2-0.2-0.2-0.2l0,0V8.8C15.7,8.5,15.8,8.5,16,8.5z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<button type="button" class="button block py-1 mt-3 skip">
+			<span>Lanjutkan</span>
 			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M21 6H17.8L16 4H10V6H15.1L17 8H21V20H5V11H3V20C3 21.1 3.9 22 5 22H21C22.1 22 23 21.1 23 20V8C23 6.9 22.1 6 21 6M8 14C8 18.45 13.39 20.69 16.54 17.54C19.69 14.39 17.45 9 13 9C10.24 9 8 11.24 8 14M13 11C14.64 11.05 15.95 12.36 16 14C15.95 15.64 14.64 16.95 13 17C11.36 16.95 10.05 15.64 10 14C10.05 12.36 11.36 11.05 13 11M5 6H8V4H5V1H3V4H0V6H3V9H5"/>
+				<path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
 			</svg>
-			<span>Pilih Foto</span>
-			<input type="file">
 		</button>
-		<button type="button" class="button block download d-none">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z"/>
-			</svg>
-			<span>Unduh</span>
-		</button>
-	</div>
-</section>
+	</section>
 
-<section class="d-none">
-	<div class="title">
-		<h2>Caption</h2>
-		<p>Silakan salin captionnya!</p>
-		<button type="button" class="d-flex back">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
-			</svg>
-		</button>
-	</div>
+	<section class="d-none">
+		<div class="title">
+			<h2>Terima Kasih</h2>
+			<p>Viralkan kampanye ini ke teman-teman kalian!</p>
+			<button type="button" class="d-flex back">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+				</svg>
+			</button>
+		</div>
 
-	<div class="my-3">
-		<textarea spellcheck="false" readonly></textarea>
-	</div>
-	
-	<div class="d-flex">
-		<button type="button" class="button block copy">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
-			</svg>
-			<span>Salin Caption</span>
-		</button>
-	</div>
-</section>
-
-<section class="d-none">
-	<div class="title">
-		<h2>Posting</h2>
-		<p>Pilih aplikasi dimana kamu akan posting!</p>
-		<button type="button" class="d-flex back">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
-			</svg>
-		</button>
-	</div>
-
-	<div class="mt-3 mb-2 app">
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Facebook" href="facebook://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
+		<div class="mt-3">
+			<button type="button" class="button block py-1 mb-2 facebook" aria-label="Facebook">
+				<svg viewBox="0 0 24 24" width="25" height="25">
 					<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
 				</svg>
-			</a>
-		</div>
+				<span>Facebook</span>
+			</button>
 
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Twitter" href="twitter://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
+			<button type="button" class="button block py-1 mb-2 twitter" aria-label="Twitter">
+				<svg viewBox="0 0 24 24" width="25" height="25">
 					<path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
 				</svg>
-			</a>
-		</div>
+				<span>Twitter</span>
+			</button>
 
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Instagram" href="instagram://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
-					<path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+			<button type="button" class="button block py-1 mb-2 share" aria-label="Share">
+				<svg viewBox="0 0 24 24" width="25" height="25">
+					<path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"/>
 				</svg>
-			</a>
+				<span>Salin Tautan</span>
+			</button>
 		</div>
-
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Pinterest" href="pinterest://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
-					<path fill="currentColor" d="M9.04,21.54C10,21.83 10.97,22 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.83 11.83,13.06 11.54,14.24C11.37,15.22 12.06,16.08 13.06,16.08C14.84,16.08 16.22,14.18 16.22,11.5C16.22,9.1 14.5,7.46 12.03,7.46C9.21,7.46 7.55,9.56 7.55,11.77C7.55,12.63 7.83,13.5 8.29,14.07C8.38,14.13 8.38,14.21 8.35,14.36L8.06,15.45C8.06,15.62 7.95,15.68 7.78,15.56C6.5,15 5.76,13.18 5.76,11.71C5.76,8.55 8,5.68 12.32,5.68C15.76,5.68 18.44,8.15 18.44,11.43C18.44,14.87 16.31,17.63 13.26,17.63C12.29,17.63 11.34,17.11 11,16.5L10.33,18.87C10.1,19.73 9.47,20.88 9.04,21.57V21.54Z"/>
-				</svg>
-			</a>
-		</div>
-
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="LinkedIn" href="linkedin://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
-					<path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
-				</svg>
-			</a>
-		</div>
-
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="WhatsApp" href="whatsapp://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
-					<path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/>
-				</svg>
-			</a>
-		</div>
-
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Telegram" href="telegram://app">
-				<svg viewBox="0 0 28 24" width="40" height="40">
-					<path fill="currentColor" d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"/>
-				</svg>
-			</a>
-		</div>
-
-		<div class="d-inline-block mb-1">
-			<a class="button circle py-1 my-1 mx-1" aria-label="Line" href="line://app">
-				<svg viewBox="0 0 24 24" width="40" height="40">
-					<path fill="currentColor" d="M22,10.8c0-4.5-4.5-8.2-10-8.2S2,6.4,2,10.8c0,4,3.7,7.2,8.3,7.9c1.3,0.2,1.1,1.2,0.8,2.2C11,21.3,11,22,12,21.5 C19.9,17.1,22,13.6,22,10.8z M8.5,13.1c0,0.1-0.1,0.2-0.2,0.2H5.6l0,0c-0.2,0-0.3-0.1-0.3-0.3l0,0V8.7c0-0.1,0.1-0.2,0.2-0.2h0.7 c0.1,0,0.2,0.1,0.2,0.2v3.5h1.9c0.1,0,0.2,0.1,0.2,0.2C8.5,12.4,8.5,13.1,8.5,13.1z M10.2,13.1c0,0.1-0.1,0.2-0.2,0.2H9.3 c-0.1,0-0.2-0.1-0.2-0.2V8.7c0-0.1,0.1-0.2,0.2-0.2H10c0.1,0,0.2,0.1,0.2,0.2V13.1L10.2,13.1z M14.9,13.1c0,0.1-0.1,0.2-0.2,0.2 c0,0-0.5,0-0.6,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0c0,0-0.1,0-0.2-0.1l-2-2.7v2.6c0,0.1-0.1,0.2-0.2,0.2H11c-0.1,0-0.2-0.1-0.2-0.2 V8.7c0-0.1,0.1-0.2,0.2-0.2c0,0,0.4,0,0.6,0c0.2,0,0.2,0.1,0.3,0.2c0.1,0.1,1.9,2.6,1.9,2.6V8.7c0-0.1,0.1-0.2,0.2-0.2h0.7 c0.2,0,0.2,0.2,0.2,0.2L14.9,13.1z M16,8.5L16,8.5h2.7c0.1,0,0.2,0.1,0.2,0.2v0.7c0,0.1-0.1,0.2-0.2,0.2h-1.9v0.7h1.9 c0.1,0,0.2,0.1,0.2,0.2v0.7c0,0.1-0.1,0.2-0.2,0.2h-1.9v0.7h1.9c0.1,0,0.2,0.1,0.2,0.2v0.8c0,0.1-0.1,0.2-0.2,0.2h-2.8l0,0 c-0.2,0-0.2-0.2-0.2-0.2l0,0V8.8C15.7,8.5,15.8,8.5,16,8.5z"/>
-				</svg>
-			</a>
-		</div>
-	</div>
-
-	<button type="button" class="button block py-1 mt-3 skip">
-		<span>Lanjutkan</span>
-		<svg viewBox="0 0 24 24" width="25" height="25">
-			<path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
-		</svg>
-	</button>
-</section>
-
-<section class="d-none">
-	<div class="title">
-		<h2>Terima Kasih</h2>
-		<p>Viralkan kampanye ini ke teman-teman kalian!</p>
-		<button type="button" class="d-flex back">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
-			</svg>
-		</button>
-	</div>
-
-	<div class="mt-3">
-		<button type="button" class="button block py-1 mb-2 facebook" aria-label="Facebook">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
-			</svg>
-			<span>Facebook</span>
-		</button>
-
-		<button type="button" class="button block py-1 mb-2 twitter" aria-label="Twitter">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
-			</svg>
-			<span>Twitter</span>
-		</button>
-
-		<button type="button" class="button block py-1 mb-2 share" aria-label="Share">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"/>
-			</svg>
-			<span>Salin Tautan</span>
-		</button>
-	</div>
-</section>
+	</section>
+</main>
 
 <footer></footer>
 
@@ -302,6 +304,7 @@ Lalu ikuti @degiam
 					reader.onload = imageIsLoaded
 					reader.readAsDataURL(this.files[0])
 					document.querySelector('.upload span').innerText = 'Ganti Foto'
+					document.querySelector('.upload').classList.add('blue')
 					document.querySelector('.download').classList.remove('d-none')
 				}
 			}
@@ -342,9 +345,46 @@ Lalu ikuti @degiam
 					canvas.item(0).set({
 						top: y,
 						cornerColor: '#275fdc',
-						cornerSize: 25,
-						padding: 13,
+						cornerSize: 50,
+						padding: 25,
 						transparentCorners: false
+					})
+
+					canvas.on({
+						'touch:gesture': function(e) {
+							if (e.e.touches && e.e.touches.length == 2) {
+								pausePanning = true
+								var point = new fabric.Point(e.self.x, e.self.y)
+								if (e.self.state == "start") {
+									zoomStartScale = self.canvas.getZoom()
+								}
+								var delta = zoomStartScale * e.self.scale
+								self.canvas.zoomToPoint(point, delta)
+								pausePanning = false
+							}
+						},
+						'object:selected': function() {
+							pausePanning = true
+						},
+						'selection:cleared': function() {
+							pausePanning = false
+						},
+						'touch:drag': function(e) {
+							if (pausePanning == false && undefined != e.e.layerX && undefined != e.e.layerY) {
+								currentX = e.e.layerX
+								currentY = e.e.layerY
+								xChange = currentX - lastX
+								yChange = currentY - lastY
+
+								if( (Math.abs(currentX - lastX) <= 50) && (Math.abs(currentY - lastY) <= 50)) {
+									var delta = new fabric.Point(xChange, yChange)
+									canvas.relativePan(delta)
+								}
+
+								lastX = e.e.layerX
+								lastY = e.e.layerY
+							}
+						}
 					})
 
 					// canvas.setActiveObject(canvas.item(0))
@@ -369,19 +409,16 @@ Lalu ikuti @degiam
 
 		// Button
 			function section1() {
-				window.scrollTo(0,0)
 				bar[1].classList.toggle('active')
 				section[0].classList.toggle('d-none')
 				section[1].classList.toggle('d-none')
 			}
 			function section2() {
-				window.scrollTo(0,0)
 				bar[2].classList.toggle('active')
 				section[1].classList.toggle('d-none')
 				section[2].classList.toggle('d-none')
 			}
 			function section3() {
-				window.scrollTo(0,0)
 				bar[3].classList.toggle('active')
 				section[2].classList.toggle('d-none')
 				section[3].classList.toggle('d-none')
@@ -437,14 +474,6 @@ Lalu ikuti @degiam
 				return false
 			}
 
-			document.querySelector('.facebook').onclick = function() {
-				popup('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thisURL) + '&quote=' + shareText, 'facebook-share-dialog', 600, 350)
-			}
-
-			document.querySelector('.twitter').onclick = function() {
-				popup('https://twitter.com/share?text=' + shareText + '&amp;url=' + thisURL, 'Twitter-dialog', 600, 350)
-			}
-
 		// Copyright
 			let year = new Date().getFullYear()
 			document.querySelector('footer').innerHTML = '© ' + year + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
@@ -458,8 +487,26 @@ Lalu ikuti @degiam
 			var logWidth = function () {
 				if (viewportWidth < 768) {
 					frame()
+
+					document.querySelector('.facebook').onclick = function() {
+						let url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thisURL) + '&quote=' + shareText
+						window.open(url, '_blank')
+					}
+
+					document.querySelector('.twitter').onclick = function() {
+						let url = 'https://twitter.com/share?text=' + shareText + '&amp;url=' + thisURL
+						window.open(url, '_blank')
+					}
 				} else {
 					frame()
+
+					document.querySelector('.facebook').onclick = function() {
+						popup('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thisURL) + '&quote=' + shareText, 'facebook-share-dialog', 600, 350)
+					}
+
+					document.querySelector('.twitter').onclick = function() {
+						popup('https://twitter.com/share?text=' + shareText + '&amp;url=' + thisURL, 'Twitter-dialog', 600, 350)
+					}
 				}
 			}
 

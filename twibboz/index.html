@@ -34,11 +34,21 @@
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="favicon.ico">
 	<!-- Preload -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="style" href="main.min.css">
 	<link rel="preload" as="script" href="canvas-toBlob.js">
-	<link rel="preload" as="style" href="main.css">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="main.min.css">
+	<script>
+		var imageName	= 'Twibboz Campaign'
+			// imageURL	= 'twibbon.png'
+			imageID		= '1iOES-STMbg2ZHxLM4ReEbk8KQrhFZwcD'
+			imageURL	= 'https://drive.google.com/uc?export=view&id=' + imageID
+			mainColor	= '#4449b7'
+			bgColor		= '#f2f3ff'
+			thisURL		= window.location.href
+			shareText	= 'Lorem ipsum adipisicing cillum ex voluptate dolor adipisicing ut aliquip ut nostrud nulla do commodo amet cillum.' + '%0A%0A' + 'Yuk ikut bikin di ' + thisURL
+	</script>
 </head>
 
 <body>
@@ -127,13 +137,6 @@ Lalu ikuti @twibbonize
 	</div>
 
 	<div class="mt-3">
-		<button type="button" class="button block py-1 mb-2 instagram">
-			<svg viewBox="0 0 24 24" width="25" height="25">
-				<path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
-			</svg>
-			<span>Instagram</span>
-		</button>
-
 		<button type="button" class="button block py-1 mb-2 facebook">
 			<svg viewBox="0 0 24 24" width="25" height="25">
 				<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
@@ -165,195 +168,187 @@ Lalu ikuti @twibbonize
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
 	<script src="canvas-toBlob.js"></script>
 	<script>
-	// Data
-		var imageName = 'Twibboz Campaign'
-			imageURL = 'twibbon.png'
-			color1 = '#4449b7'
-			color2 = '#f2f3ff'
-			thisURL = window.location.href
-			shareText = 'Lorem ipsum adipisicing cillum ex voluptate dolor adipisicing ut aliquip ut nostrud nulla do commodo amet cillum.' + '%0A%0A' + 'Yuk ikut bikin di ' + thisURL
+		// Color
+			let head = document.querySelector('head')
+				style = document.createElement('style')
+				style.innerHTML = ':root{--primary:' + mainColor + ';--secondary:' + bgColor + ';}'
+			head.appendChild(style)
 
-	// Color
-		let head = document.querySelector('head')
-			style = document.createElement('style')
-			style.innerHTML = ':root{--primary:' + color1 + ';--secondary:' + color2 + ';}'
-		head.appendChild(style)
+		// Variable
+			var bar = document.querySelectorAll('.bar')
+				section = document.querySelectorAll('section')
+				textarea = document.querySelector('textarea')
 
-	// Variable
-		var bar = document.querySelectorAll('.bar')
-			section = document.querySelectorAll('section')
-			textarea = document.querySelector('textarea')
+		// Image Canvas
+			var canvas = new fabric.Canvas('layer')
+				canvasWrapper = document.querySelector('#layer')
+				canvasWrapperWidth = canvasWrapper.clientWidth
 
-	// Image Canvas
-		var canvas = new fabric.Canvas('layer')
-			canvasWrapper = document.querySelector('#layer')
-			canvasWrapperWidth = canvasWrapper.clientWidth
+			canvas.setWidth(1080)
+			canvas.setHeight(1080)
 
-		canvas.setWidth(1080)
-		canvas.setHeight(1080)
-
-		document.querySelector('[type="file"]').onchange = function() {
-			if (this.files && this.files[0]) {
-				var reader = new FileReader()
-				reader.onload = imageIsLoaded
-				reader.readAsDataURL(this.files[0])
-				document.querySelector('.upload span').innerText = 'Ganti Foto'
-				document.querySelector('.download').classList.remove('d-none')
+			document.querySelector('[type="file"]').onchange = function() {
+				if (this.files && this.files[0]) {
+					var reader = new FileReader()
+					reader.onload = imageIsLoaded
+					reader.readAsDataURL(this.files[0])
+					document.querySelector('.upload span').innerText = 'Ganti Foto'
+					document.querySelector('.download').classList.remove('d-none')
+				}
 			}
-		}
 
-		function generate() {
-			fabric.Image.fromURL(imageURL,function(img) {
-				canvas.clear()
-				img.scaleToWidth(canvas.getWidth())
-				canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
-			})
-		}
+			function generate() {
+				fabric.Image.fromURL(imageURL,function(img) {
+					canvas.clear()
+					img.scaleToWidth(canvas.getWidth())
+					canvas.setOverlayImage(img, canvas.renderAll.bind(canvas))
+				})
+			}
 
-		generate()
-
-		function imageIsLoaded(e) {
 			generate()
 
-			fabric.Image.fromURL(e.target.result,function(img) {
-				var aspectRatio = 1080/1080
-					factor = 1080 / img.width
+			function imageIsLoaded(e) {
+				generate()
 
-				img.set({
-					scaleX: factor,
-					scaleY: factor
+				fabric.Image.fromURL(e.target.result,function(img) {
+					var aspectRatio = 1080/1080
+						factor = 1080 / img.width
+
+					img.set({
+						scaleX: factor,
+						scaleY: factor
+					})
+
+					canvas.add(img)
+
+					if ( img.width > img.height ) {
+						var y = (canvas.getHeight() - (img.height/2)) / 2
+					} else if ( img.width < img.height ) {
+						let x = ((img.width/2) - canvas.getWidth()) / 2
+						var y = ( x / 2 ) - x
+					} else {
+						var y = 0
+					}
+
+					canvas.item(0).set({
+						top: y,
+						cornerColor: '#275fdc',
+						cornerSize: 25,
+						padding: 13,
+						transparentCorners: false
+					})
+
+					// canvas.setActiveObject(canvas.item(0))
+					this.__canvases.push(canvas)
+					canvas.sendToBack(img)
 				})
+			}
 
-				canvas.add(img)
+		// Canvas Frame
+			function frame() {
+				document.querySelector('.canvas-container').style.height = document.querySelector('.canvas-container').clientWidth + 'px'
+			}
+			frame()
 
-				if ( img.width > img.height ) {
-					var y = (canvas.getHeight() - (img.height/2)) / 2
-				} else if ( img.width < img.height ) {
-					let x = ((img.width/2) - canvas.getWidth()) / 2
-					var y = ( x / 2 ) - x
-				} else {
-					var y = 0
+		// Caption
+			function caption() {
+				if (textarea.clientHeight < textarea.scrollHeight) {
+					textarea.style.height = textarea.scrollHeight + 'px'
 				}
+			}
+			caption()
 
-				canvas.item(0).set({
-					top: y,
-					cornerColor: '#275fdc',
-					cornerSize: 25,
-					padding: 13,
-					transparentCorners: false
+		// Button
+			function section1() {
+				window.scrollTo(0,0)
+				bar[1].classList.toggle('active')
+				section[0].classList.toggle('d-none')
+				section[1].classList.toggle('d-none')
+			}
+			function section2() {
+				window.scrollTo(0,0)
+				bar[2].classList.toggle('active')
+				section[1].classList.toggle('d-none')
+				section[2].classList.toggle('d-none')
+			}
+			section[1].querySelector('.back').onclick = function() { section1() }
+			section[2].querySelector('.back').onclick = function() { section2() }
+
+			document.querySelector('.download').onclick = function() {
+				$('#layer').get(0).toBlob(function(blob) {
+					let fileName = imageName.split(' ').join('-').toLowerCase() + '.png'
+					saveAs(blob, fileName)
+					section1()
+					caption()
 				})
-
-				// canvas.setActiveObject(canvas.item(0))
-				this.__canvases.push(canvas)
-				canvas.sendToBack(img)
-			})
-		}
-
-	// Canvas Frame
-		function frame() {
-			document.querySelector('.canvas-container').style.height = document.querySelector('.canvas-container').clientWidth + 'px'
-		}
-		frame()
-
-	// Caption
-		function caption() {
-			if (textarea.clientHeight < textarea.scrollHeight) {
-				textarea.style.height = textarea.scrollHeight + 'px'
 			}
-		}
-		caption()
 
-	// Button
-		function section1() {
-			window.scrollTo(0,0)
-			bar[1].classList.toggle('active')
-			section[0].classList.toggle('d-none')
-			section[1].classList.toggle('d-none')
-		}
-		function section2() {
-			window.scrollTo(0,0)
-			bar[2].classList.toggle('active')
-			section[1].classList.toggle('d-none')
-			section[2].classList.toggle('d-none')
-		}
-		section[1].querySelector('.back').onclick = function() { section1() }
-		section[2].querySelector('.back').onclick = function() { section2() }
+			document.querySelector('.copy').onclick = function() {
+				let clipboard = document.createElement('textarea')
+					clipboard.style.opacity = '0'
+					clipboard.style.position = 'absolute'
 
-		document.querySelector('.download').onclick = function() {
-			$('#layer').get(0).toBlob(function(blob) {
-				let fileName = imageName.split(' ').join('-').toLowerCase() + '.png'
-				saveAs(blob, fileName)
-				section1()
-				caption()
-			})
-		}
+				clipboard.innerHTML = textarea.innerHTML
+				document.body.appendChild(clipboard)
+				clipboard.select()
+				document.execCommand('copy')
+				document.body.removeChild(clipboard)
 
-		document.querySelector('.copy').onclick = function() {
-			let clipboard = document.createElement('textarea')
-				clipboard.style.opacity = '0'
-				clipboard.style.position = 'absolute'
-
-			clipboard.innerHTML = textarea.innerHTML
-			document.body.appendChild(clipboard)
-			clipboard.select()
-			document.execCommand('copy')
-			document.body.removeChild(clipboard)
-
-			section2()
-		}
-
-		document.querySelector('.share').onclick = function() {
-			let clipboard = document.createElement('input')
-				clipboard.style.opacity = '0'
-				clipboard.style.position = 'absolute'
-
-			clipboard.value = thisURL
-			document.body.appendChild(clipboard)
-			clipboard.select()
-			document.execCommand('copy')
-			document.body.removeChild(clipboard)
-		}
-
-		function popup(url,title,width,height) { 
-			let x = (window.innerWidth - width) / 2
-				y = ((window.innerHeight - height) / 2) + 50
-			window.open(url, title, 'width=' + width + ', height=' + height + ', top=' + y + ', left=' + x)
-			return false
-		}
-
-		document.querySelector('.facebook').onclick = function() {
-			popup('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thisURL) + '&quote=' + shareText, 'facebook-share-dialog', 600, 350)
-		}
-
-		document.querySelector('.twitter').onclick = function() {
-			popup('https://twitter.com/share?text=' + shareText + '&amp;url=' + thisURL, 'Twitter-dialog', 600, 350)
-		}
-
-	// Copyright
-		let year = new Date().getFullYear()
-		document.querySelector('footer').innerHTML = '© ' + year + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
-
-	// Responsive
-		var viewportWidth
-		var setViewportWidth = function () {
-			viewportWidth = window.innerWidth || document.documentElement.clientWidth
-		}
-
-		var logWidth = function () {
-			if (viewportWidth < 768) {
-				frame()
-			} else {
-				frame()
+				section2()
 			}
-		}
 
-		setViewportWidth()
-		logWidth()
+			document.querySelector('.share').onclick = function() {
+				let clipboard = document.createElement('input')
+					clipboard.style.opacity = '0'
+					clipboard.style.position = 'absolute'
 
-		window.addEventListener('resize', function () {
+				clipboard.value = thisURL
+				document.body.appendChild(clipboard)
+				clipboard.select()
+				document.execCommand('copy')
+				document.body.removeChild(clipboard)
+			}
+
+			function popup(url,title,width,height) { 
+				let x = (window.innerWidth - width) / 2
+					y = ((window.innerHeight - height) / 2) + 50
+				window.open(url, title, 'width=' + width + ', height=' + height + ', top=' + y + ', left=' + x)
+				return false
+			}
+
+			document.querySelector('.facebook').onclick = function() {
+				popup('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thisURL) + '&quote=' + shareText, 'facebook-share-dialog', 600, 350)
+			}
+
+			document.querySelector('.twitter').onclick = function() {
+				popup('https://twitter.com/share?text=' + shareText + '&amp;url=' + thisURL, 'Twitter-dialog', 600, 350)
+			}
+
+		// Copyright
+			let year = new Date().getFullYear()
+			document.querySelector('footer').innerHTML = '© ' + year + ' Twibboz by <a href="https://degiam.github.io" target="_blank">Degiam</a>'
+
+		// Responsive
+			var viewportWidth
+			var setViewportWidth = function () {
+				viewportWidth = window.innerWidth || document.documentElement.clientWidth
+			}
+
+			var logWidth = function () {
+				if (viewportWidth < 768) {
+					frame()
+				} else {
+					frame()
+				}
+			}
+
 			setViewportWidth()
 			logWidth()
-		}, false)
+
+			window.addEventListener('resize', function () {
+				setViewportWidth()
+				logWidth()
+			}, false)
 	</script>
 </slot>
 

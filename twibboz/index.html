@@ -63,7 +63,7 @@
 	</div>
 
 	<div class="my-3">
-		<canvas id="combine"></canvas>
+		<canvas id="layer"></canvas>
 	</div>
 
 	<div class="d-flex">
@@ -185,8 +185,8 @@ Lalu ikuti @twibbonize
 			textarea = document.querySelector('textarea')
 
 	// Image Canvas
-		var canvas = new fabric.Canvas('combine')
-			canvasWrapper = document.querySelector('#combine')
+		var canvas = new fabric.Canvas('layer')
+			canvasWrapper = document.querySelector('#layer')
 			canvasWrapperWidth = canvasWrapper.clientWidth
 
 		canvas.setWidth(1080)
@@ -280,7 +280,7 @@ Lalu ikuti @twibbonize
 		section[2].querySelector('.back').onclick = function() { section2() }
 
 		document.querySelector('.download').onclick = function() {
-			$('#combine').get(0).toBlob(function(blob) {
+			$('#layer').get(0).toBlob(function(blob) {
 				let fileName = imageName.split(' ').join('-').toLowerCase() + '.png'
 				saveAs(blob, fileName)
 				section1()

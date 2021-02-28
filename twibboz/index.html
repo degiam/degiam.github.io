@@ -66,7 +66,7 @@
 	</div>
 </header>
 
-<section>
+<section class="d-none">
 	<div class="title">
 		<h2>Filter</h2>
 		<p>Pilih fotomu yang paling keren!</p>
@@ -93,7 +93,7 @@
 	</div>
 </section>
 
-<section class="d-none">
+<section class="d-nones">
 	<div class="title">
 		<h2>Caption</h2>
 		<p>Silakan salin <i>caption</i>-nya!</p>
@@ -271,7 +271,7 @@ Lalu ikuti @twibbonize
 				section[1].classList.toggle('d-none')
 				section[2].classList.toggle('d-none')
 			}
-			section[1].querySelector('.back').onclick = function() { section1() }
+			section[1].querySelector('.back').onclick = function() { section1(), frame() }
 			section[2].querySelector('.back').onclick = function() { section2() }
 
 			document.querySelector('.download').onclick = function() {

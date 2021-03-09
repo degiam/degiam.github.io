@@ -1,0 +1,169 @@
+/*
+ * Aksara Digital
+ * IT Software Solution for Your Business
+ * Design by Degiam - https://degiam.github.io
+ * Copyright (c) 2021
+ */
+
+/* Base */
+	:root {
+		--theme: #d60303;
+		--theme-dark: #b10000;
+		--dark: #1d2021;
+		--dark-dark: #050505;
+		--green: #009b72;
+	}
+
+	body {
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.text-theme {
+		color: var(--theme) !important;
+	}
+	.text-dark {
+		color: var(--dark) !important;
+	}
+
+	.bg-theme {
+		background-color: var(--theme) !important;
+	}
+	.bg-theme-dark {
+		background-color: var(--theme-dark) !important;
+	}
+	.bg-dark {
+		background-color: var(--dark) !important;
+	}
+	.bg-green {
+		background-color: var(--green) !important;
+	}
+	.bg-blue {
+		background-color: var(--blue) !important;
+	}
+
+	.bg-gradient-theme {
+		background: var(--theme);
+		background: linear-gradient(145deg, var(--theme) 30%, var(--theme-dark) 75%) !important;
+	}
+	.bg-gradient-dark {
+		background: var(--dark);
+		background: linear-gradient(145deg, var(--dark) 30%, var(--dark-dark) 75%) !important;
+	}
+	.bg-gradient-dark-half {
+		background: rgba(0,0,0,.5);
+		background: linear-gradient(145deg, var(--dark) 45%, rgba(0,0,0,.5) 75%, transparent 100%) !important;
+	}
+
+/* Opacity */
+	.opacity {
+		opacity: 1;
+	}
+	.opacity-1 {
+		opacity: .1;
+	}
+	.opacity-2 {
+		opacity: .2;
+	}
+	.opacity-3 {
+		opacity: .3;
+	}
+	.opacity-4 {
+		opacity: .4;
+	}
+	.opacity-5 {
+		opacity: .5;
+	}
+	.opacity-6 {
+		opacity: .6;
+	}
+	.opacity-7 {
+		opacity: .7;
+	}
+	.opacity-8 {
+		opacity: .8;
+	}
+	.opacity-9 {
+		opacity: .9;
+	}
+
+/* Filter */
+	.filter-white-unhover:not(:hover) {
+	    filter: brightness(0) invert(1);
+	}
+
+/* Type */
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 991.98px) {
+		.lead {
+			font-size: 1rem;
+		}
+	}
+
+/* Image */
+	.object-fit-cover {
+		object-fit: cover;
+	}
+	.object-fit-contain {
+		object-fit: contain;
+	}
+
+/* Spacing */
+	.lh-1 {
+		line-height: 1;
+	}
+	.ws-normal {
+		white-space: normal;
+	}
+
+/* Shadow */
+	.shadow-0 {
+		box-shadow: none;
+	}
+
+/* Order */
+	.index-1 {
+		z-index: 1;
+	}
+	.index-n1 {
+		z-index: -1;
+	}
+
+/* Dimension */
+	.w-fit {
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+
+/* Navbar */
+	.navbar-nav .nav-link {
+		font-size: 1rem !important;
+		font-weight: 600 !important;
+	}
+	.navbar-dark .navbar-nav .show>.nav-link,
+	.navbar-dark .navbar-nav .active>.nav-link,
+	.navbar-dark .navbar-nav .nav-link.show,
+	.navbar-dark .navbar-nav .nav-link.active,
+	.navbar-dark .navbar-nav .nav-link:hover,
+	.navbar-dark .navbar-nav .nav-link:focus {
+		color: var(--theme) !important;
+	}
+	@media (max-width: 991.98px) {
+		.navbar-expand-lg .navbar-brand img {
+			height: 2.25rem;
+		}
+		.navbar-expand-lg .navbar-collapse {
+			background-color: transparent;
+		}
+		.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item .nav-link {
+			color: var(--white);
+		}
+	}
+
+/* Footer */
+	.footer-dark {
+		color: rgba(255,255,255,.9);
+		background-color: var(--dark);
+	}

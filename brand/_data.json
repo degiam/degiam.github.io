@@ -1,4 +1,4 @@
-brand = `[
+var brand = `[
 	{
 		"title"	: "Adobe Illustrator",
 		"image"	: "brand/adobe-illustrator.svg"

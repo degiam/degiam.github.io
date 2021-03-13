@@ -1,0 +1,62 @@
+var brand = `[
+	{
+		"title"	: "Adobe Illustrator",
+		"image"	: "brand/adobe-illustrator.svg"
+	},
+	{
+		"title"	: "Adobe Photoshop",
+		"image"	: "brand/adobe-photoshop.svg"
+	},
+	{
+		"title"	: "Affinity Photo",
+		"image"	: "brand/affinity-photo.svg"
+	},
+	{
+		"title"	: "Affinity Designer",
+		"image"	: "brand/affinity-designer.svg"
+	},
+	{
+		"title"	: "Figma",
+		"image"	: "brand/figma.svg"
+	},
+	{
+		"title"	: "PWA",
+		"image"	: "brand/pwa.svg"
+	},
+	{
+		"title"	: "AMP",
+		"image"	: "brand/amp.svg"
+	},
+	{
+		"title"	: "Vue",
+		"image"	: "brand/vue.svg"
+	},
+	{
+		"title"	: "jQuery",
+		"image"	: "brand/jquery.svg"
+	},
+	{
+		"title"	: "Milligram",
+		"image"	: "brand/milligram.svg"
+	},
+	{
+		"title"	: "Bootstrap",
+		"image"	: "brand/bootstrap.svg"
+	},
+	{
+		"title"	: "Sass",
+		"image"	: "brand/sass.svg"
+	},
+	{
+		"title"	: "JavaScript",
+		"image"	: "brand/js.svg"
+	},
+	{
+		"title"	: "CSS",
+		"image"	: "brand/css.svg"
+	},
+	{
+		"title"	: "HTML",
+		"image"	: "brand/html.svg"
+	}
+]`

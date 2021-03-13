@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+	<title>Twig</title>
+	<ellipse fill="url(#_Radial1)" cx="11.903" cy="23.177" rx="3.984" ry="0.823"/>
+	<g>
+		<path fill="url(#_Linear2)" d="M10.495,21.333l2.659,-0c-0.162,-3.456 -1.168,-14.48 -2.864,-21.333c0.307,4.705 0.643,20.339 0.205,21.333Z"/>
+		<path fill="url(#_Linear3)" d="M10.495,21.363l1.085,-0c0.133,-7.801 -1.29,-21.333 -1.29,-21.333c0.307,4.705 0.643,20.339 0.205,21.333Z"/>
+		<path fill="url(#_Linear4)" d="M10.593,20.746l1.129,0.328c0,-0 0.277,-3.747 0.682,-4.033c0.218,-1.436 -1.576,-14.567 -2.054,-16.797c-0.02,-0.082 -0.04,-0.164 -0.06,-0.244c0.28,4.291 0.584,17.67 0.303,20.746Z"/>
+	</g>
+	<g>
+		<path fill="url(#_Linear5)" d="M10.422,23.349l1.68,0.073c0.04,-3.26 -1.139,-8.898 -4.354,-11.09c1.636,2.031 2.82,4.515 2.674,11.017Z"/>
+		<path fill="url(#_Linear6)" d="M7.975,12.628c1.524,1.986 2.6,4.529 2.46,10.744l1.148,0.05c0.041,-1.254 0.07,-7.868 -3.608,-10.794Z"/>
+	</g>
+	<g>
+		<path fill="url(#_Linear7)" d="M13.615,23.459c0.052,0.234 -1.681,0.402 -1.739,0.35c-0.059,-0.051 -1.257,-8.051 4.376,-7.247c-3.054,0.132 -3.288,4.318 -2.637,6.897Z"/>
+		<path fill="url(#_Linear8)" d="M11.875,23.809c0.034,0.03 0.615,-0.013 1.097,-0.098c-0.072,-0.675 -0.412,-4.356 0.407,-6.53c-2.274,1.801 -1.549,6.589 -1.504,6.628Z"/>
+	</g>
+	<path fill="#a0cb29" d="M8.128,22.312l0.628,1.081l0.351,-0m0.774,0.468l0.76,-0l-1.125,-3.025m4.763,2.835l0.497,-0l0.365,-2.338m0.41,1.724l0.423,-0l0.205,-0.862"/>
+	<use xlink:href="#_Image9" x="6.539" y="14.402" width="11.335px" height="10.393px" transform="matrix(0.944543,0,0,0.944791,0,0)"/>
+	<path fill="#fff" d="M11.286,19.218c0.245,-0 0.444,0.199 0.444,0.444c0,0.245 -0.199,0.443 -0.444,0.443c-0.245,0 -0.443,-0.198 -0.443,-0.443c-0,-0.245 0.198,-0.444 0.443,-0.444Zm1.115,-0c0.244,-0 0.443,0.199 0.443,0.444c0,0.245 -0.199,0.443 -0.443,0.443c-0.245,0 -0.444,-0.198 -0.444,-0.443c-0,-0.245 0.199,-0.444 0.444,-0.444Z"/>
+	<defs>
+		<radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.81351,0,0,0.903803,11.9025,23.1782)">
+			<stop offset="0" style="stop-color:#323232;stop-opacity:0.92"/>
+			<stop offset="0.13" style="stop-color:#363636;stop-opacity:0.8"/>
+			<stop offset="0.27" style="stop-color:#434343;stop-opacity:0.67"/>
+			<stop offset="0.41" style="stop-color:#585858;stop-opacity:0.54"/>
+			<stop offset="0.55" style="stop-color:#757575;stop-opacity:0.4"/>
+			<stop offset="0.69" style="stop-color:#9b9b9b;stop-opacity:0.27"/>
+			<stop offset="0.83" style="stop-color:#c9c9c9;stop-opacity:0.13"/>
+			<stop offset="0.98" style="stop-color:#fff;stop-opacity:0"/>
+			<stop offset="1" style="stop-color:#fff;stop-opacity:0"/>
+		</radialGradient>
+		<linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.10765e-15,-18.0892,18.0892,1.10765e-15,11.7223,17.2513)">
+			<stop offset="0" style="stop-color:#3d6a06;stop-opacity:1"/>
+			<stop offset="0.16" style="stop-color:#588710;stop-opacity:1"/>
+			<stop offset="0.33" style="stop-color:#6d9d18;stop-opacity:1"/>
+			<stop offset="0.51" style="stop-color:#7bae1e;stop-opacity:1"/>
+			<stop offset="0.72" style="stop-color:#84b721;stop-opacity:1"/>
+			<stop offset="1" style="stop-color:#87ba22;stop-opacity:1"/>
+		</linearGradient>
+		<linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.30625e-15,-21.3328,21.3328,1.30625e-15,10.9397,21.3627)">
+			<stop offset="0" style="stop-color:#bbe882;stop-opacity:0.28"/>
+			<stop offset="0.14" style="stop-color:#bee988;stop-opacity:0.26"/>
+			<stop offset="0.34" style="stop-color:#c8ec9a;stop-opacity:0.22"/>
+			<stop offset="0.58" style="stop-color:#d8f2b7;stop-opacity:0.19"/>
+			<stop offset="0.83" style="stop-color:#eef9e0;stop-opacity:0.15"/>
+			<stop offset="1" style="stop-color:#fff;stop-opacity:0.12"/>
+		</linearGradient>
+		<linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.16473e-15,-19.0215,19.0215,1.16473e-15,11.3564,20.2974)">
+			<stop offset="0" style="stop-color:#48790b;stop-opacity:0.33"/>
+			<stop offset="0.82" style="stop-color:#fff;stop-opacity:0.14"/>
+			<stop offset="1" style="stop-color:#fff;stop-opacity:0.14"/>
+		</linearGradient>
+		<linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.98293e-16,-6.50462,6.50462,3.98293e-16,9.92558,23.0204)">
+			<stop offset="0" style="stop-color:#5e7814;stop-opacity:1"/>
+			<stop offset="0.51" style="stop-color:#8aa21f;stop-opacity:1"/>
+			<stop offset="1" style="stop-color:#b1c628;stop-opacity:1"/>
+		</linearGradient>
+		<linearGradient id="_Linear6" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.100118,-5.23921,5.23921,0.100118,9.70504,21.931)">
+			<stop offset="0" style="stop-color:#82af10;stop-opacity:0.17"/>
+			<stop offset="0.82" style="stop-color:#fff;stop-opacity:0"/>
+			<stop offset="1" style="stop-color:#fff;stop-opacity:0"/>
+		</linearGradient>
+		<linearGradient id="_Linear7" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.58459e-16,-5.85407,5.85407,3.58459e-16,13.9911,23.2267)">
+			<stop offset="0" style="stop-color:#5e7814;stop-opacity:1"/>
+			<stop offset="0.14" style="stop-color:#758e1a;stop-opacity:1"/>
+			<stop offset="0.34" style="stop-color:#8fa620;stop-opacity:1"/>
+			<stop offset="0.55" style="stop-color:#a2b824;stop-opacity:1"/>
+			<stop offset="0.77" style="stop-color:#adc327;stop-opacity:1"/>
+			<stop offset="1" style="stop-color:#b1c628;stop-opacity:1"/>
+		</linearGradient>
+		<linearGradient id="_Linear8" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.06457e-16,-6.63795,6.63795,4.06457e-16,12.5548,23.6734)">
+			<stop offset="0" style="stop-color:#fff;stop-opacity:0.08"/>
+			<stop offset="1" style="stop-color:#fff;stop-opacity:0"/>
+		</linearGradient>
+		<image id="_Image9" width="12px" height="11px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAQUlEQVQokZWRQQoAMAjD4v7/Zz1tIFhHexJJ1WLQFczKCVBwM13oBz9TGDAAR/TloMmw5lIb7JMsQ4oaWMIp2X8oRuoGFQuCeAsAAAAASUVORK5CYII="/>
+	</defs>
+</svg>

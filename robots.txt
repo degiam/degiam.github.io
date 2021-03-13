@@ -1,0 +1,11 @@
+Sitemap: https://degiam.github.io/sitemap.xml
+
+User-agent: *
+
+Allow: /
+Allow: /product/
+Allow: /product/detail
+Allow: /project/
+Allow: /project/detail
+
+Disallow: /pro

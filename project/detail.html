@@ -86,9 +86,6 @@
 				</picture>
 			</a>
 			<div class="order-md-3 d-flex justify-content-end w-lg-75 me-n2">
-				<button type="button" class="btn btn-primary rounded-3 px-4 text-uppercase me-3 d-md-none" data-bs-toggle="modal" data-bs-target="#contact">
-					Hire
-				</button>
 				<button type="button" class="btn btn-clear d-flex align-items-center cursor-default btn-dark-mode" aria-label="Toggle Dark">
 					<label class="d-none d-lg-flex align-items-center cursor-pointer me-lg-2 text-dark-mode" for="dark-mode">
 						<span>Light Mode</span>
@@ -133,9 +130,9 @@
 							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/project/?web-design">Web Design</a></li>
 						</ul>
 					</li>
-					<li class="nav-item mx-md-2 my-2 my-md-0 text-uppercase d-none d-md-block">
-						<a class="btn btn-primary rounded-3 px-4" href="#" role="button" data-bs-toggle="modal" data-bs-target="#contact">
-							Hire
+					<li class="nav-item mx-md-2 mt-auto my-md-0 pt-2 pt-md-0 text-uppercase">
+						<a class="btn btn-primary rounded-3 px-4 d-block" href="#" role="button" data-bs-toggle="modal" data-bs-target="#contact" aria-label="Toggle Contact">
+							Hire Me
 						</a>
 					</li>
 				</ul>
@@ -158,7 +155,7 @@
 								<label for="contactName" class="form-label">Name *</label>
 								<input type="text" class="form-control" id="contactName" name="Name" required>
 							</div>
-							<div class="col-md-6 mb-3">
+							<div class="col-md-6 mb-3 d-none d-md-block">
 								<label for="contactLocation" class="form-label">Location</label>
 								<input type="text" class="form-control" id="contactLocation" name="Location">
 							</div>
@@ -172,9 +169,10 @@
 							</div>
 							<div class="col-12 mb-3">
 								<label for="contactMessage" class="form-label">Message *</label>
-								<textarea rows="5" class="form-control" id="contactMessage" name="Message" required></textarea>
+								<textarea rows="3" class="form-control" id="contactMessage" name="Message" required></textarea>
 							</div>
 							<div class="col-12 text-end">
+								<button type="button" class="btn btn-outline-secondary opacity-8 border-0 rounded-3 px-4" data-bs-dismiss="modal">Back</button>
 								<button type="submit" class="btn btn-primary rounded-3 px-4">Send</button>
 							</div>
 						</div>

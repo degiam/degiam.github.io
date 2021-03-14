@@ -1,4 +1,4 @@
-var project =`[
+var project = `[
 	{
 		"id"			: "#1",
 		"title"			: "Sunrise",

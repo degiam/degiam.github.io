@@ -1,4 +1,4 @@
-var project = `[
+var project =`[
 	{
 		"id"			: "#1",
 		"title"			: "Sunrise",
@@ -553,16 +553,16 @@ var project = `[
 		"publish"		: "https://www.smpkemalabhayangkari7porong.sch.id/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1WhzmZrg_wBgQrZacNnbYf4eXs7t6IATb",
+				"webp"	: "1WhSfw4Bt67ealNTzn8Q1r9UwK-oE7-J-"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1ix-YT5ZJhLldiL0H8-tgaIjEf1qxKe82",
+				"webp"	: "1HnAOezkcKNH-DtbRDL1VBhP8_0YIxNzp"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1cKAD1sx2sg16ZWupGveY8z3rY1E_MrVG",
+				"webp"	: "1y9is-0zg6AmV4pU1RZO1pH1SeSl4QYqB"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -637,16 +637,16 @@ var project = `[
 		"publish"		: "https://budimuliaalbayaan.sch.id/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1GLkx-ueoyrZlGPUyJltiw-_19tsKnVwC",
+				"webp"	: "1zVds1cMeHrCkIumSW24nvqv6lpIRiewN"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1VxqvcWe2iwNY_5aBMp1YY821b1YskFav",
+				"webp"	: "1OXO_m377693Fs6t-635M8jqYw31f312j"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1QrqBIXseME5SY5d-IdUz8HKM5ugKiB5z",
+				"webp"	: "17mXqwzPB9e4Ui341XdNU4v-iP1NsjoyN"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -679,16 +679,16 @@ var project = `[
 		"publish"		: "https://jendela.id/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1ipFomeg4_cRvRZ9t6fD0P6FcSEw-h_-c",
+				"webp"	: "1rsrrn4yNtxKu0lxBq39o_VRXshYJebcn"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1iSeW3Uq9FciVRU06bfPoW9pxlHE9hbhV",
+				"webp"	: "1QlbMpQXvTe_h9_YyLR-g4tcEJQK2GR_f"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1euxYYMiWHd1_cNgSdI_MO5hBoXg8WQGL",
+				"webp"	: "1FbPq_zxAacqKiirJkxdaw1s0hSPqT9KP"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -721,16 +721,16 @@ var project = `[
 		"publish"		: "https://aksaradigital.co.id/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "152Qgif7dEEau1T8pBQ-VF-KauiKK4kWp",
+				"webp"	: "1jx2eh56Z_iN0xeTRG2LeLSDSMvEMKmRg"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1IebtisItXDOivn2GgePuP6JQpHu5gBTE",
+				"webp"	: "1aJgielmsdT25Ahj5rtApLQV32CljCCvs"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1emH1mg-9Q8uVXrQ6pcjLC9WQgArEYMrS",
+				"webp"	: "1wmrt3l3M-mxT-xXT8Sf-b2rOaFuc-M2B"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",

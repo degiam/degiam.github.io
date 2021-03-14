@@ -1,4 +1,4 @@
-var product = `[
+var product =`[
 	{
 		"id"			: "#1",
 		"title"			: "Captionide",
@@ -69,53 +69,6 @@ var product = `[
 			"end"		: "2021-02-28"
 		},
 		"publish"		: "http://degiam.github.io/twibbonide/",
-		"screenshot"	: {
-			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
-			},
-			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
-			},
-			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
-			},
-			"src3" 		: {
-				"jpg"	: "1KNT4oINwqxA39QiYq54CpY8BwdgrJBO1",
-				"webp"	: "1uEJMP93om0YLHabN5oN_IVDrx-eb7Bph"
-			}
-		}
-	},
-	{
-		"id"			: "#3",
-		"title"			: "Nydia",
-		"description"	: "<p>A complete user interface for admin panel that ready to use. This UI kit based on Bootstrap 5, with some touch to raise the own characteristic. Nydia support responsive design and progressive web apps. This kit uses Material Design Icons that have thousands of icons. All the Bootstrap's components can be use here, don't worry!</p>",
-		"category"		: "Admin Panel",
-		"badge"			: "bg-orange",
-		"software"		: [
-			{
-				"name"	: "Affinity Designer",
-				"image"	: "../brand/affinity-designer.svg",
-				"url"	: "https://affinity.serif.com/designer/"
-			},
-			{
-				"name"	: "Material Design Icons",
-				"image"	: "../brand/materialdesignicons.svg",
-				"url"	: "https://materialdesignicons.com/"
-			},
-			{
-				"name"	: "Bootstrap",
-				"image"	: "../brand/bootstrap.svg",
-				"url"	: "https://getbootstrap.com/"
-			}
-		],
-		"date"			: {
-			"start"		: "2021-01-01",
-			"end"		: "2021-12-31"
-		},
-		"publish"		: "http://degiam.github.io/nydia/",
 		"screenshot"	: {
 			"src0" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",

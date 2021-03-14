@@ -291,20 +291,20 @@ var project =`[
 		"publish"		: "https://kelimutu.wunik.id/admin/dashboard",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "1PyPcSbSByggChQf_ABzsSkusfIkQy8RU",
-				"webp"	: "1lXljCLiQmMdvHmrxnAHw8davlHqkpNTT"
+				"jpg"	: "1U72CE1eX6NkeIfcG5lc8gW_M83l1I89j",
+				"webp"	: "1_uBq0YRPO2bX79hyYLIBw7fQrQ5RsB_M"
 			},
 			"src1" 		: {
-				"jpg"	: "1SSps752xWtvb-co0Kl-1CuWpUKU7OuJL",
-				"webp"	: "1E-l26fwZokwjv5KNfY_AoPgKBISwh-je"
+				"jpg"	: "16Kay6qrzzVzlsw_4tWQSiFguNsRyfU0a",
+				"webp"	: "1Fj8H8DczSzd9-dYlSL2gBPzQSdtrd-yc"
 			},
 			"src2" 		: {
-				"jpg"	: "1643MjKB1BvTGaU6CsdT9sVg71chfancD",
-				"webp"	: "1wwF2RF-XdChwJvZ-6V1cFScXhUbB9DNZ"
+				"jpg"	: "1OYbqcQjOF1Z7VVbdWM7TfEhr_cY1Xwdi",
+				"webp"	: "1HuQ8lTl0nDPk_E5K5Jev0u079VpTgKF0"
 			},
 			"src3" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "18baZfX1l5gFahquEH1UNIqO93RLvR2qm",
+				"webp"	: "1scJggnQithCEHSGX2qICNIZPvnCO1avE"
 			}
 		}
 	},

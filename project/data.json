@@ -592,7 +592,7 @@ var project =`[
 			"start"		: "2021-01-22",
 			"end"		: "2021-02-16"
 		},
-		"publish"		: "https://www.figma.com/proto/2N3KDJL5ZjkYLtmLHOdeDJ/Kerjoo-App?node-id=2%3A2&viewport=158%2C87%2C0.16890756785869598&scaling=scale-down",
+		"publish"		: "https://play.google.com/store/apps/details?id=com.kerjoo",
 		"screenshot"	: {
 			"src0" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",

@@ -3,7 +3,7 @@ var project =`[
 		"id"			: "#1",
 		"title"			: "Sunrise",
 		"description"	: "<p>Jejualan theme</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -50,7 +50,7 @@ var project =`[
 		"id"			: "#2",
 		"title"			: "Paperbag",
 		"description"	: "<p>Jejualan theme</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -97,7 +97,7 @@ var project =`[
 		"id"			: "#3",
 		"title"			: "Retro",
 		"description"	: "<p>Jejualan theme</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -144,7 +144,7 @@ var project =`[
 		"id"			: "#4",
 		"title"			: "Stikes Surya Global",
 		"description"	: "<p>Official website</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -270,7 +270,7 @@ var project =`[
 		"id"			: "#7",
 		"title"			: "Wunik Admin",
 		"description"	: "<p>Admin Panel</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -312,7 +312,7 @@ var project =`[
 		"id"			: "#8",
 		"title"			: "ePusta Amarta Library",
 		"description"	: "<p>Official website and admin</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -364,7 +364,7 @@ var project =`[
 		"id"			: "#9",
 		"title"			: "Merbabu",
 		"description"	: "<p>Wunik theme</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -406,7 +406,7 @@ var project =`[
 		"id"			: "#10",
 		"title"			: "Kelimutu",
 		"description"	: "<p>Wunik theme</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -447,8 +447,8 @@ var project =`[
 	{
 		"id"			: "#11",
 		"title"			: "BBPOM Yogyakarta",
-		"description"	: "<p>Official website</p><p>Web design for an institution that oversees the distribution of medicines and food in Indonesia</p>",
-		"category"		: "Web Design",
+		"description"	: "<p>Official website</p><p>Website for an institution that oversees the distribution of medicines and food in Indonesia</p>",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -532,7 +532,7 @@ var project =`[
 		"id"			: "#13",
 		"title"			: "SMP Kemala Bhayangkari 7 Porong",
 		"description"	: "<p>Official website</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -616,7 +616,7 @@ var project =`[
 		"id"			: "#15",
 		"title"			: "PAUD Budi Mulia Al Bayaan",
 		"description"	: "<p>Official website</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -658,7 +658,7 @@ var project =`[
 		"id"			: "#16",
 		"title"			: "Jendela.id",
 		"description"	: "<p>Official website - partner dhimas</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{
@@ -700,7 +700,7 @@ var project =`[
 		"id"			: "#17",
 		"title"			: "Aksara Digital",
 		"description"	: "<p>Official website</p>",
-		"category"		: "Web Design",
+		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
 			{

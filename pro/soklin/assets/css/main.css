@@ -309,10 +309,30 @@
 
 /* Variant */
 	body {
-		background-image: url(../img/bg.png);
+		background-image: url(../img/bg-xs.png);
 		background-color: var(--theme-3);
 		background-size: 100% auto;
 		background-repeat: repeat-y;
+	}
+	@media (min-width: 576px) {
+		body {
+			background-image: url(../img/bg-sm.png);
+		}
+	}
+	@media (min-width: 768px) {
+		body {
+			background-image: url(../img/bg-md.png);
+		}
+	}
+	@media (min-width: 992px) {
+		body {
+			background-image: url(../img/bg-lg.png);
+		}
+	}
+	@media (min-width: 1200px) {
+		body {
+			background-image: url(../img/bg.png);
+		}
 	}
 
 	header nav > * span,
@@ -337,21 +357,33 @@
 	}
 
 	#main {
-		background-image: url(../img/main.png);
+		background-image: url(../img/main-xs.png);
 		background-size: 100% auto;
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-position-y: 275px;
 		min-height: calc(100vh - 53px);
 	}
+	@media (min-width: 576px) {
+		#main {
+			background-image: url(../img/main-sm.png);
+		}
+	}
 	@media (min-width: 768px) {
 		#main {
+			background-image: url(../img/main-md.png);
 			background-position-y: 200px;
 		}
 	}
 	@media (min-width: 992px) {
 		#main {
+			background-image: url(../img/main-lg.png);
 			background-position-y: 150px;
+		}
+	}
+	@media (min-width: 1200px) {
+		#main {
+			background-image: url(../img/main.png);
 		}
 	}
 

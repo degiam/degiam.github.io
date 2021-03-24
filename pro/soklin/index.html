@@ -25,6 +25,8 @@
 	<link rel="canonical" href="https://degiam.github.io/pro/soklin">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico">
+	<!-- Manifest -->
+	<link rel="manifest" href="manifest.json">
 	<!-- Status Bar -->
 	<meta name="apple-mobile-web-app-status-bar" content="#fff">
 	<meta name="msapplication-TileColor" content="#fff">
@@ -213,6 +215,16 @@
 </footer>
 
 <slot>
+	<!-- START PWA -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('service-worker.js').then(res => console.log('service worker registered')).catch(err => console.log('service worker not registered', err))
+			})
+		}
+	</script>
+	<script src="service-worker.js"></script>
+	<!-- END PWA -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
 	<script src="assets/js/main.js" defer></script>

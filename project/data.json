@@ -268,7 +268,7 @@ var project =`[
 	},
 	{
 		"id"			: "#7",
-		"title"			: "Wunik Admin",
+		"title"			: "Wunik",
 		"description"	: "<p>Admin Panel</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",

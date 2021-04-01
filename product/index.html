@@ -60,14 +60,14 @@
 	<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
 	<link rel="preload" as="style" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="preload" as="style" href="../assets/css/main.min.css">
-	<link rel="preload" as="script" href="../assets/js/main.min.js">
+	<link rel="preload" as="style" href="../assets/css/main.css">
+	<link rel="preload" as="script" href="../assets/js/main.js">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;600&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1">
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
-	<link rel="stylesheet" href="../assets/css/main.min.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
@@ -117,6 +117,7 @@
 						<ul class="dropdown-menu" aria-labelledby="navdown-1">
 							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/product/detail?#1&captionide">Captionide</a></li>
 							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/product/detail?#2&twibbonide">Twibbonide</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/product/detail?#3&nydia">Nydia</a></li>
 						</ul>
 					</li>
 					<li class="nav-item mx-md-2 my-2 my-md-0 text-uppercase dropdown">
@@ -253,11 +254,11 @@
 								</div>
 								<div class="data-sort-asc">
 									<span class="mdi mdi-sort-ascending me-2"></span>
-									Date Latest
+									Date Oldest
 								</div>
 								<div class="data-sort-desc">
 									<span class="mdi mdi-sort-descending me-2"></span>
-									Date Oldest
+									Date Latest
 								</div>
 							</div>
 						</div>
@@ -302,7 +303,8 @@
 							<a class="product-title text-decoration-none text-dark">
 								<h3 class="filter-title fs-5 mb-1"></h3>
 							</a>
-							<p class="product-date filter-date mb-1 d-none"></p>
+							<p class="product-date mb-1 d-none"></p>
+							<span class="filter-date d-none"></span>
 							<span class="product-category filter-category badge rounded-pill text-uppercase px-3 py-2 mt-1"></span>
 							<span class="product-release filter-release d-none"></span>
 						</div>
@@ -348,7 +350,7 @@
 	<script src="../service-worker.js"></script>
 	<!-- Main -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
-	<script src="../assets/js/main.min.js"></script>
+	<script src="../assets/js/main.js"></script>
 </slot>
 
 </body>

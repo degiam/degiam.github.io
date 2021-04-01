@@ -129,8 +129,11 @@
 									<div class="form-group">
 										<label for="idcard">Foto KTP</label>
 										<div class="mb-4">
-											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#idcard" aria-expanded="false" aria-controls="idcard">
+											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#idcard" aria-expanded="false" aria-controls="idcard" onclick="$(this).toggleClass('d-none'),$(this).next().toggleClass('d-none')">
 												Lihat Foto
+											</button>
+											<button class="btn btn-primary d-none" type="button" data-toggle="collapse" data-target="#idcard" aria-expanded="false" aria-controls="idcard" onclick="$(this).toggleClass('d-none'),$(this).prev().toggleClass('d-none')">
+												Tutup Foto
 											</button>
 											<div class="collapse" id="idcard">
 												<img class="img-fluid mt-3" src="chat/assets/ktp.jpg" alt="Foto KTP">

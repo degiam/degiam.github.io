@@ -18,8 +18,16 @@
 	})
 
 // Account Name
-	let head = document.head
-		width = document.querySelector('header nav:last-child > * span').clientWidth
-		css = document.createElement('style')
-		css.innerHTML = 'header nav:last-child > * span { width: 0 } header nav:last-child > *:hover span { width: ' + (width + 15) + 'px }'
-	head.appendChild(css)
+	function name() {
+		let head = document.head
+			width = document.querySelector('header nav:last-child > * span').clientWidth
+			css = document.createElement('style')
+			css.innerHTML = 'header nav:last-child > * span { width: 0 } header nav:last-child > *:hover span { width: ' + (width + 15) + 'px }'
+		head.appendChild(css)
+	}
+
+	name()
+
+	$(window).resize(function() {
+		name()
+	})

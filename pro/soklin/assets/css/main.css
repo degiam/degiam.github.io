@@ -1,5 +1,5 @@
 /*
- * So Klin Korean Series
+ * So Klin Korea Vaganza
  * Design by Degiam - https://degiam.github.io
  * Copyright (c) 2021
  */
@@ -392,6 +392,15 @@
 	}
 	header nav > *:hover svg {
 		margin: 0 .5rem;
+	}
+	header nav:last-child > * span {
+		width: auto;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	header nav:last-child > *:hover span {
+		max-width: 60vw;
 	}
 
 	#main {

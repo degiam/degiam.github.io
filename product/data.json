@@ -24,20 +24,20 @@ var product =`[
 		"publish"		: "http://degiam.github.io/captionide/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
+				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src1" 		: {
 				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
 				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
+				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src3" 		: {
-				"jpg"	: "1KNT4oINwqxA39QiYq54CpY8BwdgrJBO1",
-				"webp"	: "1uEJMP93om0YLHabN5oN_IVDrx-eb7Bph"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			}
 		}
 	},
@@ -71,20 +71,20 @@ var product =`[
 		"publish"		: "http://degiam.github.io/twibbonide/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
+				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src1" 		: {
 				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
 				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
+				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
 			},
 			"src3" 		: {
-				"jpg"	: "1KNT4oINwqxA39QiYq54CpY8BwdgrJBO1",
-				"webp"	: "1uEJMP93om0YLHabN5oN_IVDrx-eb7Bph"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			}
 		}
 	}

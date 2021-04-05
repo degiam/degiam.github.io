@@ -325,6 +325,15 @@
 		border-color: var(--theme-2);
 	}
 
+/* Tab */
+	.nav-pills .nav-link {
+		background-color: rgba(255,255,255,.9);
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		background-color: var(--theme-1);
+	}
+
 /* Border */
 	.rounded-1 {
 		border-radius: .25rem !important;

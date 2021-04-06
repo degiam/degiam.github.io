@@ -328,10 +328,37 @@
 /* Tab */
 	.nav-pills .nav-link {
 		background-color: rgba(255,255,255,.9);
+		position: relative;
+	}
+	.nav-pills .nav-link:after {
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0;
+		height: 0;
+		border-top: 0 solid var(--theme-1);
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		-webkit-transform: translateY(-7px);
+		-moz-transform: translateY(-7px);
+		transform: translateY(-7px);
+		-webkit-transition: all .1s ease;
+		-moz-transition: all .1s ease;
+		transition: all .1s ease;
 	}
 	.nav-pills .nav-link.active,
 	.nav-pills .show>.nav-link {
 		background-color: var(--theme-1);
+	}
+	.nav-pills .nav-link.active:after,
+	.nav-pills .show>.nav-link:after {
+		border-top-width: 7px;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
 	}
 
 /* Border */

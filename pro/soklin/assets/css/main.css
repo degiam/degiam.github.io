@@ -483,6 +483,7 @@
 		padding-right: 0;
 	}
 	.list-group-custom li:after {
+		content: '';
 		width: 15px;
 		height: 15px;
 		background-image: url(../img/pointer.png);

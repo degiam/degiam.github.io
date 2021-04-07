@@ -384,7 +384,7 @@
 /* Variant */
 	body {
 		background-image: url(../img/bg-xs.png);
-		background-color: var(--theme-3);
+		background-color: var(--theme-4);
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 	}

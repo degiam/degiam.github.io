@@ -47,7 +47,7 @@
 		--theme-1: #ce1f47;
 		--theme-2: #f3718f;
 		--theme-3: #f955c0;
-		--theme-4: #fcdfec;
+		--theme-4: #ffd4e7;
 	}
 
 	body {
@@ -280,7 +280,7 @@
 
 /* Button */
 	.btn:hover {
-		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 10px 15px -3px rgba(249,85,192,.2), 0 4px 6px -2px rgba(249,85,192,.1) !important;
 	}
 	.btn-primary,
 	.btn-primary:hover,
@@ -323,6 +323,11 @@
 	.btn-outline-secondary {
 		color: var(--theme-2);
 		border-color: var(--theme-2);
+	}
+
+/* Shadow */
+	.shadow {
+		box-shadow: 0 10px 15px -3px rgba(249,85,192,.2), 0 4px 6px -2px rgba(249,85,192,.1) !important;
 	}
 
 /* Tab */

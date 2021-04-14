@@ -47,7 +47,7 @@
 		--theme-1: #ce1f47;
 		--theme-2: #f3718f;
 		--theme-3: #f955c0;
-		--theme-4: #ffd4e7;
+		--theme-4: #fdddf6;
 	}
 
 	body {
@@ -398,32 +398,14 @@
 
 /* Variant */
 	body {
-		background-image: url(../img/bg-xs.png);
 		background-color: var(--theme-4);
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 	}
-	@media (min-width: 576px) {
-		body {
-			background-image: url(../img/bg-sm.png);
-		}
-	}
-	@media (min-width: 768px) {
-		body {
-			background-image: url(../img/bg-md.png);
-		}
-	}
-	@media (min-width: 992px) {
-		body {
-			background-image: url(../img/bg-lg.png);
-		}
-	}
-	@media (min-width: 1200px) {
-		body {
-			background-image: url(../img/bg.png);
-		}
-	}
 
+	header nav > button {
+		border: 2px solid var(--white) !important;
+	}
 	header nav > * span,
 	header nav > * svg {
 		-webkit-transition: all .25s ease;
@@ -459,8 +441,7 @@
 		background-size: 100% auto;
 		background-repeat: no-repeat;
 		background-position-x: center;
-		background-position-y: 275px;
-		min-height: calc(100vh - 53px);
+		background-position-y: top;
 	}
 	@media (min-width: 576px) {
 		#main {
@@ -470,18 +451,18 @@
 	@media (min-width: 768px) {
 		#main {
 			background-image: url(../img/main-md.png);
-			background-position-y: 200px;
 		}
 	}
 	@media (min-width: 992px) {
 		#main {
 			background-image: url(../img/main-lg.png);
-			background-position-y: 150px;
+			background-position-y: -5%;
 		}
 	}
 	@media (min-width: 1200px) {
 		#main {
 			background-image: url(../img/main.png);
+			background-position-y: -10%;
 		}
 	}
 

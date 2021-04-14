@@ -516,7 +516,7 @@
 	}
 
 	.border-custom {
-		border: 2px dashed var(--theme-4);
+		border: 2px dashed var(--theme-2);
 		border-radius: 1.5rem;
 	}
 	@media (max-width: 991px) {

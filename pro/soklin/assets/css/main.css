@@ -436,6 +436,20 @@
 		max-width: 60vw;
 	}
 
+	footer {
+		position: relative;
+	}
+	footer:before {
+		content: '';
+		position: absolute;
+		top: -3rem;
+		left: 0;
+		height: 3rem;
+		width: 100%;
+		background: var(--theme-4);
+		background: linear-gradient(0deg, rgb(253,221,246,1) 0%, rgb(253,221,246,0) 100%);
+	}
+
 	#main {
 		background-image: url(../img/main-xs.png);
 		background-size: 100% auto;

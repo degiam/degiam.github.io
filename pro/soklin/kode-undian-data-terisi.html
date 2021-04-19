@@ -170,17 +170,20 @@
 											<input type="file" id="struk" class="form-control-file my-1">
 										</div>
 									</div> -->
-									<div class="d-flex align-items-center justify-content-between mt-4">
-										<div>
+									<div class="d-md-flex align-items-center justify-content-between mt-4">
+										<!-- <div>
 											<div class="alert alert-loading py-0 mb-0" style="display:none;">
 												<div class="loading"></div>
 											</div>
-										</div>
+										</div> -->
 										<!-- <button type="submit" class="btn btn-primary btn-block py-2 px-3 fs-6 rounded-pill text-uppercase">
 											Validasi
 										</button> -->
-										<button type="button" class="btn btn-success py-2 px-4 fs-6 rounded-pill text-uppercase" onclick="validate()">
+										<button type="button" class="btn btn-success py-2 px-4 fs-6 rounded-pill text-uppercase" onclick="window.location.href='/pro/soklin/kode-undian-data-edit'">
 											Sunting
+										</button>
+										<button type="button" class="btn bg-theme-1 text-white py-2 px-4 fs-6 rounded-pill text-uppercase my-3 my-md-0 ml-md-3" onclick="window.location.href='/pro/soklin/kode-undian'">
+											Masukkan Kode / Struk Belanja
 										</button>
 									</div>
 								</form>
@@ -304,17 +307,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
 	<script src="assets/js/main.js" defer></script>
-	<script>
-		function validate() {
-			$('.alert-loading').show()
-
-			setTimeout(function() {
-				$('.alert-loading').hide()
-				$('.alert-danger').show()
-				$('html,body').animate({scrollTop:$('h1').offset().top + 80},500)
-			},2000)
-		}
-	</script>
 </slot>
 
 </body>

@@ -373,6 +373,7 @@
 	.tab-content .nav-pills .nav-item {
 		-ms-flex-positive: 1;
 		flex-grow: 1;
+		text-align: center;
 	}
 	@media (min-width: 992px) {
 		.tab-content .nav-pills .nav-link:after {

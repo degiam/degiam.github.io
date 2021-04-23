@@ -547,6 +547,22 @@
 		color: var(--white);
 	}
 
+	@media (max-width: 767px) {
+		.btn-fs-auto {
+			font-size: 24px !important;
+		}
+	}
+	@media (max-width: 575px) {
+		.btn-fs-auto {
+			font-size: 16px !important;
+		}
+	}
+	@media (max-width: 320px) {
+		.btn-fs-auto {
+			font-size: 12px !important;
+		}
+	}
+
 	.number {
 		display: flex;
 		align-items: center;

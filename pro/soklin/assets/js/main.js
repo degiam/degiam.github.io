@@ -45,15 +45,15 @@
 
 		for (let i = 0; i < selector.length; i++) {
 			let itemH = selector[i].querySelector('.border-custom .card').clientHeight
-			itemH = itemH - 24
+			itemH = itemH - 12
 			highest = itemH > highest ? itemH : highest
 		}
 
 		for (let i = 0; i < selector.length; i++) {
 			let itemH = selector[i].querySelector('.border-custom .card').clientHeight
-			itemH = itemH - 24
+			itemH = itemH - 12
 			highest = itemH > highest ? itemH : highest
-			selector[i].querySelector('.card').style.minHeight = highest + 'px'
+			selector[i].querySelector('.card').style.height = highest + 'px'
 		}
 	}
 

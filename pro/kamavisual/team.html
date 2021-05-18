@@ -341,7 +341,7 @@
 			name = parent.find('h5').html()
 			job = parent.find('small').html()
 			height = $(window).height() - 160
-			content = `<p class='h5 text-break text-white mt-1 mb-0'>` + name + `</p><span class='badge badge-primary mb-3'>` + job +`</span><img class='img-fluid rounded-2 d-block mx-auto' loading='lazy' src='` + img + `' alt='` + name + `' style='max-height:` + height + `px'>`
+			content = `<p class='h5 text-break text-white mt-1 mb-0'>` + name + `</p><span class='badge bg-theme-2 text-white mb-3'>` + job +`</span><img class='img-fluid rounded-2 d-block mx-auto' loading='lazy' src='` + img + `' alt='` + name + `' style='max-height:` + height + `px'>`
 		$(this).attr('data-detail',content)
 	})
 

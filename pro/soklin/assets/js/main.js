@@ -18,7 +18,7 @@
 	function linkLogo() {
 		let logo = $('.main-logo')
 			image = logo.find('img')
-			height = logo.closest('div').css('height',image.height() + 15)
+			height = logo.closest('div').css('height',image.height() + 30)
 		if (!image.prop('complete')) {
 			image.on('load', function() { height })
 		} else {

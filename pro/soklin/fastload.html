@@ -25,21 +25,44 @@
 	<link rel="canonical" href="https://degiam.github.io/pro/soklin">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="SoKlin Korea Vaganza">
+	<link rel="apple-touch-icon" href="assets/icon/72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/512x512.png">
 	<!-- Status Bar -->
 	<meta name="apple-mobile-web-app-status-bar" content="#fff">
 	<meta name="msapplication-TileColor" content="#fff">
 	<meta name="theme-color" content="#fff">
 	<!-- Preload -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous">
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous">
 	<link rel="preload" as="style" href="assets/css/main.css">
 	<link rel="preload" as="script" href="assets/js/main.js">
 	<!-- Main -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<style type="text/css" id="preload">
+		#main {
+			background: transparent;
+		}
+		img {
+			opacity: 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -57,23 +80,23 @@
 	</nav>
 
 	<nav class="position-fixed index-1 right m-3 m-md-5">
-		<!-- <button type="button" class="btn d-flex align-items-center cursor-pointer bg-theme-1 text-white rounded-pill shadow p-2" data-toggle="modal" data-target="#login">
+		<button type="button" class="btn d-flex align-items-center cursor-pointer bg-theme-1 text-white rounded-pill shadow p-2" data-toggle="modal" data-target="#login">
 			<svg viewBox="0 0 24 24" width="24" height="24">
 				<path fill="currentColor" d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z"/>
 			</svg>
 			<span class="text-left">
 				Login
 			</span>
-		</button> -->
+		</button>
 
-		<button type="button" class="btn d-flex align-items-center cursor-pointer bg-theme-1 text-white rounded-pill shadow p-2" data-toggle="modal" data-target="#account">
+		<!-- <button type="button" class="btn d-flex align-items-center cursor-pointer bg-theme-1 text-white rounded-pill shadow p-2" data-toggle="modal" data-target="#account">
 			<svg viewBox="0 0 24 24" width="24" height="24">
 				<path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"/>
 			</svg>
 			<span class="text-left">
 				Andita
 			</span>
-		</button>
+		</button> -->
 	</nav>
 </header>
 
@@ -81,8 +104,10 @@
 	<section id="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-5 col-md-4 col-lg-3 pt-3 pt-md-5 mt-5 mx-auto text-center">
-					<img width="200" height="300" class="w-100 h-auto" loading="lazy" src="assets/img/soklin-koreavaganza.png" alt="SoKlin Korea Vaganza">
+				<div class="col-10 col-md-8 col-lg-6 pt-3 pt-md-5 mt-5 mx-auto text-center" style="height:300px">
+					<a class="position-absolute index-1 d-block ml-n3 main-logo" href="/pro/soklin/">
+						<img width="300" height="155" class="w-100 h-auto" loading="lazy" src="assets/img/soklin-koreavaganza.png" alt="SoKlin Korea Vaganza">
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -103,30 +128,31 @@
 						SoKlin Korea Vaganza
 					</h1>
 
-					<!-- <button type="button" class="btn btn-primary rounded-pill py-3 px-5 fs-6 text-uppercase" data-toggle="modal" data-target="#login" id="ikutan">
+					<button type="button" class="btn btn-primary rounded-pill py-3 px-5 fs-6 text-uppercase" data-toggle="modal" data-target="#login" id="ikutan">
 						Login & Ikutan
-					</button> -->
+					</button>
 
-					<a class="btn btn-primary rounded-pill py-3 px-5 fs-6 text-uppercase" href="/pro/soklin/kode-undian" id="ikutan">
+					<!-- <a class="btn btn-primary rounded-pill py-3 px-5 fs-6 text-uppercase" href="/pro/soklin/kode-undian" id="ikutan">
 						Ikutan
-					</a>
+					</a> -->
 
 					<div class="px-md-3 px-lg-5 mt-5 pt-5">
-						<img width="500" height="209" class="w-100 h-auto" loading="lazy" src="assets/img/hadiah.png" srcset="assets/img/hadiah-xs.png 576w, assets/img/hadiah-sm.png 768w, assets/img/hadiah.png 992w" alt="Hadiah">
+						<img width="335" height="550" class="w-100 h-auto d-block d-md-none" loading="lazy" src="assets/img/hadiah-sm.png" alt="Hadiah">
+						<img width="600" height="250" class="w-100 h-auto d-none d-md-block" loading="lazy" src="assets/img/hadiah.png" alt="Hadiah">
 					</div>
 					
-					<div class="my-5 py-5">
-						<div class="border-custom p-4 mx-md-n4">
-							<div class="card bg-white-9 border-0 shadow rounded-3 p-2 p-md-4">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-12 mb-0">
-											<h2 class="fs-3 font-weight-bold text-uppercase mb-4 text-outline-white">
-												Mekanisme
-											</h2>
-										</div>
-										<div class="col-lg-4">
-											<div class="number mx-auto fs-5 font-weight-bold bg-light text-theme-1">
+					<div class="my-5 py-5" id="mekanisme">
+						<div class="row">
+							<div class="col-12 mb-0">
+								<h2 class="fs-1 font-weight-bold text-uppercase mb-4 text-outline-white text-theme-1">
+									Mekanisme
+								</h2>
+							</div>
+							<div class="col-lg-4 same-height">
+								<div class="border-custom p-3 mx-lg-n2 mb-3 mb-lg-0">
+									<div class="card bg-white-9 border-0 shadow rounded-3 p-2">
+										<div class="card-body">
+											<div class="number mx-auto fs-5 font-weight-bold bg-theme-1 text-white">
 												1
 											</div>
 											<h3 class="text-uppercase text-theme-1 fs-5 font-weight-bold my-3">
@@ -137,15 +163,21 @@
 												<p>Unicode bisa didapatkan di:<br>Indomaret dan Alfamart.</p>
 											</div>
 										</div>
-										<div class="col-lg-4">
-											<div class="number mx-auto fs-5 font-weight-bold bg-light text-theme-1">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 same-height">
+								<div class="border-custom p-3 mx-lg-n2 mb-3 mb-lg-0">
+									<div class="card bg-white-9 border-0 shadow rounded-3 p-2">
+										<div class="card-body">
+											<div class="number mx-auto fs-5 font-weight-bold bg-theme-1 text-white">
 												2
 											</div>
 											<h3 class="text-uppercase text-theme-1 fs-5 font-weight-bold my-3">
 												Pengiriman Struk Belanja
 											</h3>
 											<div class="px-md-2 px-xl-3">
-												<p>Setiap pembelian 2 varian produk SoKlin Korean Camellia Experience Series (SoKlin Softergent Korean Camellia 770gr, SoKlin Liquid Korean Camellia 750ml, dan Rapika Korean Camellia 400ml) dalam 1 struk pembelanjaan berhak mendaftarkan struk belanja dan mendapatkan 1 buah nomor undian.</p>
+												<p>Setiap pembelian 2 varian produk berbeda SoKlin Korean Camellia Experience Series (SoKlin Softergent Korean Camellia 770gr, SoKlin Liquid Korean Camellia 750ml, dan Rapika Korean Camellia 400ml) dalam 1 struk pembelanjaan berhak mendaftarkan struk belanja dan mendapatkan 1 buah nomor undian.</p>
 												<p class="mb-0">Struk belanja bisa didapatkan dari:</p>
 												<ul class="pl-3 text-left mx-auto" style="width:fit-content;width:-moz-fit-content;">
 													<li>Toko lain apa saja yang mengeluarkan struk belanja resmi.</li>
@@ -153,15 +185,21 @@
 												</ul>
 											</div>
 										</div>
-										<div class="col-lg-4">
-											<div class="number mx-auto fs-5 font-weight-bold bg-light text-theme-1">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 same-height">
+								<div class="border-custom p-3 mx-lg-n2 mb-3 mb-lg-0">
+									<div class="card bg-white-9 border-0 shadow rounded-3 p-2">
+										<div class="card-body">
+											<div class="number mx-auto fs-5 font-weight-bold bg-theme-1 text-white">
 												3
 											</div>
 											<h3 class="text-uppercase text-theme-1 fs-5 font-weight-bold my-3">
 												Pengiriman Cangkang/Bungkus
 											</h3>
 											<div class="px-md-2 px-xl-3">
-												Cukup mengirimkan 2 bungkus kosong dari ketiga produk SoKlin Korean Camellia Experience Series (SoKlin Softergent Korean Camellia 770gr, SoKlin Liquid Korean Camellia 750ml, dan Rapika Korean Camellia 400ml) melampirkan print bon pembelian (dari toko mana saja) dalam 1 struk pembelian, fotocopy identitas diri yang berlaku, dan nomor handphone yang dapat dihubungi, kirimkan ke PO BOX : SoKlin KOREA VAGANZA JKT 13000
+												Cukup mengirimkan 2 bungkus kosong (varian produk harus berbeda) dari tiga produk Soklin Korean Camellia Experience Series (SoKlin Softergent Korean Camellia 770gr, SoKlin Liquid Korean Camellia 750ml, dan Rapika Korean Camellia 400ml) melampirkan print struk pembelian (dari toko mana saja) dalam 1 struk pembelian, fotocopy identitas diri yang berlaku, dan nomor handphone yang dapat dihubungi, kirimkan ke PO BOX SOKLIN KOREA VAGANZA JAKARTA 13000.
 											</div>
 										</div>
 									</div>
@@ -172,27 +210,13 @@
 					
 					<div class="my-5">
 						<p class="fs-6">UNICODE dan struk belanja dapat dikirimkan melalui microsite</p>
-						<a class="text-decoration-none d-inline-block mb-3 cursor-pointer" onclick="$('html,body').animate({scrollTop:$('#ikutan').offset().top - 50},500)">
-							<div class="d-flex align-items-center">
-								<svg viewBox="0 0 24 24" width="35" height="35">
-									<path fill="currentColor" d="M11.5,11L17.88,16.37L17,16.55L16.36,16.67C15.73,16.8 15.37,17.5 15.65,18.07L15.92,18.65L17.28,21.59L15.86,22.25L14.5,19.32L14.24,18.74C13.97,18.15 13.22,17.97 12.72,18.38L12.21,18.78L11.5,19.35V11M10.76,8.69A0.76,0.76 0 0,0 10,9.45V20.9C10,21.32 10.34,21.66 10.76,21.66C10.95,21.66 11.11,21.6 11.24,21.5L13.15,19.95L14.81,23.57C14.94,23.84 15.21,24 15.5,24C15.61,24 15.72,24 15.83,23.92L18.59,22.64C18.97,22.46 19.15,22 18.95,21.63L17.28,18L19.69,17.55C19.85,17.5 20,17.43 20.12,17.29C20.39,16.97 20.35,16.5 20,16.21L11.26,8.86L11.25,8.87C11.12,8.76 10.95,8.69 10.76,8.69M15,10V8H20V10H15M13.83,4.76L16.66,1.93L18.07,3.34L15.24,6.17L13.83,4.76M10,0H12V5H10V0M3.93,14.66L6.76,11.83L8.17,13.24L5.34,16.07L3.93,14.66M3.93,3.34L5.34,1.93L8.17,4.76L6.76,6.17L3.93,3.34M7,10H2V8H7V10"/>
-								</svg>
-								<span class="ml-2 fs-3">
-									www.SoKlin.id/SoKlinkoreavaganza
-								</span>
-							</div>
+						<a class="btn bg-theme-1 text-white fs-3 rounded-pill px-sm-3 px-md-4 mb-3 btn-fs-auto" onclick="$('html,body').animate({scrollTop:$('#ikutan').offset().top - 50},500)">
+							www.soklin.id/koreavaganza
 						</a>
 
-						<p class="fs-6">dan Whatsapp ke nomor</p>
-						<a class="text-decoration-none d-inline-block mb-3" rel="noreferrer" target="_blank" href="https://wa.me/6282122221393?text=Saranghae,%20SoKlin%20Korea">
-							<div class="d-flex align-items-center">
-								<svg viewBox="0 0 24 24" width="35" height="35">
-									<path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/>
-								</svg>
-								<span class="ml-2 fs-3">
-									0821 2222 1393
-								</span>
-							</div>
+						<p class="fs-6">atau Whatsapp ke nomor</p>
+						<a class="btn bg-theme-1 text-white fs-3 rounded-pill px-sm-3 px-md-4 mb-3 btn-fs-auto" rel="noreferrer" target="_blank" href="https://wa.me/6282122221393?text=Saranghae,%20SoKlin%20Korea">
+							0821 2222 1393
 						</a>
 					</div>
 
@@ -207,7 +231,8 @@
 										1 Juni - 30 Juni 2021
 									</div>
 									<div>
-										Pengundian disaksikan notaris pada tanggal 14 Juli 2021 dan diumumkan di media sosial SoKlin Detergent
+										Pengundian disaksikan notaris pada tanggal 14 Juli 2021 dan diumumkan di media sosial SoKlin Detergent.<br><br>
+										Hadiah: 2 trip ke Korea, 10 logam mulia 2gr, 20 dana pendidikan senilai Rp 1.000.000,- dan 100 Uang belanja senilai Rp 100.000,-
 									</div>
 								</div>
 								<div class="mb-4">
@@ -215,11 +240,12 @@
 										1 Juli - 31 Agustus 2021
 									</div>
 									<div>
-										Pengundian disaksikan notaris pada tanggal 14 September 2021 dan diumumkan di media sosial SoKlin Detergent
+										Pengundian disaksikan notaris pada tanggal 14 September 2021 dan diumumkan di media sosial SoKlin Detergent.<br><br>
+										Hadiah: 3 trip ke Korea, 1 motor Honda Scoopy FI (Stylish - MH), 15 logam mulia 2gr, 30 dana pendidikan senilai Rp 1.000.000,- dan 150 uang belanja senilai Rp 100.000,-
 									</div>
 								</div>
 								<div class="mb-4">
-									<strong>Petunjuk Pengisian :</strong> <a rel="noreferrer" target="_blank" href="http://bit.ly/PetunjukKoreavaganza">http://bit.ly/PetunjukKoreavaganza</a>
+									Petunjuk cara ikutan <a class="anchor" href="#mekanisme"><strong>klik disini</strong></a>.
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -232,7 +258,7 @@
 											<li class="list-group-item">Warna motor sesuai persediaan, kondisi ON THE ROAD</li>
 											<li class="list-group-item">Pajak undian ditanggung oleh PT. Sayap Mas Utama</li>
 											<li class="list-group-item">Setiap peserta yang telah menang di periode 1 tidak dapat menang kembali di periode 2.</li>
-											<li class="list-group-item">Jika nomor UNICODE tidak muncul setelah pembelian ketiga produk di atas di Indomaret dan Alfamart, harap hubungi kontak@indomaret.co.id</li>
+											<li class="list-group-item">Jika nomor UNICODE tidak muncul setelah pembelian kedua produk di atas di Indomaret dan Alfamart, harap hubungi kontak@indomaret.co.id atau sahabat_alfamart@sat.co.id</li>
 										</ul>
 									</div>
 								</div>
@@ -286,7 +312,7 @@
 			</div>
 		</div>
 
-		<!-- <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+		<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content rounded-2">
 					<div class="modal-body text-center p-4">
@@ -298,13 +324,13 @@
 						<h5 class="modal-title text-uppercase my-2" id="loginLabel">Login</h5>
 						<p class="opacity-5">Silakan masuk dengan salah satu akun Anda</p>
 						<div class="d-md-flex">
-							<button type="button" class="btn d-flex align-items-center justify-content-center w-100 rounded-2 text-dark text-decoration-none border fs-5 px-3 py-2 mx-1 mt-3 mt-md-0" onclick="window.location.href='/pro/soklin/sudah-login'">
+							<button type="button" class="btn d-flex align-items-center justify-content-center w-100 rounded-2 text-dark text-decoration-none border fs-5 px-3 py-2 mx-1 mt-3 mt-md-0" onclick="window.location.href='/pro/soklin/kode-undian'">
 								<svg viewBox="0 0 24 24" width="35" height="35">
 									<path fill="#4267b2" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
 								</svg>
 								<span class="ml-1">Facebook</span>
 							</button>
-							<button type="button" class="btn d-flex align-items-center justify-content-center w-100 rounded-2 text-dark text-decoration-none border fs-5 px-3 py-2 mx-1 mt-3 mt-md-0" onclick="window.location.href='/pro/soklin/sudah-login'">
+							<button type="button" class="btn d-flex align-items-center justify-content-center w-100 rounded-2 text-dark text-decoration-none border fs-5 px-3 py-2 mx-1 mt-3 mt-md-0" onclick="window.location.href='/pro/soklin/kode-undian'">
 								<svg viewBox="0 0 512 512" width="30" height="30">
 									<path fill="#FBBB00" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456C103.821,274.792,107.225,292.797,113.47,309.408z"/>
 									<path fill="#518EF8" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
@@ -317,9 +343,9 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<div class="modal fade" id="account" tabindex="-1" aria-labelledby="accountLabel" aria-hidden="true">
+		<!-- <div class="modal fade" id="account" tabindex="-1" aria-labelledby="accountLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content rounded-2">
 					<div class="modal-body text-center p-4">
@@ -334,7 +360,7 @@
 								<a class="text-decoration-none" href="/pro/soklin/kode-undian-data-terisi">Data Diri</a>
 							</li>
 							<li class="list-group-item">
-								<a class="text-decoration-none" href="/pro/soklin/kode-undian">Masukkan Kode</a>
+								<a class="text-decoration-none" href="/pro/soklin/kode-undian">Masukkan Kode / Struk Belanja</a>
 							</li>
 							<li class="list-group-item">
 								<a class="text-decoration-none" href="/pro/soklin/">Keluar</a>
@@ -343,7 +369,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</section>
 </main>
 
@@ -368,6 +394,27 @@
 </footer>
 
 <slot>
+	<script>
+		var imgs = document.images,
+			len = imgs.length,
+			counter = 0;
+
+		[].forEach.call( imgs, function( img ) {
+			if(img.complete)
+				incrementCounter();
+			else
+				img.addEventListener( 'load', incrementCounter, false );
+		} );
+
+		function incrementCounter() {
+			counter++;
+			if ( counter === len ) {
+				console.log( 'All images loaded!' );
+				let p = document.querySelector('#preload')
+				p.remove(p)
+			}
+		}
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
 	<script src="assets/js/main.js" defer></script>

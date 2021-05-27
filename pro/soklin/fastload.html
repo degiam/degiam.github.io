@@ -373,27 +373,14 @@
 	</section>
 </main>
 
-	<script>
-		var imgs = document.images,
-			len = imgs.length,
-			counter = 0;
-
-		[].forEach.call( imgs, function( img ) {
-			if(img.complete)
-				incrementCounter();
-			else
-				img.addEventListener( 'load', incrementCounter, false );
-		} );
-
-		function incrementCounter() {
-			counter++;
-			if ( counter === len ) {
-				console.log( 'All images loaded!' );
-				let p = document.querySelector('#preload')
-				p.remove(p)
-			}
+<script>
+	$('img').each(function() {
+		if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
+			console.log('broken image');
+			$('#preload').remove()
 		}
-	</script>
+	});
+</script>
 
 <footer>
 	<div class="container-fluid">

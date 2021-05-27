@@ -403,7 +403,9 @@
 	$('img').each(function() {
 		if (this.naturalWidth === 0 || this.naturalHeight === 0 || this.complete === false) {
 			console.log('broken image');
-			$('#preload').remove()
+			setTimeout(function() {
+				$('#preload').remove()
+			},5000)
 		}
 	});
 </script>

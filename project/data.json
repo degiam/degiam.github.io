@@ -447,7 +447,7 @@ var project =`[
 	{
 		"id"			: "#11",
 		"title"			: "BBPOM Yogyakarta",
-		"description"	: "<p>Official website</p><p>Website for an institution that oversees the distribution of medicines and food in Indonesia</p>",
+		"description"	: "<p>Official website of an institution that oversees the distribution of medicines and food in Indonesia</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -469,20 +469,20 @@ var project =`[
 		"publish"		: "http://bbpom-yogya.pom.go.id/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1qFP2b-zMNEktWB6rbdQJRJmR49J7ecE5",
+				"webp"	: "1dUd_40N43tkecISD8T2x4K00ar7E8vzE"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "14-Bq42rK6T2pQ0pN4o9qFyX8dW9cWuwn",
+				"webp"	: "13pOdOWYhCstlglGwBWkzUtR2c94fnsiM"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1rZIMB4_XqSFx-TwbAtjphASJloV2v9jB",
+				"webp"	: "1oODyx8zoySAPcXZYy--xlgmtbigKM-zh"
 			},
 			"src3" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "1O95MooZSVEVG4BnlKFFpQfvrmFyK0bMh",
+				"webp"	: "1_oFQWgefD9wk4g90mmTgNVx04_4GP2Wq"
 			}
 		}
 	},
@@ -680,19 +680,19 @@ var project =`[
 		"screenshot"	: {
 			"src0" 		: {
 				"jpg"	: "1aPQPdqQNAo2JPZp2hr2JiU7GUAei8Po3",
-				"webp"	: "1UizFyUszEIRrDgSsF57D1zYc5lYXjiGT"
+				"webp"	: "1qpwEkHLfn6ICw1zo8k80LkCyXYQRaX5W"
 			},
 			"src1" 		: {
 				"jpg"	: "1JEV9Io-dHqNlpxOS_NlU5Q2doOPfk5rw",
-				"webp"	: "1J4QezNIsqSOVWzyN8dHLHvAngJqssacC"
+				"webp"	: "1nflPWgSvxVz9bVIuuhmJGPyvzFuWjYne"
 			},
 			"src2" 		: {
 				"jpg"	: "1t5f37YpAmfOLDer4kdKx0iTFK9keufGk",
-				"webp"	: "1DClTSSQnHNdC226EOmeoGDIjzb2kADDn"
+				"webp"	: "1fz6t32v8wrdMIEXmyO6A_WztxGo9mL9u"
 			},
 			"src3" 		: {
 				"jpg"	: "1ltOdVR-ClNsE4Fdn2TnKMNJaQoWroAi7",
-				"webp"	: "1sI7U4UVNnFSDBwnTF8fYP_4tN3qsAgl_"
+				"webp"	: "1rSzjdaMAXp32Ivt_3TZreB6qw26eEEes"
 			}
 		}
 	},
@@ -722,15 +722,15 @@ var project =`[
 		"screenshot"	: {
 			"src0" 		: {
 				"jpg"	: "152Qgif7dEEau1T8pBQ-VF-KauiKK4kWp",
-				"webp"	: "1jx2eh56Z_iN0xeTRG2LeLSDSMvEMKmRg"
+				"webp"	: "1ctHntAUfA8Zsar1Z27nAvD_uAkG3zNim"
 			},
 			"src1" 		: {
 				"jpg"	: "1IebtisItXDOivn2GgePuP6JQpHu5gBTE",
-				"webp"	: "1aJgielmsdT25Ahj5rtApLQV32CljCCvs"
+				"webp"	: "1Ko-a7XUKJpFZ_7OGA0W1q8qVnUvwoINQ"
 			},
 			"src2" 		: {
 				"jpg"	: "1emH1mg-9Q8uVXrQ6pcjLC9WQgArEYMrS",
-				"webp"	: "1wmrt3l3M-mxT-xXT8Sf-b2rOaFuc-M2B"
+				"webp"	: "1vBD0beL7rtB6K0IIDwTGZIfEzXiBvfof"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -764,19 +764,19 @@ var project =`[
 		"screenshot"	: {
 			"src0" 		: {
 				"jpg"	: "1BgDfLmeUFzberOnzZdSrFhnUh5RM7XCn",
-				"webp"	: "1SUK07iXK0WRTxB9KyxTIqqP5AKmeq-42"
+				"webp"	: "1BNFy5lHvuhrJkQujmk8hMJwRM1C46Yfs"
 			},
 			"src1" 		: {
 				"jpg"	: "14Q1-2gNSohBi1ZgqDlfEkbw5ysnqc6DH",
-				"webp"	: "13IqMCp5DQlEW322xilAAGkjkPwbqMUN4"
+				"webp"	: "1XNTWmBDUYF3BeoCx9EkQHwqsXNLrwD4H"
 			},
 			"src2" 		: {
 				"jpg"	: "12hzQwnjiM-obGvjo6Ajjc1WSkiEXQ0xx",
-				"webp"	: "1Y8UBjYL0a76vgCBK7IipZtGj-1AC2pgC"
+				"webp"	: "1vxrEZXNYc55btzE-Ry36Y0hlm1A8ot4Q"
 			},
 			"src3" 		: {
 				"jpg"	: "1bx2QxMMlpDHavJ909yZxn-KxdvAPAzwL",
-				"webp"	: "1MyrnxT2UAjgwWLjQ2eeucLDggVoYjAJH"
+				"webp"	: "1H8cLiyfQvE6en0K5S352K-QIAx30OV2F"
 			}
 		}
 	}

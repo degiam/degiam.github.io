@@ -614,8 +614,92 @@ var project =`[
 	},
 	{
 		"id"			: "#15",
-		"title"			: "Aksara Digital",
+		"title"			: "PAUD Budi Mulia Al Bayaan",
 		"description"	: "<p>Official website</p>",
+		"category"		: "Website",
+		"badge"			: "bg-pink",
+		"software"		: [
+			{
+				"name"	: "jQuery",
+				"image"	: "../brand/jquery.svg",
+				"url"	: "https://jquery.com/"
+			},
+			{
+				"name"	: "Bootstrap",
+				"image"	: "../brand/bootstrap.svg",
+				"url"	: "https://getbootstrap.com/"
+			}
+		],
+		"date"			: {
+			"start"		: "2021-02-04",
+			"end"		: "2021-02-15"
+		},
+		"publish"		: "https://budimuliaalbayaan.sch.id/",
+		"screenshot"	: {
+			"src0" 		: {
+				"jpg"	: "1GLkx-ueoyrZlGPUyJltiw-_19tsKnVwC",
+				"webp"	: "1zVds1cMeHrCkIumSW24nvqv6lpIRiewN"
+			},
+			"src1" 		: {
+				"jpg"	: "1VxqvcWe2iwNY_5aBMp1YY821b1YskFav",
+				"webp"	: "1OXO_m377693Fs6t-635M8jqYw31f312j"
+			},
+			"src2" 		: {
+				"jpg"	: "1QrqBIXseME5SY5d-IdUz8HKM5ugKiB5z",
+				"webp"	: "17mXqwzPB9e4Ui341XdNU4v-iP1NsjoyN"
+			},
+			"src3" 		: {
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+			}
+		}
+	},
+	{
+		"id"			: "#16",
+		"title"			: "Kama Visual",
+		"description"	: "<p>A creative agency studio that bridges brands to customers through creative visual messages.</p>",
+		"category"		: "Website",
+		"badge"			: "bg-pink",
+		"software"		: [
+			{
+				"name"	: "jQuery",
+				"image"	: "../brand/jquery.svg",
+				"url"	: "https://jquery.com/"
+			},
+			{
+				"name"	: "Bootstrap",
+				"image"	: "../brand/bootstrap.svg",
+				"url"	: "https://getbootstrap.com/"
+			}
+		],
+		"date"			: {
+			"start"		: "2021-02-22",
+			"end"		: "2021-02-26"
+		},
+		"publish"		: "https://kamavisual.id/",
+		"screenshot"	: {
+			"src0" 		: {
+				"jpg"	: "1aPQPdqQNAo2JPZp2hr2JiU7GUAei8Po3",
+				"webp"	: "1UizFyUszEIRrDgSsF57D1zYc5lYXjiGT"
+			},
+			"src1" 		: {
+				"jpg"	: "1JEV9Io-dHqNlpxOS_NlU5Q2doOPfk5rw",
+				"webp"	: "1J4QezNIsqSOVWzyN8dHLHvAngJqssacC"
+			},
+			"src2" 		: {
+				"jpg"	: "1t5f37YpAmfOLDer4kdKx0iTFK9keufGk",
+				"webp"	: "1DClTSSQnHNdC226EOmeoGDIjzb2kADDn"
+			},
+			"src3" 		: {
+				"jpg"	: "1ltOdVR-ClNsE4Fdn2TnKMNJaQoWroAi7",
+				"webp"	: "1sI7U4UVNnFSDBwnTF8fYP_4tN3qsAgl_"
+			}
+		}
+	},
+	{
+		"id"			: "#17",
+		"title"			: "Aksara Digital",
+		"description"	: "<p>A company based in Yogyakarta that provide one stop IT Solution services, such as website, apps and consulting.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -651,6 +735,48 @@ var project =`[
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
 				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+			}
+		}
+	},
+	{
+		"id"			: "#18",
+		"title"			: "SoKlin Koreavaganza",
+		"description"	: "<p>Consumer promo for the 3 new product variants with the Korean vibes. You can participating this promo through the official microsite, from June to December 2021. The prizes that can be won are matic motorbike and millions of rupiah.</p>",
+		"category"		: "Website",
+		"badge"			: "bg-pink",
+		"software"		: [
+			{
+				"name"	: "jQuery",
+				"image"	: "../brand/jquery.svg",
+				"url"	: "https://jquery.com/"
+			},
+			{
+				"name"	: "Bootstrap",
+				"image"	: "../brand/bootstrap.svg",
+				"url"	: "https://getbootstrap.com/"
+			}
+		],
+		"date"			: {
+			"start"		: "2021-03-24",
+			"end"		: "2021-06-10"
+		},
+		"publish"		: "https://koreavaganza.soklin.id/",
+		"screenshot"	: {
+			"src0" 		: {
+				"jpg"	: "1BgDfLmeUFzberOnzZdSrFhnUh5RM7XCn",
+				"webp"	: "1SUK07iXK0WRTxB9KyxTIqqP5AKmeq-42"
+			},
+			"src1" 		: {
+				"jpg"	: "14Q1-2gNSohBi1ZgqDlfEkbw5ysnqc6DH",
+				"webp"	: "13IqMCp5DQlEW322xilAAGkjkPwbqMUN4"
+			},
+			"src2" 		: {
+				"jpg"	: "12hzQwnjiM-obGvjo6Ajjc1WSkiEXQ0xx",
+				"webp"	: "1Y8UBjYL0a76vgCBK7IipZtGj-1AC2pgC"
+			},
+			"src3" 		: {
+				"jpg"	: "1bx2QxMMlpDHavJ909yZxn-KxdvAPAzwL",
+				"webp"	: "1MyrnxT2UAjgwWLjQ2eeucLDggVoYjAJH"
 			}
 		}
 	}

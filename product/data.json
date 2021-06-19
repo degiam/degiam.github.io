@@ -24,16 +24,16 @@ var product =`[
 		"publish"		: "http://degiam.github.io/captionide/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1ZUFAJsZj217eZXiTNLzls4gbsxuGBNWu",
+				"webp"	: "1YZO-Akfj9-sdNMhihUib9hgSdMiIOfhH"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			},
 			"src2" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -44,7 +44,7 @@ var product =`[
 	{
 		"id"			: "#2",
 		"title"			: "Twibbonide",
-		"description"	: "<p>Lorem ipsum nulla anim proident minim nostrud sunt pariatur mollit et est minim cupidatat commodo est ullamco minim eu sunt esse.</p>",
+		"description"	: "<p>Create your campaign into a twibbon, and you can share it for others in social media. Make your campaign's viral!</p>",
 		"category"		: "Twitter",
 		"badge"			: "bg-primary",
 		"software"		: [
@@ -71,16 +71,16 @@ var product =`[
 		"publish"		: "http://degiam.github.io/twibbonide/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1kmk6Iw1sNNVoNB2Q-V9ltR3Ap-JDzymt",
+				"webp"	: "1bPsaMplHD0o6hESYaEnageIK-Yr8OZPP"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			},
 			"src2" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",

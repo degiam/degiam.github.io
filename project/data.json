@@ -142,48 +142,6 @@ var project =`[
 	},
 	{
 		"id"			: "#4",
-		"title"			: "Stikes Surya Global",
-		"description"	: "<p>Official website</p>",
-		"category"		: "Website",
-		"badge"			: "bg-pink",
-		"software"		: [
-			{
-				"name"	: "jQuery",
-				"image"	: "../brand/jquery.svg",
-				"url"	: "https://jquery.com/"
-			},
-			{
-				"name"	: "Bootstrap",
-				"image"	: "../brand/bootstrap.svg",
-				"url"	: "https://getbootstrap.com/"
-			}
-		],
-		"date"			: {
-			"start"		: "2019-02-07",
-			"end"		: "2019-02-18"
-		},
-		"publish"		: "https://stikessuryaglobal.ac.id/",
-		"screenshot"	: {
-			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
-			},
-			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
-			},
-			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
-			},
-			"src3" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
-			}
-		}
-	},
-	{
-		"id"			: "#5",
 		"title"			: "Desk.id",
 		"description"	: "<p>Logo</p>",
 		"category"		: "Logo",
@@ -225,7 +183,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#6",
+		"id"			: "#5",
 		"title"			: "Aksara Digital",
 		"description"	: "<p>Logo</p>",
 		"category"		: "Logo",
@@ -267,7 +225,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#7",
+		"id"			: "#6",
 		"title"			: "Wunik",
 		"description"	: "<p>Admin Panel</p>",
 		"category"		: "Website",
@@ -309,7 +267,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#8",
+		"id"			: "#7",
 		"title"			: "ePusta Amarta Library",
 		"description"	: "<p>Official website and admin</p>",
 		"category"		: "Website",
@@ -361,7 +319,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#9",
+		"id"			: "#8",
 		"title"			: "Merbabu",
 		"description"	: "<p>Wunik theme</p>",
 		"category"		: "Website",
@@ -403,7 +361,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#10",
+		"id"			: "#9",
 		"title"			: "Kelimutu",
 		"description"	: "<p>Wunik theme</p>",
 		"category"		: "Website",
@@ -445,7 +403,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#11",
+		"id"			: "#10",
 		"title"			: "BBPOM Yogyakarta",
 		"description"	: "<p>Official website of an institution that oversees the distribution of medicines and food in Indonesia</p>",
 		"category"		: "Website",
@@ -487,7 +445,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#12",
+		"id"			: "#11",
 		"title"			: "Wunik",
 		"description"	: "<p>Logo</p>",
 		"category"		: "Logo",
@@ -529,7 +487,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#13",
+		"id"			: "#12",
 		"title"			: "SMP Kemala Bhayangkari 7 Porong",
 		"description"	: "<p>Official website</p>",
 		"category"		: "Website",
@@ -571,9 +529,9 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#14",
+		"id"			: "#13",
 		"title"			: "Kerjoo",
-		"description"	: "<p>Mobile app <a target='_blank' href='https://kerjoo.com/'>Kerjoo</a></p>",
+		"description"	: "<p>An app for CLOUD and SaaS-based HR systems, which is one of the features we provide is employee attendance that can be done through mobile phone using the latest technology in real-time through GPS systems and face recognition biometric systems. Now available on <a target='_blank' href='https://play.google.com/store/apps/details?id=com.kerjoo'>Google Play</a> and <a target='_blank' href='https://apps.apple.com/id/app/kerjoo/id1562259906'>AppStore</a>.</p>",
 		"category"		: "Mobile App",
 		"badge"			: "bg-success",
 		"software"		: [
@@ -592,19 +550,19 @@ var project =`[
 			"start"		: "2021-01-22",
 			"end"		: "2021-02-16"
 		},
-		"publish"		: "https://play.google.com/store/apps/details?id=com.kerjoo",
+		"publish"		: "https://kerjoo.com/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+				"jpg"	: "11Q-BD1hhsw9078RFIVYNR7Nky2YIhdK4",
+				"webp"	: "1beY0puCv0Lir5MMa-rZQdCf31R8s03yc"
 			},
 			"src1" 		: {
-				"jpg"	: "1sZ8wcTDaSCJku5dfBPHWpM_m72saRsQZ",
-				"webp"	: "1mtInkMgLEDNqOKGk1ub8rDmKVahrCcow"
+				"jpg"	: "1NxXuQNjA7WVHTVJ2RAYCGbo7447IteF-",
+				"webp"	: "1pmENJC-mUQ5uOoht-hD0f6TSF6ZL_2wf"
 			},
 			"src2" 		: {
-				"jpg"	: "1nyCAKZAx5Ge8f3lUhUelVmxWEd8iJovN",
-				"webp"	: "1eA5UO2IzjhJLUQN4obPRywM5QLZsjwxd"
+				"jpg"	: "1lgD0JodIaPTDexfx5b8YYTKK0J3Btru5",
+				"webp"	: "124cdyklaZD5tJD5ljIOvgKbv1WiH1vfs"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -613,49 +571,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#15",
-		"title"			: "PAUD Budi Mulia Al Bayaan",
-		"description"	: "<p>Official website</p>",
-		"category"		: "Website",
-		"badge"			: "bg-pink",
-		"software"		: [
-			{
-				"name"	: "jQuery",
-				"image"	: "../brand/jquery.svg",
-				"url"	: "https://jquery.com/"
-			},
-			{
-				"name"	: "Bootstrap",
-				"image"	: "../brand/bootstrap.svg",
-				"url"	: "https://getbootstrap.com/"
-			}
-		],
-		"date"			: {
-			"start"		: "2021-02-04",
-			"end"		: "2021-02-15"
-		},
-		"publish"		: "https://budimuliaalbayaan.sch.id/",
-		"screenshot"	: {
-			"src0" 		: {
-				"jpg"	: "1GLkx-ueoyrZlGPUyJltiw-_19tsKnVwC",
-				"webp"	: "1zVds1cMeHrCkIumSW24nvqv6lpIRiewN"
-			},
-			"src1" 		: {
-				"jpg"	: "1VxqvcWe2iwNY_5aBMp1YY821b1YskFav",
-				"webp"	: "1OXO_m377693Fs6t-635M8jqYw31f312j"
-			},
-			"src2" 		: {
-				"jpg"	: "1QrqBIXseME5SY5d-IdUz8HKM5ugKiB5z",
-				"webp"	: "17mXqwzPB9e4Ui341XdNU4v-iP1NsjoyN"
-			},
-			"src3" 		: {
-				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
-				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
-			}
-		}
-	},
-	{
-		"id"			: "#16",
+		"id"			: "#14",
 		"title"			: "Kama Visual",
 		"description"	: "<p>A creative agency studio that bridges brands to customers through creative visual messages.</p>",
 		"category"		: "Website",
@@ -697,7 +613,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#17",
+		"id"			: "#15",
 		"title"			: "Aksara Digital",
 		"description"	: "<p>A company based in Yogyakarta that provide one stop IT Solution services, such as website, apps and consulting.</p>",
 		"category"		: "Website",
@@ -739,7 +655,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#18",
+		"id"			: "#16",
 		"title"			: "SoKlin Koreavaganza",
 		"description"	: "<p>Consumer promo for the 3 new product variants with the Korean vibes. You can participating this promo through the official microsite, from June to December 2021. The prizes that can be won are matic motorbike and millions of rupiah.</p>",
 		"category"		: "Website",

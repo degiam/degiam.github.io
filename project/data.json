@@ -2,7 +2,7 @@ var project =`[
 	{
 		"id"			: "#1",
 		"title"			: "Sunrise",
-		"description"	: "<p>Jejualan theme</p>",
+		"description"	: "<p>One of <a target='_blank' href='https://jejualan.com/'>Jejualan</a> themes, which is the default theme.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -49,7 +49,7 @@ var project =`[
 	{
 		"id"			: "#2",
 		"title"			: "Paperbag",
-		"description"	: "<p>Jejualan theme</p>",
+		"description"	: "<p>One of <a target='_blank' href='https://jejualan.com/'>Jejualan</a> themes.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -96,7 +96,7 @@ var project =`[
 	{
 		"id"			: "#3",
 		"title"			: "Retro",
-		"description"	: "<p>Jejualan theme</p>",
+		"description"	: "<p>One of <a target='_blank' href='https://jejualan.com/'>Jejualan</a> themes.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -143,7 +143,7 @@ var project =`[
 	{
 		"id"			: "#4",
 		"title"			: "Desk.id",
-		"description"	: "<p>Logo</p>",
+		"description"	: "<p>Logo design for a new brand that provide Live Chat and WhatsApp services.</p>",
 		"category"		: "Logo",
 		"badge"			: "bg-orange",
 		"software"		: [
@@ -185,7 +185,7 @@ var project =`[
 	{
 		"id"			: "#5",
 		"title"			: "Aksara Digital",
-		"description"	: "<p>Logo</p>",
+		"description"	: "<p>Logo design for a new brand that provide one stop IT Solution services (website, apps, consulting).</p>",
 		"category"		: "Logo",
 		"badge"			: "bg-orange",
 		"software"		: [
@@ -227,7 +227,7 @@ var project =`[
 	{
 		"id"			: "#6",
 		"title"			: "Wunik",
-		"description"	: "<p>Admin Panel</p>",
+		"description"	: "<p>User interface admin kit on Wunik, new brand that provide website management.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -269,7 +269,7 @@ var project =`[
 	{
 		"id"			: "#7",
 		"title"			: "ePusta Amarta Library",
-		"description"	: "<p>Official website and admin</p>",
+		"description"	: "<p>Go online a school library, make design for official website and admin panel. Amarta Library is part of <a target='_blank' href='https://sman1bantul.sch.id/'>SMA N 1 Bantul</a>.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -321,7 +321,7 @@ var project =`[
 	{
 		"id"			: "#8",
 		"title"			: "Merbabu",
-		"description"	: "<p>Wunik theme</p>",
+		"description"	: "<p>One of <a target='_blank' href='https://wunik.id/'>Wunik</a> themes, which is the default theme.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -363,7 +363,7 @@ var project =`[
 	{
 		"id"			: "#9",
 		"title"			: "Kelimutu",
-		"description"	: "<p>Wunik theme</p>",
+		"description"	: "<p>One of <a target='_blank' href='https://wunik.id/'>Wunik</a> themes.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -447,7 +447,7 @@ var project =`[
 	{
 		"id"			: "#11",
 		"title"			: "Wunik",
-		"description"	: "<p>Logo</p>",
+		"description"	: "<p>Logo design for a new brand that provide website management.</p>",
 		"category"		: "Logo",
 		"badge"			: "bg-orange",
 		"software"		: [
@@ -488,8 +488,8 @@ var project =`[
 	},
 	{
 		"id"			: "#12",
-		"title"			: "SMP Kemala Bhayangkari 7 Porong",
-		"description"	: "<p>Official website</p>",
+		"title"			: "SMP Kemala Bhayangkari",
+		"description"	: "<p>Official website one of the schools in Sidoarjo, Indonesia.</p>",
 		"category"		: "Website",
 		"badge"			: "bg-pink",
 		"software"		: [
@@ -531,7 +531,7 @@ var project =`[
 	{
 		"id"			: "#13",
 		"title"			: "Kerjoo",
-		"description"	: "<p>An app for CLOUD and SaaS-based HR systems, which is one of the features we provide is employee attendance that can be done through mobile phone using the latest technology in real-time through GPS systems and face recognition biometric systems. Now available on <a target='_blank' href='https://play.google.com/store/apps/details?id=com.kerjoo'>Google Play</a> and <a target='_blank' href='https://apps.apple.com/id/app/kerjoo/id1562259906'>AppStore</a>.</p>",
+		"description"	: "<p>An app for CLOUD and SaaS-based HR systems, which is one of the features we provide is employee attendance that can be done through mobile phone using the latest technology in real-time through GPS systems and face recognition biometric systems.</p><p>Now available on <a target='_blank' href='https://play.google.com/store/apps/details?id=com.kerjoo'>Google Play</a> and <a target='_blank' href='https://apps.apple.com/id/app/kerjoo/id1562259906'>AppStore</a>!</p>",
 		"category"		: "Mobile App",
 		"badge"			: "bg-success",
 		"software"		: [

@@ -50,6 +50,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 	<!-- Main -->
 	<link rel="stylesheet" type="text/css" href="https://upnveri.com/themes/semeru/css/main.min.css"/>
+	<link rel="stylesheet" type="text/css" href="custom.css"/>
 	<script type="text/javascript" src="https://upnveri.com/themes/semeru/js/main.js"></script>
 
 	<meta name="google-site-verification" content="RoMqgiY4S-6wbrpGH6MejVRbR_i8BhJV20OxCn23qAY" />
@@ -81,34 +82,42 @@
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white" id="main-menu">
 		<div class="container">
-			<div id="navbar-search"  class="collapse align-items-center justify-content-center">
+			<div id="navbar-search" class="collapse align-items-center justify-content-center">
 				<form action="https://upnveri.com/dashboard/search" method="GET">
 					<div class="input-group">
 						<input type="text" name="search" id="search" value="" placeholder="Search" class="form-control">
 						<span class="input-group-btn">
 							<button type="submit" class="btn btn-primary ml-n1"><i class="zmdi zmdi-search"></i></button>
-							<button type="button" data-target="#navbar-search" data-toggle="collapse" class="btn btn-light ml-1" aria-expanded="false"><i
-									class="zmdi zmdi-close"></i></button>
+							<button type="button" data-target="#navbar-search" data-toggle="collapse" class="btn btn-light ml-1" aria-expanded="false"><i class="zmdi zmdi-close"></i></button>
 						</span>
 					</div>
+				</form>
 			</div>
-			</form>
-			<a class="navbar-brand" href="https://upnveri.com">
+
+			<div class="d-flex align-items-center justify-content-between w-100">
+				<a class="navbar-brand" href="https://upnveri.com">
+					<img src="https://upnveri.com/media/logo-b124d2e7-ba67-4454-90fd-ab2a0dde42fb.png" alt="Logo Semeru">
+					<span class="d-none">UPNVERI.COM</span>
+				</a>
+				<button class="navbar-toggler border-0 d-block" type="button" data-toggle="collapse" data-target="#navbar-search" aria-controls="navbarTop" aria-expanded="false">
+					<i class="zmdi zmdi-search"></i>
+				</button>
+			</div>
+
+			<!-- <a class="navbar-brand" href="https://upnveri.com">
 				<img src="https://upnveri.com/media/logo-b124d2e7-ba67-4454-90fd-ab2a0dde42fb.png" alt="Logo Semeru">
 				<span class="d-none">UPNVERI.COM</span>
 			</a>
 			<div class="ml-auto">
-				<button class="navbar-toggler border-0" type="button" data-toggle="collapse"
-					data-target="#navbar-search" aria-controls="navbarTop" aria-expanded="false">
+				<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar-search" aria-controls="navbarTop" aria-expanded="false">
 					<i class="zmdi zmdi-search"></i>
 				</button>
-				<button class="navbar-toggler border-0" type="button" data-toggle="collapse"
-					data-target="#navbarNav" aria-controls="navbarTop" aria-expanded="false">
+				<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTop" aria-expanded="false">
 					<i class="zmdi zmdi-apps"></i>
 				</button>
-			</div>
+			</div> -->
 
-			<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+			<!-- <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item dropdown d-lg-flex ">
 						<span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -171,15 +180,15 @@
 						</span>
 					</li>
 				</ul>
-			</div>
-			<ul class="list-inline mb-0 text-right d-none d-lg-inline">
+			</div> -->
+
+			<!-- <ul class="list-inline mb-0 text-right d-none d-lg-inline">
 				<li class="nav-item list-inline-item">
-					<a class="nav-link" data-toggle="collapse" href="#navbar-search" role="button"
-						aria-expanded="false" aria-controls="navbar-search">
+					<a class="nav-link" data-toggle="collapse" href="#navbar-search" role="button" aria-expanded="false" aria-controls="navbar-search">
 						<i class="zmdi zmdi-search zmdi-hc-lg"></i>
 					</a>
 				</li>
-			</ul>
+			</ul> -->
 
 		</div>
 	</nav>
@@ -244,85 +253,64 @@
 							</div>
 						</div>
 					</div>
-					<!-- START -->
-					<style>
-						#main-top .navbar-nav {
-							background: var(--success);
-							display: block !important;
-							padding: .25rem;
-						}
-						#main-top .navbar-nav li {
-							display: inline-block !important;
-							padding: 0 1rem;
-						}
-						#main-top .navbar-nav .dropdown-menu {
-							position: absolute;
-							left: auto;
-							right: initial;
-						}
-						#main-top .navbar .nav-link {
-							color: var(--white);
-						}
-						#main-top .navbar .nav-link:focus,
-						#main-top .navbar .nav-link:hover {
-							color: rgba(255,255,255,.75) !important;
-						}
-						#main-top .navbar .dropdown-menu a:focus,
-						#main-top .navbar .dropdown-menu a:hover {
-							color: var(--success) !important;
-						}
-					</style>
-					<nav class="navbar navbar-light bg-white p-0 mt-n2">
-						<ul class="navbar-nav">
-							<li class="nav-item dropdown d-lg-flex ">
-								<span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Home
-								</span>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="https://upnveri.com/page/1/">Pendahuluan</a>
-									<a class="dropdown-item" href="https://upnveri.com/page/13/">Sambutan Dekan UPN VETERAN Jakarta</a>
-									<a class="dropdown-item" href="https://upnveri.com/page/14/">Sambutan Rektor UPN VETERAN Jakarta</a>
-								</div>
-							</li>
-							<li class="nav-item dropdown d-lg-flex ">
-								<span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Sekilas UPN Veteran Jakarta
-								</span>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="https://upnveri.com/page/7/">Sekilas UPNVERI</a>
-									<a class="dropdown-item" href="https://upnveri.com/page/9/">Struktur Organisasi UPNVERI</a>
-								</div>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/news">News</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/2/">Buku Inovasi</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/4/">Khazanah Riset</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/5/">Pendidikan dan Latihan</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/6/">Publication</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/8/">Student Capacity Research</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/page/10/">Slide dan Youtube</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/gallery">Gallery</a>
-							</li>
-							<li class="nav-item  ">
-								<a class="nav-link" href="https://upnveri.com/contactus">Kontak</a>
-							</li>
-						</ul>
+					<nav class="navbar navbar-expand-lg navbar-light bg-success p-0 mt-n2">
+						<div class="d-flex align-items-center justify-content-between w-100 d-lg-none text-white p-2">
+							<p class="h6 mb-0 mx-2">Menu</p>
+							<button class="navbar-toggler border-0 text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTop" aria-expanded="false">
+								<i class="zmdi zmdi-menu"></i>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item dropdown d-lg-flex ">
+									<span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Home
+									</span>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="https://upnveri.com/page/1/">Pendahuluan</a>
+										<a class="dropdown-item" href="https://upnveri.com/page/13/">Sambutan Dekan UPN VETERAN Jakarta</a>
+										<a class="dropdown-item" href="https://upnveri.com/page/14/">Sambutan Rektor UPN VETERAN Jakarta</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown d-lg-flex ">
+									<span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Sekilas UPN Veteran Jakarta
+									</span>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="https://upnveri.com/page/7/">Sekilas UPNVERI</a>
+										<a class="dropdown-item" href="https://upnveri.com/page/9/">Struktur Organisasi UPNVERI</a>
+									</div>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/news">News</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/2/">Buku Inovasi</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/4/">Khazanah Riset</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/5/">Pendidikan dan Latihan</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/6/">Publication</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/8/">Student Capacity Research</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/page/10/">Slide dan Youtube</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/gallery">Gallery</a>
+								</li>
+								<li class="nav-item  ">
+									<a class="nav-link" href="https://upnveri.com/contactus">Kontak</a>
+								</li>
+							</ul>
+						</div>
 					</nav>
-					<!-- EMD -->
 				</div>
 			</div>
 		</div>

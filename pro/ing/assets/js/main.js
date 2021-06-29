@@ -16,3 +16,13 @@
 			$('body').addClass('bg-light')
 		}
 	})
+
+// FAQ
+	$('[data-toggle="collapse"]').closest('ul').find('li').first().each(function(index) {
+		let list = $(this)
+			trigger = list.find('[data-toggle="collapse"]')
+			id = trigger.attr('href')
+			container = $(id)
+		trigger.attr('aria-expanded','true')
+		container.addClass('show')
+	})

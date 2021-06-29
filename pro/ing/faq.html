@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Sunting Profil - BBPOM Informasi Nilai Gizi</title>
+	<title>FAQ - BBPOM Informasi Nilai Gizi</title>
 	<meta name="title" content="[site.title]">
 	<meta name="description" content="[site.description]">
 	<meta name="keywords" content="[site.keywords]">
@@ -78,13 +78,13 @@
 			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="/pro/ing/ing-format">
 				Format ING
 			</a>
-			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="/pro/ing/faq">
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4 active" href="/pro/ing/faq">
 				FAQ
 			</a>
 			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="/pro/ing/regulation">
 				Regulasi Terkait
 			</a>
-			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4 active" href="/pro/ing/profile">
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="/pro/ing/profile">
 				Profil
 			</a>
 			<a class="btn btn-danger btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="/pro/ing/">
@@ -98,67 +98,94 @@
 </header>
 
 <main>
-	<h1 class="font-theme-1 fs-1 text-break mb-0 d-none">Sunting Profil - BBPOM Informasi Nilai Gizi</h1>
+	<h1 class="font-theme-1 fs-1 text-break mb-0 d-none">FAQ - BBPOM Informasi Nilai Gizi</h1>
 
 	<section>
 		<div class="container">
 
 			<article class="my-4 my-md-5">
-				<h2 class="fs-3 mb-4">Profil Pengguna</h2>
+				<h2 class="fs-3 mb-4">Pertanyaan Yang Sering Diajukan</h2>
 
 				<div class="card border-0 rounded-3 p-2 p-md-3 shadow text-justify">
 					<div class="card-body">
 
-						<form spellcheck="false">
-							<div class="form-group">
-								<label class="opacity-5" for="profileName">Nama Lengkap</label>
-								<input type="text" class="form-control" name="profile" id="profileName" required value="Adi Nugroho">
-							</div>
-							<div class="form-group">
-								<label class="opacity-5" for="profileEmail">Email</label>
-								<input type="email" class="form-control" name="profile" id="profileEmail" required value="adinugroho@gmail.com">
-							</div>
-							<div class="form-group">
-								<label class="opacity-5" for="profilePhone">Telepon / HP</label>
-								<input type="text" class="form-control" name="profile" id="profilePhone" required value="081234567890">
-							</div>
-							<div class="form-group">
-								<label class="opacity-5" for="profileGender">Jenis Kelamin</label>
-								<div class="form-inline mt-n1">
-									<div class="form-check">
-										<input class="form-check-input mt-0" type="radio" name="profile" id="profile1" value="Laki-laki" checked>
-										<label class="form-check-label fs-6 ml-1" for="profile1">
-											Laki-laki
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input mt-0" type="radio" name="profile" id="profile2" value="Perempuan">
-										<label class="form-check-label fs-6 ml-1" for="profile2">
-											Perempuan
-										</label>
-									</div>
+						<ul class="list-group list-group-flush list-group-show list-group-number my-n2">
+							<li class="list-group-item">
+								<a class="d-flex justify-content-between text-dark text-decoration-none" data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1">
+									Apakah Informasi Nilai Gizi wajib dicantumkan pada pangan olahan?
+									<span class="chevron">
+										<svg viewBox="0 0 16 16" fill="currentColor">
+											<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+										</svg>
+									</span>
+								</a>
+								<div class="collapse" id="collapse-1">
+									<blockquote class="my-2">
+										Sesuai Peraturan BPOM Nomor 18 Tahun 2019, ING wajib dicantumkan pada label pangan olahan.
+									</blockquote>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="opacity-5" for="profileAddress">Alamat</label>
-								<input type="text" class="form-control" name="profile" id="profileAddress" required value="Jl. Gajah Mada No. 17 Palangkaraya">
-							</div>
-							<div class="form-group">
-								<label class="opacity-5" for="profileCompany">Instansi / Institusi / Perusahaan</label>
-								<input type="text" class="form-control" name="profile" id="profileCompany" required value="PT. Guna Sejahtera Abadi">
-							</div>
-							<div class="d-sm-flex align-items-center justify-content-between">
-								<label class="mb-sm-0" for="profileCaptcha">
-									<span class="opacity-5">Captcha</span>
-									<img class="captcha d-block mt-2 mb-1 mb-sm-0" src="https://kelimutu.wunik.id/captcha/flat?xBWKrUG5" alt="Captcha">
-								</label>
-								<input type="text" class="form-control mt-sm-4 ml-sm-2" name="profile" id="profileCaptcha" required>
-							</div>
-							<div class="form-group text-right mt-4 mb-0">
-								<!-- <button type="submit" class="btn btn-success px-4">Simpan</button> -->
-								<button type="button" class="btn btn-success px-4" onclick="window.location.href='/pro/ing/profile'">Simpan</button>
-							</div>
-						</form>
+							</li>
+							<li class="list-group-item">
+								<a class="d-flex justify-content-between text-dark text-decoration-none" data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2">
+									Non sit aute sit nostrud tempor incididunt occaecat nulla aliquip duis eu?
+									<span class="chevron">
+										<svg viewBox="0 0 16 16" fill="currentColor">
+											<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+										</svg>
+									</span>
+								</a>
+								<div class="collapse" id="collapse-2">
+									<blockquote class="my-2">
+										Est minim dolor consectetur adipisicing ad ut excepteur adipisicing tempor dolore irure est qui duis culpa est. Anim anim laborum in tempor id elit sint consectetur nostrud consequat voluptate adipisicing deserunt ullamco.
+									</blockquote>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="d-flex justify-content-between text-dark text-decoration-none" data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3">
+									Deserunt adipisicing ut sint cupidatat tempor in do laboris nulla in minim ea labore in?
+									<span class="chevron">
+										<svg viewBox="0 0 16 16" fill="currentColor">
+											<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+										</svg>
+									</span>
+								</a>
+								<div class="collapse" id="collapse-3">
+									<blockquote class="my-2">
+										Mollit occaecat ut et laborum velit fugiat exercitation eiusmod veniam qui aliquip cupidatat occaecat nulla. Labore enim labore commodo ad occaecat cillum adipisicing veniam pariatur sit.
+									</blockquote>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="d-flex justify-content-between text-dark text-decoration-none" data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4">
+									Consectetur nulla et ad ut ut proident deserunt id exercitation officia laboris culpa officia dolor dolor in eu consectetur magna eu ex irure ex officia?
+									<span class="chevron">
+										<svg viewBox="0 0 16 16" fill="currentColor">
+											<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+										</svg>
+									</span>
+								</a>
+								<div class="collapse" id="collapse-4">
+									<blockquote class="my-2">
+										Sint id fugiat reprehenderit pariatur exercitation labore sed dolor.
+									</blockquote>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="d-flex justify-content-between text-dark text-decoration-none" data-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapse-5">
+									Incididunt tempor sed esse ullamco minim cillum ad deserunt in ea sit aliquip dolor magna in commodo eu?
+									<span class="chevron">
+										<svg viewBox="0 0 16 16" fill="currentColor">
+											<path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+										</svg>
+									</span>
+								</a>
+								<div class="collapse" id="collapse-5">
+									<blockquote class="my-2">
+										Do sunt elit ex et nostrud enim velit anim dolore id ex excepteur do eiusmod et sit dolore qui. Commodo elit occaecat ullamco voluptate dolore in et laboris do reprehenderit id eu proident aute adipisicing excepteur ut. Veniam aute non incididunt eu elit proident pariatur duis aute irure veniam irure nulla aute adipisicing proident ea aliqua. Dolor nostrud proident aute excepteur magna exercitation reprehenderit aliqua duis amet ea.
+									</blockquote>
+								</div>
+							</li>
+						</ul>
 
 					</div>
 				</div>

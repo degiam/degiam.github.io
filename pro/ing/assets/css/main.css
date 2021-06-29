@@ -764,9 +764,15 @@
 	body.inside {
 		padding-top: 90px;
 	}
+	body.inside main {
+		height: calc(100vh - 90px);
+	}
 	@media (max-width: 767px) {
 		body.inside {
 			padding-top: 118px;
+		}
+		body.inside main {
+			height: calc(100vh - 118px);
 		}
 	}
 

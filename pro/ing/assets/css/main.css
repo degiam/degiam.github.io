@@ -241,6 +241,9 @@
 	.fs-7 {
 		font-size: .75rem !important;
 	}
+	.fs-inherit {
+		font-size: inherit;
+	}
 
 /* Cursor */
 	.cursor-pointer {
@@ -973,5 +976,32 @@
 	@media (max-width: 575px) {
 		.radio-list .form-check:not(:last-child) {
 			margin-bottom: .75rem;
+		}
+	}
+
+	.no-resize {
+		resize: none;
+	}
+
+	@media (min-width: 768px) {
+		.calc-description {
+			height: 341px !important;
+		}
+	}
+
+	.nutrition > div > label {
+		width: 150px;
+	}
+	.nutrition > div > input {
+		width: 150px;
+		max-width: calc(100% - 150px - 70px)
+	}
+	@media (max-width: 767px) {
+		.nutrition > div > label {
+			width: 120px;
+		}
+		.nutrition > div > input {
+			width: 120px;
+			max-width: calc(100% - 120px - 70px)
 		}
 	}

@@ -990,18 +990,16 @@
 	}
 
 	.nutrition > div > label {
-		width: 150px;
+		width: 120px;
 	}
 	.nutrition > div > input {
-		width: 150px;
-		max-width: calc(100% - 150px - 70px)
+		width: calc(100% - 140px - 22px);
 	}
-	@media (max-width: 767px) {
+	@media (min-width: 768px) {
 		.nutrition > div > label {
-			width: 120px;
+			width: 150px;
 		}
 		.nutrition > div > input {
-			width: 120px;
-			max-width: calc(100% - 120px - 70px)
+			width: calc(100% - 170px - 70px);
 		}
 	}

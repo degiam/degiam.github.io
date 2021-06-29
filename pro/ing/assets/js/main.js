@@ -4,6 +4,11 @@
  * Copyright (c) 2021
  */
 
+// Menu
+	$('header .overflow-auto').animate({
+		scrollLeft: $('.menu-top a.active').offset().left - 32
+	}, 1);
+
 // Footer
 	$('footer').each(function() {
 		let footer = $('footer > div')

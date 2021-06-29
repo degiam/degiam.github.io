@@ -865,3 +865,12 @@
 		min-height: 46px;
 		background-color: var(--light);
 	}
+
+	.list-group-show {
+		padding-left: 1rem;
+	}
+	.list-group-show > li {
+		display: list-item;
+		padding-right: 0;
+		padding-left: 0;
+	}

@@ -817,6 +817,9 @@
 	.menu-top > .btn-outline-primary:not(.active) {
 		border-color: transparent;
 	}
+	.menu-top > .btn.active {
+		box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+	}
 	@media (max-width: 767px) {
 		.menu-top > .btn-block {
 			font-size: .75rem;

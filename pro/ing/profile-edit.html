@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Selamat Datang - BBPOM Informasi Nilai Gizi</title>
+	<title>Sunting Profil - BBPOM Informasi Nilai Gizi</title>
 	<meta name="title" content="[site.title]">
 	<meta name="description" content="[site.description]">
 	<meta name="keywords" content="[site.keywords]">
@@ -69,7 +69,7 @@
 				<img class="obj-fit-contain py-1 py-md-0" width="50" height="50" src="assets/img/bpom-logogram.svg">
 				<strong>Informasi Nilai Gizi</strong>
 			</div>
-			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4 active" href="index.html">
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="index.html">
 				Beranda
 			</a>
 			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="ing-calc.html">
@@ -84,7 +84,7 @@
 			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="regulation.html">
 				Regulasi Terkait
 			</a>
-			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="profile.html">
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4 active" href="profile.html">
 				Profil
 			</a>
 		</div>
@@ -95,18 +95,65 @@
 </header>
 
 <main>
-	<h1 class="font-theme-1 fs-1 text-break mb-0 d-none">Selamat Datang - BBPOM Informasi Nilai Gizi</h1>
+	<h1 class="font-theme-1 fs-1 text-break mb-0 d-none">Sunting Profil - BBPOM Informasi Nilai Gizi</h1>
 
 	<section>
 		<div class="container">
 
 			<article class="my-4 my-md-5">
-				<h2 class="fs-3 mb-4">Selamat Datang, [Nama Pengguna] !</h2>
+				<h2 class="fs-3 mb-4">Profil Pengguna</h2>
 				<div class="card border-0 rounded-3 p-3 shadow lh-4 text-justify">
 					<div class="card-body">
-						<p>Aplikasi Hitung ING pangan olahan ini digunakan untuk pangan olahan yang diproduksi oleh Usaha Mikro dan Usaha Kecil.</p>
-						<p>Database jenis, deskripsi, nilai kandungan gizi dan takaran saji pangan olahan pada situs ini mengacu pada <b>Lampiran Peraturan Badan Pengawas Obat dan Makanan Nomor 16 Tahun 2020</b> tentang Pencantuman Informasi Nilai Gizi untuk Pangan Olahan yang diproduksi oleh Usaha Mikro dan Usaha Kecil.</p>
-						<p>Sebelum perhitungan ING dijalankan, pastikan jenis, deskripsi dan takaran saji pangan olahan yang Anda produksi sesuai dengan database yang ada.</p>
+						<form spellcheck="false">
+							<div class="form-group">
+								<label class="opacity-5" for="profileName">Nama Lengkap</label>
+								<input type="text" class="form-control" name="profile" id="profileName" required value="Adi Nugroho">
+							</div>
+							<div class="form-group">
+								<label class="opacity-5" for="profileEmail">Email</label>
+								<input type="email" class="form-control" name="profile" id="profileEmail" required value="adinugroho@gmail.com">
+							</div>
+							<div class="form-group">
+								<label class="opacity-5" for="profilePhone">Telepon / HP</label>
+								<input type="text" class="form-control" name="profile" id="profilePhone" required value="081234567890">
+							</div>
+							<div class="form-group">
+								<label class="opacity-5" for="profileGender">Jenis Kelamin</label>
+								<div class="form-inline mt-n1">
+									<div class="form-check">
+										<input class="form-check-input mt-0" type="radio" name="profile" id="profile1" value="Laki-laki" checked>
+										<label class="form-check-label fs-6 ml-1" for="profile1">
+											Laki-laki
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input mt-0" type="radio" name="profile" id="profile2" value="Perempuan">
+										<label class="form-check-label fs-6 ml-1" for="profile2">
+											Perempuan
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="opacity-5" for="profileAddress">Alamat</label>
+								<input type="text" class="form-control" name="profile" id="profileAddress" required value="Jl. Gajah Mada No. 17 Palangkaraya">
+							</div>
+							<div class="form-group">
+								<label class="opacity-5" for="profileCompany">Instansi / Institusi / Perusahaan</label>
+								<input type="text" class="form-control" name="profile" id="profileCompany" required value="PT. Guna Sejahtera Abadi">
+							</div>
+							<div class="d-sm-flex align-items-center justify-content-between">
+								<label class="mb-sm-0" for="profileCaptcha">
+									<span class="opacity-5">Captcha</span>
+									<img class="captcha d-block mt-2 mb-1 mb-sm-0" src="https://kelimutu.wunik.id/captcha/flat?xBWKrUG5" alt="Captcha">
+								</label>
+								<input type="text" class="form-control mt-sm-4 ml-sm-2" name="profile" id="profileCaptcha" required>
+							</div>
+							<div class="form-group text-right mt-4">
+								<!-- <button type="submit" class="btn btn-success px-4">Simpan</button> -->
+								<button type="button" class="btn btn-success px-4" onclick="window.location.href='profile.html'">Simpan</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</article>

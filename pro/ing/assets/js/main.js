@@ -31,3 +31,10 @@
 		trigger.attr('aria-expanded','true')
 		container.addClass('show')
 	})
+
+// Radio
+	$('.radio-list input:radio').on('change',function() {
+		let input = $(this)
+		$('.form-check').removeClass('selected')
+		if ( input.is(':checked') ) input.closest('.form-check').addClass('selected')
+	})

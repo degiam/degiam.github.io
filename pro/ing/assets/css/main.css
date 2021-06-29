@@ -866,6 +866,10 @@
 		background-color: var(--light);
 	}
 
+	article h2 {
+		padding: 1rem 0 .5rem;
+	}
+
 	.list-group-show {
 		padding-left: 1rem;
 	}

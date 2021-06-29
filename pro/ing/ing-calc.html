@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<title>Hitung Informasi Nilai Gizi - BBPOM Informasi Nilai Gizi</title>
+	<meta name="title" content="[site.title]">
+	<meta name="description" content="[site.description]">
+	<meta name="keywords" content="[site.keywords]">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="[site.title]">
+	<meta property="og:description" content="[site.description]">
+	<meta property="og:image" content="assets/img/ogp.jpg">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:site_name" content="[site.title]">
+	<meta property="og:url" content="[site.url]">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="[site.title]">
+	<meta name="twitter:title" content="[site.title]">
+	<meta name="twitter:description" content="[site.description]">
+	<meta name="twitter:image" content="assets/img/ogp.jpg">
+	<meta name="twitter:site" content="[site.title]">
+	<!-- Canonical -->
+	<link rel="canonical" href="[site.url]">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="[site.title]">
+	<link rel="apple-touch-icon" href="assets/icon/72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/512x512.png">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#fff">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#fff">
+	<!-- Preload -->
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="assets/css/main.css">
+	<link rel="preload" as="script" href="assets/js/main.js">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<header>
+	<div class="py-3 overflow-auto">
+		<div class="d-flex align-items-center w-fit-content mx-auto px-4 menu-top">
+			<div class="brand pb-1 py-md-1">
+				<img class="obj-fit-contain py-1 py-md-0" width="50" height="50" src="assets/img/bpom-logogram.svg" alt="BBPOM">
+				<strong>Informasi Nilai Gizi</strong>
+			</div>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="home.html">
+				Beranda
+			</a>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4 active" href="ing-calc.html">
+				Hitung ING
+			</a>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="ing-format.html">
+				Format ING
+			</a>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="faq.html">
+				FAQ
+			</a>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="regulation.html">
+				Regulasi Terkait
+			</a>
+			<a class="btn btn-outline-primary btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="profile.html">
+				Profil
+			</a>
+			<a class="btn btn-danger btn-block rounded-pill text-uppercase font-weight-bold py-2 px-4" href="index.html">
+				Logout
+			</a>
+		</div>
+	</div>
+	<script>
+		document.querySelector('body').classList.add('inside')
+	</script>
+</header>
+
+<main>
+	<h1 class="font-theme-1 fs-1 text-break mb-0 d-none">Hitung Informasi Nilai Gizi - BBPOM Informasi Nilai Gizi</h1>
+
+	<section>
+		<div class="container">
+
+			<article class="my-4 my-md-5">
+				<h2 class="fs-3 mb-4">Hitung Informasi Nilai Gizi</h2>
+
+				<div class="card border-0 rounded-3 p-2 p-md-3 shadow text-justify">
+					<div class="card-body">
+
+						<div class="story mb-4">
+							<div class="bar active">
+								<span class="sr-only">Pilih Jenis Pangan Olahan</span>
+							</div>
+							<div class="bar">
+								<span class="sr-only">Deskripsi Pangan Olahan</span>
+							</div>
+							<div class="bar">
+								<span class="sr-only">Tentukan Takaran Saji</span>
+							</div>
+							<div class="bar">
+								<span class="sr-only">Tabel ING</span>
+							</div>
+						</div>
+
+						<!-- <a class="d-inline-block text-dark text-decoration-none fs-7 my-2" href="ing-calc.html">
+							<div class="d-flex align-items-center ml-n1">
+								<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor">
+									<path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+								</svg>
+								Kembali
+							</div>
+						</a> -->
+
+						<h3 class="fs-5 py-3 font-weight-bold">
+							Pilih Jenis Pangan Olahan
+						</h3>
+
+						<form spellcheck="false">
+							<div class="input-group mb-3">
+								<input type="search" class="form-control" name="search" aria-describedby="search" placeholder="Masukkan kata kunci...">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-primary px-4" id="search">Cari</button>
+								</div>
+							</div>
+						</form>
+
+						<div class="radio-list text-left my-4">
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-1" value="Keripik pisang asin">
+								<label class="form-check-label fs-6 ml-1" for="kind-1">
+									Keripik pisang asin
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-2" value="Keripik pisang manis">
+								<label class="form-check-label fs-6 ml-1" for="kind-2">
+									Keripik pisang manis
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-3" value="Keripik sale pisang">
+								<label class="form-check-label fs-6 ml-1" for="kind-3">
+									Keripik sale pisang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-4" value="Keripik nangka">
+								<label class="form-check-label fs-6 ml-1" for="kind-4">
+									Keripik nangka
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-5" value="Keripik tempe">
+								<label class="form-check-label fs-6 ml-1" for="kind-5">
+									Keripik tempe
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-6" value="Keripik singkong">
+								<label class="form-check-label fs-6 ml-1" for="kind-6">
+									Keripik singkong
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-7" value="Keripik singkong balado/pedas">
+								<label class="form-check-label fs-6 ml-1" for="kind-7">
+									Keripik singkong balado/pedas
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-8" value="Keripik umbi gadung">
+								<label class="form-check-label fs-6 ml-1" for="kind-8">
+									Keripik umbi gadung
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-9" value="Keripik ubi ungu">
+								<label class="form-check-label fs-6 ml-1" for="kind-9">
+									Keripik ubi ungu
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-10" value="Keripik kentang asin">
+								<label class="form-check-label fs-6 ml-1" for="kind-10">
+									Keripik kentang asin
+								</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-11" value="Keripik talas/keladi">
+								<label class="form-check-label fs-6 ml-1" for="kind-11">
+									Keripik talas/keladi
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-12" value="Keripik ceker">
+								<label class="form-check-label fs-6 ml-1" for="kind-12">
+									Keripik ceker
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-13" value="Dodol ketan">
+								<label class="form-check-label fs-6 ml-1" for="kind-13">
+									Dodol ketan
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-14" value="Dodol/lempok durian">
+								<label class="form-check-label fs-6 ml-1" for="kind-14">
+									Dodol/lempok durian
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-15" value="Rempeyek kacang tanah">
+								<label class="form-check-label fs-6 ml-1" for="kind-15">
+									Rempeyek kacang tanah
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-16" value="Kemplang">
+								<label class="form-check-label fs-6 ml-1" for="kind-16">
+									Kemplang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-17" value="Amplang/kuku macan">
+								<label class="form-check-label fs-6 ml-1" for="kind-17">
+									Amplang/kuku macan
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-18" value="Kerupuk ikan">
+								<label class="form-check-label fs-6 ml-1" for="kind-18">
+									Kerupuk ikan
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-19" value="Kerupuk udang">
+								<label class="form-check-label fs-6 ml-1" for="kind-19">
+									Kerupuk udang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-20" value="Rengginang/batiah">
+								<label class="form-check-label fs-6 ml-1" for="kind-20">
+									Rengginang/batiah
+								</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-21" value="Kacang telur">
+								<label class="form-check-label fs-6 ml-1" for="kind-21">
+									Kacang telur
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-22" value="Kacang bawang/kacang tojin">
+								<label class="form-check-label fs-6 ml-1" for="kind-22">
+									Kacang bawang/kacang tojin
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-23" value="Jipang kacang/kipang kacang/enting-enting">
+								<label class="form-check-label fs-6 ml-1" for="kind-23">
+									Jipang kacang/kipang kacang/enting-enting
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-24" value="Kue semprong">
+								<label class="form-check-label fs-6 ml-1" for="kind-24">
+									Kue semprong
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-25" value="Egg roll ubi ungu">
+								<label class="form-check-label fs-6 ml-1" for="kind-25">
+									Egg roll ubi ungu
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-26" value="Stik keju">
+								<label class="form-check-label fs-6 ml-1" for="kind-26">
+									Stik keju
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-27" value="Kue mochi isi kacang">
+								<label class="form-check-label fs-6 ml-1" for="kind-27">
+									Kue mochi isi kacang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-28" value="Kue satu/koyah">
+								<label class="form-check-label fs-6 ml-1" for="kind-28">
+									Kue satu/koyah
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-29" value="Biji ketapang">
+								<label class="form-check-label fs-6 ml-1" for="kind-29">
+									Biji ketapang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-30" value="Kembang goyang">
+								<label class="form-check-label fs-6 ml-1" for="kind-30">
+									Kembang goyang
+								</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-31" value="Cokelat susu">
+								<label class="form-check-label fs-6 ml-1" for="kind-31">
+									Cokelat susu
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-32" value="Risoles isi daging dengan mayonais (beef mayonaise)">
+								<label class="form-check-label fs-6 ml-1" for="kind-32">
+									Risoles isi daging dengan mayonais (beef mayonaise)
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-33" value="Bakso daging sapi">
+								<label class="form-check-label fs-6 ml-1" for="kind-33">
+									Bakso daging sapi
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-34" value="Naget ayam">
+								<label class="form-check-label fs-6 ml-1" for="kind-34">
+									Naget ayam
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-35" value="Siomay/dimsum ikan">
+								<label class="form-check-label fs-6 ml-1" for="kind-35">
+									Siomay/dimsum ikan
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-36" value="Tahu bakso">
+								<label class="form-check-label fs-6 ml-1" for="kind-36">
+									Tahu bakso
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-37" value="Otak-otak ikan">
+								<label class="form-check-label fs-6 ml-1" for="kind-37">
+									Otak-otak ikan
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-38" value="Sambal ikan roa">
+								<label class="form-check-label fs-6 ml-1" for="kind-38">
+									Sambal ikan roa
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-39" value="Sambal bawang">
+								<label class="form-check-label fs-6 ml-1" for="kind-39">
+									Sambal bawang
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-40" value="Minuman yogurt plain">
+								<label class="form-check-label fs-6 ml-1" for="kind-40">
+									Minuman yogurt plain
+								</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-41" value="Minuman yogurt berperisa">
+								<label class="form-check-label fs-6 ml-1" for="kind-41">
+									Minuman yogurt berperisa
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-42" value="Abon ayam">
+								<label class="form-check-label fs-6 ml-1" for="kind-42">
+									Abon ayam
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-43" value="Abon ikan lele">
+								<label class="form-check-label fs-6 ml-1" for="kind-43">
+									Abon ikan lele
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-44" value="Abon sapi">
+								<label class="form-check-label fs-6 ml-1" for="kind-44">
+									Abon sapi
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="radio" name="kind" id="kind-45" value="Bawang goreng">
+								<label class="form-check-label fs-6 ml-1" for="kind-45">
+									Bawang goreng
+								</label>
+							</div>
+						</div>
+
+						<div class="text-right">
+							<a class="btn btn-success py-2 px-4 d-flex justify-content-center d-md-inline-block" href="ing-calc-2.html">
+								Selanjutnya
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="mt-auto fs-7 text-center pt-3 pb-4 opacity-5">
+			&copy; 2021 <a class="text-dark text-decoration-none font-weight-bold" href="http://bbpom-yogya.pom.go.id/">BBPOM Yogyakarta</a>
+		</div>
+	</footer>
+</main>
+
+<slot>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/main.js"></script>
+</slot>
+
+</body>
+</html>

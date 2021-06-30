@@ -774,17 +774,17 @@
 
 /* Customize */
 	body.inside {
-		padding-top: 90px;
+		padding-top: 118px;
 	}
 	body.inside main {
-		height: calc(100vh - 90px);
+		height: calc(100vh - 118px);
 	}
-	@media (max-width: 767px) {
+	@media (min-width: 768px) {
 		body.inside {
-			padding-top: 118px;
+			padding-top: 90px;
 		}
 		body.inside main {
-			height: calc(100vh - 118px);
+			height: calc(100vh - 90px);
 		}
 	}
 
@@ -1009,5 +1009,36 @@
 		}
 		.nutrition > div > input {
 			width: calc(100% - 170px - 70px);
+		}
+	}
+
+	@media (max-width: 767px) {
+		.grid-card > [class^="col-md"]:not(:last-child) > .card {
+			margin-bottom: 2rem;
+		}
+	}
+
+	
+	.modal,
+	.modal > .close,
+	.modal-backdrop {
+		top: 118px;
+	}
+	.modal-dialog-centered {
+		min-height: calc(100% - 1rem - 118px);
+	}
+	@media (min-width: 576px) {
+		.modal-dialog-centered {
+			min-height: calc(100% - 3.5rem - 118px);
+		}
+	}
+	@media (min-width: 768px) {
+		.modal,
+		.modal > .close,
+		.modal-backdrop {
+			top: 90px;
+		}
+		.modal-dialog-centered {
+			min-height: calc(100% - 3.5rem - 90px);
 		}
 	}

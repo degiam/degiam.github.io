@@ -38,3 +38,23 @@
 		$('.form-check').removeClass('selected')
 		if ( input.is(':checked') ) input.closest('.form-check').addClass('selected')
 	})
+
+// Modal
+	let popupDetail = 'formatING'
+
+	$('[data-target="#' + popupDetail + '"]').each(function() {
+		let button = $(this)
+			parent = button.closest('center')
+			img = parent.find('img')
+			src = img.attr('src')
+			alt = img.attr('src')
+			content = `<div class='bg-white w-fit-content mx-auto p-2'><img class='img-fluid' loading='lazy' src='` + src + `' alt='` + alt + `'></div>`
+		$(this).attr('data-detail',content)
+	})
+
+	$('#' + popupDetail).on('show.bs.modal', function(e) {
+		let modal = $(this)
+		button = $(e.relatedTarget)
+		content = button.data('detail')
+		modal.find('.' + popupDetail + '-content').html(content)
+	})

@@ -480,6 +480,20 @@
 	}
 
 /* Dimension */
+	.flex-12 {
+		flex: 0 0 100%;
+	}
+	@media (min-width: 768px) {
+		.flex-md-6 {
+			flex: 0 0 50%;
+		}
+	}
+	@media (min-width: 992px) {
+		.flex-lg-4 {
+			flex: 0 0 33.3333%;
+		}
+	}
+
 	.w-fit-content {
 		width: -moz-fit-content;
 		width: fit-content;

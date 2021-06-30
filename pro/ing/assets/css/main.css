@@ -721,7 +721,16 @@
 		max-width: fit-content;
 	}
 
-/* Checkbox */
+/* Form */
+	.form-control:disabled,
+	.form-control[readonly] {
+		background-color: #f7f7f7;
+	}
+
+	.input-group .form-control {
+		height: 42px;
+	}
+
 	.form-inline .form-check {
 		display: -ms-flexbox;
 		display: flex;
@@ -930,10 +939,6 @@
 		opacity: .1;
 	}
 
-	.input-group .form-control {
-		height: 42px;
-	}
-
 	.radio-list {
 		display: flex;
 		flex-wrap: wrap;
@@ -986,6 +991,9 @@
 	@media (min-width: 768px) {
 		.calc-description {
 			height: 341px !important;
+		}
+		.serve-description {
+			height: 215px !important;
 		}
 	}
 

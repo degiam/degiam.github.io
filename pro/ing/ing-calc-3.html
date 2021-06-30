@@ -113,10 +113,10 @@
 							<div class="bar">
 								<span class="sr-only">Pilih Jenis Pangan Olahan</span>
 							</div>
-							<div class="bar active">
+							<div class="bar">
 								<span class="sr-only">Deskripsi Pangan Olahan</span>
 							</div>
-							<div class="bar">
+							<div class="bar active">
 								<span class="sr-only">Tentukan Takaran Saji</span>
 							</div>
 							<div class="bar">
@@ -124,7 +124,7 @@
 							</div>
 						</div>
 
-						<a class="d-inline-block text-dark text-decoration-none fs-7 my-2" href="/pro/ing/ing-calc">
+						<a class="d-inline-block text-dark text-decoration-none fs-7 my-2" href="/pro/ing/ing-calc-2">
 							<div class="d-flex align-items-center ml-n1">
 								<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor">
 									<path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
@@ -134,7 +134,7 @@
 						</a>
 
 						<h3 class="fs-5 py-3 font-weight-bold">
-							Deskripsi Pangan Olahan
+							Tentukan Takaran Saji
 						</h3>
 
 						<div class="text-left">
@@ -142,74 +142,66 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<label class="opacity-5" for="descName">Jenis Pangan Olahan</label>
-											<input type="text" class="form-control" name="ingDesc" id="descName" required value="Keripik Pisang Asin" disabled>
+											<label class="opacity-5" for="serveName">Jenis Pangan Olahan</label>
+											<input type="text" class="form-control" name="ingServe" id="serveName" required value="Keripik Pisang Asin" disabled>
 										</div>
 										<div class="form-group">
-											<label class="opacity-5" for="descDetail">Deskripsi</label>
-											<textarea rows="5" class="form-control no-resize calc-description" name="ingDesc" id="descDetail" required disabled>Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.</textarea>
+											<label class="opacity-5" for="serveDetail">Deskripsi</label>
+											<textarea rows="5" class="form-control no-resize serve-description" name="ingServe" id="serveDetail" required disabled>Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.</textarea>
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group nutrition">
-											<label class="opacity-5">Nilai Kandungan Gizi (per 100 gram)</label>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-1">Energi Total</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-1" required disabled value="538.5">
-												kkal
+										<div class="form-group">
+											<label class="opacity-5" for="serveValue-1">Takaran Saji (satuan metrik)</label>
+											<div class="d-flex align-items-center flex-row">
+												<input type="number" class="form-control mr-2 mr-md-3" name="ingServe" id="serveValue-1" required>
+												<span>gram</span>
 											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-2">Lemak Total</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-2" required disabled value="31.25">
-												<span class="d-md-none">g</span>
-												<span class="d-none d-md-inline-block">gram</span>
-											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-3">Lemak Jenuh</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-3" required disabled value="23.5">
-												<span class="d-md-none">g</span>
-												<span class="d-none d-md-inline-block">gram</span>
-											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-4">Protein</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-4" required disabled value="2.32">
-												<span class="d-md-none">g</span>
-												<span class="d-none d-md-inline-block">gram</span>
-											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-5">Karbohidrat Total</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-5" required disabled value="62">
-												<span class="d-md-none">g</span>
-												<span class="d-none d-md-inline-block">gram</span>
-											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-6">Gula</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-6" required disabled value="1.79">
-												<span class="d-md-none">g</span>
-												<span class="d-none d-md-inline-block">gram</span>
-											</div>
-											<div class="d-flex align-items-center flex-row mb-3">
-												<label class="ws-nowrap fs-inherit mb-0" for="descValue-7">Garam (Natrium)</label>
-												<input type="number" class="form-control mx-2 mx-md-3" name="ingDesc" id="descValue-7" required disabled value="583">
-												<span class="d-md-none">mg</span>
-												<span class="d-none d-md-inline-block">miligram</span>
+											<small class="form-text text-danger">Takaran saji harus antara 20 - 40 gram</small>
+										</div>
+										<div class="form-group">
+											<label class="opacity-5" for="serveValue-2">Takaran Saji (satuan ukuran rumah tangga)</label>
+											<div class="d-flex align-items-center flex-row">
+												<input type="number" class="form-control mr-2 mr-md-3" name="ingServe" id="serveValue-2" required>
+												<select class="form-control custom-select" required style="max-width:150px">
+													<option selected>Pilih Satuan...</option>
+													<option value="1">Sendok teh</option>
+													<option value="2">Sendok makan</option>
+													<option value="3">Sendok takar</option>
+													<option value="4">Gelas</option>
+													<option value="5">Botol</option>
+													<option value="6">Kaleng</option>
+													<option value="7">Mangkuk</option>
+													<option value="8">Bungkus</option>
+													<option value="9">Saset</option>
+													<option value="10">Keping</option>
+													<option value="11">Buah</option>
+													<option value="12">Biji</option>
+													<option value="13">Butir</option>
+													<option value="14">Potong</option>
+													<option value="15">Iris</option>
+													<option value="16">Kotak</option>
+												</select>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="opacity-5" for="descServe">Takaran Saji</label>
-											<input type="text" class="form-control" name="ingDesc" id="descServe" required disabled value="20 gram - 40 gram">
+											<label class="opacity-5" for="serveValue-3">Netto (isi bersih)</label>
+											<div class="d-flex align-items-center flex-row">
+												<input type="number" class="form-control mr-2 mr-md-3" name="ingServe" id="serveValue-3" required>
+												<span>gram</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="opacity-5" for="serveValue-4">Sajian per Kemasan</label>
+											<input type="number" class="form-control" name="ingServe" id="serveValue-4" required>
 										</div>
 									</div>
 								</div>
 							</form>
 						</div>
 
-						<div class="float-md-left mb-3 mb-md-0 mt-md-2">
-							<small class="opacity-5">Sumber: <b>Peraturan BPOM Nomor 16 Tahun 2020</b></small>
-						</div>
-
 						<div class="text-right mt-2 mt-md-0">
-							<a class="btn btn-success py-2 px-4 d-flex justify-content-center d-md-inline-block" href="/pro/ing/ing-calc-3">
+							<a class="btn btn-success py-2 px-4 d-flex justify-content-center d-md-inline-block" href="/pro/ing/ing-calc-4">
 								Selanjutnya
 							</a>
 						</div>

@@ -58,3 +58,19 @@
 		content = button.data('detail')
 		modal.find('.' + popupDetail + '-content').html(content)
 	})
+
+// Pills
+	$('.pills-responsive').each(function() {
+		let select = $('.custom-select')
+			link = $('.nav-link')
+
+		select.on('change',function() {
+			let id = '#pills-' + $(this).val() + '-tab'
+			$(id).click()
+		})
+
+		link.on('click',function() {
+			let val = $(this).attr('href').split('-')
+			select.val(val[1])
+		})
+	})

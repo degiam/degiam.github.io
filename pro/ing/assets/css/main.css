@@ -417,7 +417,7 @@
 		background-color: rgba(0,0,0,.03);
 		position: relative;
 	}
-	.nav-pills .nav-link:after {
+	.nav-pills:not([aria-orientation="vertical"]) .nav-link:after {
 		content: '';
 		position: absolute;
 		bottom: -6px;
@@ -1018,7 +1018,6 @@
 		}
 	}
 
-	
 	.modal,
 	.modal > .close,
 	.modal-backdrop {

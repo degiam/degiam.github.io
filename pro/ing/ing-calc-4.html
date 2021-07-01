@@ -166,7 +166,7 @@
 							<div class="col-md-9">
 								<div class="tab-content">
 
-									<div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" title="[Jenis Produk] - INGV">
+									<div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" title="Keripik Pisang Asin (INGV)">
 										<div class="border">
 											<table class="table table-borderless mb-0">
 												<tbody>
@@ -237,7 +237,7 @@
 										</div>
 									</div>
 
-									<div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" title="[Jenis Produk] - INGT">
+									<div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" title="Keripik Pisang Asin (INGT)">
 										<div class="border table-responsive">
 											<table class="table table-borderless mb-0">
 												<tbody>
@@ -332,12 +332,12 @@
 										</div>
 									</div>
 
-									<div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" title="[Jenis Produk] - INGL">
+									<div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" title="Keripik Pisang Asin (INGL)">
 										<div class="border">
 											<table class="table table-borderless mb-0">
 												<tbody>
 													<tr>
-														<td class="lh-4 px-3"><b>INFORMAI NILAI GIZI</b> Takaran saji : 20 gram (4 URT), 5 Sajian per kemasan <b>JUMLAH PER SAJIAN : Energi Total 140 kkal, Lemak Total 8 g (12% AKG), Lemak Jenuh 4 g (19% AKG), Protein 4 g (7% AKG), Karbohidrat Total 12 g (4% AKG), Gula 0 g (0% AKG), Garam (natrium) 270 mg (18% AKG).</b> Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.</td>
+														<td class="lh-4 px-3"><b>INFORMASI NILAI GIZI</b> Takaran saji : 20 gram (4 URT), 5 Sajian per kemasan <b>JUMLAH PER SAJIAN : Energi Total 140 kkal, Lemak Total 8 g (12% AKG), Lemak Jenuh 4 g (19% AKG), Protein 4 g (7% AKG), Karbohidrat Total 12 g (4% AKG), Gula 0 g (0% AKG), Garam (natrium) 270 mg (18% AKG).</b> Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.</td>
 													</tr>
 												</tbody>
 											</table>
@@ -987,7 +987,7 @@
 			doc.save(title + '.pdf')
 		}
 
-		// Linier width: 15 cm
+		// Linier width: 14,5 cm
 		function generatePDF3(element) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
@@ -996,26 +996,87 @@
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 425.1968505,
+				tableWidth: 411.0236222,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
-					textColor: [0,0,0],
-					fillColor: [255,255,255],
-					font: 'helvetica',
-					fontSize: 11,
+					minCellHeight: 100,
 				},
 				body: [
 					[
 						{ 
-							content: '<b>INFORMAI NILAI GIZI</b> Takaran saji : 20 gram (4 URT), 5 Sajian per kemasan <b>JUMLAH PER SAJIAN : Energi Total 140 kkal, Lemak Total 8 g (12% AKG), Lemak Jenuh 4 g (19% AKG), Protein 4 g (7% AKG), Karbohidrat Total 12 g (4% AKG), Gula 0 g (0% AKG), Garam (natrium) 270 mg (18% AKG).</b> Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.',
+							content: '',
 						},
 					],
 				],
 			})
 
+			let inputValue = document.querySelector('#pills-3-table td').innerHTML.replace(/<[^>]*>?/gm,'**')
+			let startX = 52
+			let startY = 59
+			const lineSpacing = 14
+			const fontSize = 11
+			const endX = 385
+
+			doc.setFont('helvetica').setFontSize(fontSize).setFontStyle('normal')
+
+			const regex = /(\*{2})+/g;
+			const textWithoutBoldMarks = inputValue.replace(regex,'')
+
+			let splitTextWithoutBoldMarks = doc.splitTextToSize(textWithoutBoldMarks,endX)
+
+			let charsMapLength = 0
+			let position = 0
+			let isBold = false
+
+			let textRows = splitTextWithoutBoldMarks.map((row, i) => {
+				const charsMap = row.split('')
+
+				const chars = charsMap.map((char, j) => {
+					position = charsMapLength + j + i
+
+					let currentChar = inputValue.charAt(position)
+
+					if (currentChar === "*") {
+						const spyNextChar = inputValue.charAt(position + 1)
+						if (spyNextChar === "*") {
+							isBold = !isBold
+							currentChar = inputValue.charAt(position + 2)
+
+							let removeMarks = inputValue.split('')
+								removeMarks.splice(position, 2)
+								inputValue = removeMarks.join('')
+						}
+					}
+
+					return { char: currentChar, bold: isBold }
+				})
+
+				charsMapLength += charsMap.length
+
+				return { ...chars }
+			})
+
+			printCharacters(doc, textRows, startY, startX, fontSize, lineSpacing)
+
 			// doc.output('dataurlnewwindow')
 			doc.save(title + '.pdf')
+		}
+
+		const printCharacters = (doc, textObject, startY, startX, fontSize, lineSpacing) => {
+			const startXCached = startX
+			const boldStr = 'bold'
+			const normalStr = 'normal'
+
+			textObject.map(row => {
+				Object.entries(row).map(([key, value]) => {
+					doc.setFontType(value.bold ? boldStr : normalStr)
+					doc.text(value.char, startX, startY)
+					startX = startX + doc.getStringUnitWidth(value.char) * fontSize
+				})
+				startX = startXCached
+				startY += lineSpacing
+			})
 		}
 	</script>
 </slot>

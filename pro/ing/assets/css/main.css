@@ -1050,6 +1050,12 @@
 		}
 	}
 
+	@media (max-width: 767px) {
+		.form-group .btn-success {
+			width: 100%;
+		}
+	}
+
 	table[id^="pills-"] td[align="right"] {
 		min-width: 50px;
 		padding-left: 0;

@@ -1056,6 +1056,9 @@
 		}
 	}
 
+	table[id^="pills-"] td {
+		vertical-align: middle;
+	}
 	table[id^="pills-"] td[align="right"] {
 		min-width: 50px;
 		padding-left: 0;

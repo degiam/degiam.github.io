@@ -63,6 +63,7 @@
 	$('.pills-responsive').each(function() {
 		let select = $('.custom-select')
 			link = $('.nav-link')
+			pane = $('.tab-pane.show')
 
 		select.on('change',function() {
 			let id = '#pills-' + $(this).val() + '-tab'
@@ -73,4 +74,7 @@
 			let val = $(this).attr('href').split('-')
 			select.val(val[1])
 		})
+
+		$('.nav-link[id="' + pane.attr('id') + '-tab"]').addClass('active')
+		$('.custom-select option[value="' + (pane.attr('id').split('-'))[1] + '"]').attr('selected','true')
 	})

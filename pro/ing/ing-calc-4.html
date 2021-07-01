@@ -384,13 +384,14 @@
 			button.setAttribute('onclick','generatePDF' + (tab[i].id.split('-'))[1] + '(this)')
 		}
 
+		// Convert pt to cm: asknumbers.com/centimeters-to-points.aspx
+
+		// Vertikal width: 15 cm
 		function generatePDF1(element) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
 				title = parent.getAttribute('title')
 				doc = new jsPDF('p', 'pt', 'A4')
-
-			// Convert pt to cm: asknumbers.com/centimeters-to-points.aspx
 
 			doc.autoTable({
 				theme: 'plain',
@@ -642,7 +643,7 @@
 							styles: 
 							{
 								fontStyle: 'italic',
-							} 
+							},
 						},
 					],
 				],
@@ -653,13 +654,345 @@
 			doc.save(title + '.pdf')
 		}
 
-		function generatePDF3(element) {
+		// Tabular width: 16 cm
+		function generatePDF2(element) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
 				title = parent.getAttribute('title')
 				doc = new jsPDF('p', 'pt', 'A4')
 
-			// Convert pt to cm: asknumbers.com/centimeters-to-points.aspx
+			doc.autoTable({
+				theme: 'plain',
+				tableWidth: 453.5433072,
+				styles: {
+					minCellHeight: 150,
+				},
+				body: [
+					[
+						{ 
+							content: '',
+						},
+					],
+				],
+				didDrawCell: function(data) {
+
+					doc.autoTable({
+						theme: 'plain',
+						tableWidth: 113.3858268,
+						tableLineWidth: 2,
+						tableLineColor: [0,0,0],
+						styles: {
+							textColor: [0,0,0],
+							fillColor: [255,255,255],
+							font: 'helvetica',
+							fontStyle: 'bold',
+							fontSize: 10.5,
+						},
+						body: [
+							[
+								{ 
+									content: 'INFORMASI NILAI GIZI',
+									styles: 
+									{
+										fontSize: 14,
+										halign: 'center',
+										valign: 'bottom',
+										minCellHeight: 45,
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Takaran saji 20 gram (4 URT)',
+									styles: 
+									{
+										fontStyle: 'normal',
+									},
+								},
+							],
+							[
+								{ 
+									content: '5 Sajian per kemasan',
+									styles: 
+									{
+										fontStyle: 'normal',
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Energi Total 140 kkal',
+									styles: {
+										minCellHeight: 54,
+									},
+								},
+							],
+						],
+					})
+
+					doc.autoTable({
+						theme: 'plain',
+						tableWidth: 170.0787402,
+						tableLineWidth: 2,
+						tableLineColor: [0,0,0],
+						styles: {
+							textColor: [0,0,0],
+							fillColor: [255,255,255],
+							font: 'helvetica',
+							fontStyle: 'bold',
+							fontSize: 10,
+						},
+						body: [
+							[
+								{ 
+									content: 'Jumlah per sajian',
+								},
+								{ 
+									content: '% AKG *',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+						],
+						startY: data.cell.y,
+						margin: {
+							left: 153.7795276,
+						},
+					})
+
+					doc.autoTable({
+						theme: 'plain',
+						tableWidth: 170.0787402,
+						tableLineWidth: 2,
+						tableLineColor: [0,0,0],
+						styles: {
+							textColor: [0,0,0],
+							fillColor: [255,255,255],
+							font: 'helvetica',
+							fontStyle: 'bold',
+							fontSize: 10,
+						},
+						body: [
+							[
+								{ 
+									content: 'Lemak Total',
+								},
+								{ 
+									content: '8 g',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '12 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Lemak Jenuh',
+								},
+								{ 
+									content: '4 g',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '19 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Protein',
+									styles: {
+										minCellHeight: 90,
+									},
+								},
+								{ 
+									content: '4 g',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '7 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+						],
+						startY: data.cell.y + 22,
+						margin: {
+							left: 153.7795276,
+						},
+					})
+
+					doc.autoTable({
+						theme: 'plain',
+						tableWidth: 170.0787402,
+						tableLineWidth: 2,
+						tableLineColor: [0,0,0],
+						styles: {
+							textColor: [0,0,0],
+							fillColor: [255,255,255],
+							font: 'helvetica',
+							fontStyle: 'bold',
+							fontSize: 10,
+						},
+						body: [
+							[
+								{ 
+									content: 'Jumlah per sajian',
+								},
+								{ 
+									content: '% AKG *',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+						],
+						startY: data.cell.y,
+						margin: {
+							left: 323.8582678,
+						},
+					})
+
+					doc.autoTable({
+						theme: 'plain',
+						tableWidth: 170.0787402,
+						tableLineWidth: 2,
+						tableLineColor: [0,0,0],
+						styles: {
+							textColor: [0,0,0],
+							fillColor: [255,255,255],
+							font: 'helvetica',
+							fontStyle: 'bold',
+							fontSize: 10,
+						},
+						body: [
+							[
+								{ 
+									content: 'Karbohidrat Total',
+								},
+								{ 
+									content: '12 g',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '4 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Gula',
+								},
+								{ 
+									content: '0 g',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '0 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+							[
+								{ 
+									content: 'Garam (natrium)',
+									styles: {
+										minCellHeight: 90,
+									},
+								},
+								{ 
+									content: '270 mg',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+								{ 
+									content: '18 %',
+									styles: 
+									{
+										halign: 'right',
+									},
+								},
+							],
+						],
+						startY: data.cell.y + 22,
+						margin: {
+							left: 323.8582678,
+						},
+					})
+
+				},
+			})
+
+			doc.autoTable({
+				theme: 'plain',
+				tableWidth: 453.9433072,
+				tableLineWidth: 2,
+				tableLineColor: [0,0,0],
+				styles: {
+					textColor: [0,0,0],
+					fillColor: [255,255,255],
+					font: 'helvetica',
+					fontStyle: 'bold',
+					fontSize: 11,
+				},
+				body: [
+					[
+						{ 
+							content: '* Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.',
+							styles: 
+							{
+								fontStyle: 'italic',
+							},
+						},
+					],
+				],
+				startY: doc.autoTableEndPosY(),
+			})
+
+			// doc.output('dataurlnewwindow')
+			doc.save(title + '.pdf')
+		}
+
+		// Linier width: 15 cm
+		function generatePDF3(element) {
+			let parent = element.closest('.tab-pane')
+				table = parent.querySelector('table')
+				title = parent.getAttribute('title')
+				doc = new jsPDF('p', 'pt', 'A4')
 
 			doc.autoTable({
 				theme: 'plain',
@@ -681,8 +1014,8 @@
 				],
 			})
 
-			doc.output('dataurlnewwindow')
-			// doc.save(title + '.pdf')
+			// doc.output('dataurlnewwindow')
+			doc.save(title + '.pdf')
 		}
 	</script>
 </slot>

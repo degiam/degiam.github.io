@@ -395,6 +395,51 @@
 
 			doc.autoTable({
 				theme: 'plain',
+				styles: {
+					textColor: [0,0,0],
+					fillColor: [255,255,255],
+					font: 'helvetica',
+					fontSize: 11,
+					halign: 'justify',
+				},
+				body: [
+					[
+						{ 
+							content: 'Informasi Nilai Gizi Vertikal',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Keripik Pisang Asin',
+							styles: {
+								fontStyle: 'bold',
+								fontSize: 15,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
+						},
+					],
+					[
+						{ 
+							content: 'Dimensi Tabel : 15 x 11 cm',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+				],
+			})
+
+			doc.autoTable({
+				theme: 'plain',
 				tableWidth: 425.1968505,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
@@ -660,6 +705,51 @@
 				table = parent.querySelector('table')
 				title = parent.getAttribute('title')
 				doc = new jsPDF('p', 'pt', 'A4')
+
+			doc.autoTable({
+				theme: 'plain',
+				styles: {
+					textColor: [0,0,0],
+					fillColor: [255,255,255],
+					font: 'helvetica',
+					fontSize: 11,
+					halign: 'justify',
+				},
+				body: [
+					[
+						{ 
+							content: 'Informasi Nilai Gizi Tabular',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Keripik Pisang Asin',
+							styles: {
+								fontStyle: 'bold',
+								fontSize: 15,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
+						},
+					],
+					[
+						{ 
+							content: 'Dimensi Tabel : 16 x 6,5 cm',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+				],
+			})
 
 			doc.autoTable({
 				theme: 'plain',
@@ -996,6 +1086,51 @@
 
 			doc.autoTable({
 				theme: 'plain',
+				styles: {
+					textColor: [0,0,0],
+					fillColor: [255,255,255],
+					font: 'helvetica',
+					fontSize: 11,
+					halign: 'justify',
+				},
+				body: [
+					[
+						{ 
+							content: 'Informasi Nilai Gizi Linier',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Keripik Pisang Asin',
+							styles: {
+								fontStyle: 'bold',
+								fontSize: 15,
+							}
+						},
+					],
+					[
+						{ 
+							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
+						},
+					],
+					[
+						{ 
+							content: 'Dimensi Tabel : 14,5 x 3,5 cm',
+							styles: {
+								textColor: [170,170,170],
+								fontSize: 9,
+							}
+						},
+					],
+				],
+			})
+
+			doc.autoTable({
+				theme: 'plain',
 				tableWidth: 411.0236222,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
@@ -1013,7 +1148,7 @@
 
 			let inputValue = document.querySelector('#pills-3-table td').innerHTML.replace(/<[^>]*>?/gm,'**')
 			let startX = 52
-			let startY = 59
+			let startY = 182
 			const lineSpacing = 14
 			const fontSize = 11
 			const endX = 385

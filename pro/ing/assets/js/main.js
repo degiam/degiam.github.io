@@ -5,9 +5,12 @@
  */
 
 // Menu
-	$('header .overflow-auto').animate({
-		scrollLeft: $('.menu-top a.active').offset().left - 32
-	}, 1);
+	let navbar = $('.menu-top a.active')
+	if ( navbar.length > 0 ) {
+		$('header .overflow-auto').animate({
+			scrollLeft: navbar.offset().left - 32
+		}, 1)
+	}
 
 // Footer
 	$('footer').each(function() {

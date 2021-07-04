@@ -268,6 +268,48 @@ var project =`[
 	},
 	{
 		"id"			: "#7",
+		"title"			: "Merbabu",
+		"description"	: "<p>One of <a target='_blank' href='https://wunik.id/'>Wunik</a> themes, which is the default theme.</p>",
+		"category"		: "Website",
+		"badge"			: "bg-pink",
+		"software"		: [
+			{
+				"name"	: "jQuery",
+				"image"	: "../brand/jquery.svg",
+				"url"	: "https://jquery.com/"
+			},
+			{
+				"name"	: "Bootstrap",
+				"image"	: "../brand/bootstrap.svg",
+				"url"	: "https://getbootstrap.com/"
+			}
+		],
+		"date"			: {
+			"start"		: "2020-06-18",
+			"end"		: "2020-06-30"
+		},
+		"publish"		: "https://merbabu.wunik.id/",
+		"screenshot"	: {
+			"src0" 		: {
+				"jpg"	: "1KdzThwWnD6nN8DLlP4nvnSDDbvdfNZs4",
+				"webp"	: "1doWHH7usoVsMyrvwyB_-kGcDg-xPdm5i"
+			},
+			"src1" 		: {
+				"jpg"	: "1_fAX7hj89gNJCWl-t5C-8Mv1oiJTdPQf",
+				"webp"	: "1DpuSjEAyABI-_D9N2l5KsiGQf4252BHq"
+			},
+			"src2" 		: {
+				"jpg"	: "1gpAVExJ7_qYD-OtbSj9_GyW2pSoCvM8l",
+				"webp"	: "1BVOGDFHIVokV1F-paWbfU2Z-EV6138R4"
+			},
+			"src3" 		: {
+				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
+				"webp"	: "1WxFlQY1srqHCSQoR6X1TVNRSeQ3Fufld"
+			}
+		}
+	},
+	{
+		"id"			: "#8",
 		"title"			: "ePusta Amarta Library",
 		"description"	: "<p>Go online a school library, make design for official website and admin panel. Amarta Library is part of <a target='_blank' href='https://sman1bantul.sch.id/'>SMA N 1 Bantul</a>.</p>",
 		"category"		: "Website",
@@ -319,40 +361,40 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#8",
-		"title"			: "Merbabu",
-		"description"	: "<p>One of <a target='_blank' href='https://wunik.id/'>Wunik</a> themes, which is the default theme.</p>",
-		"category"		: "Website",
-		"badge"			: "bg-pink",
+		"id"			: "#9",
+		"title"			: "ResellerCamp",
+		"description"	: "<p>Redesign logo for a brand that provide domain reseller services.</p>",
+		"category"		: "Logo",
+		"badge"			: "bg-orange",
 		"software"		: [
 			{
-				"name"	: "jQuery",
-				"image"	: "../brand/jquery.svg",
-				"url"	: "https://jquery.com/"
+				"name"	: "Adobe Photoshop",
+				"image"	: "../brand/adobe-photoshop.svg",
+				"url"	: "https://www.adobe.com/sea/products/photoshop"
 			},
 			{
-				"name"	: "Bootstrap",
-				"image"	: "../brand/bootstrap.svg",
-				"url"	: "https://getbootstrap.com/"
+				"name"	: "Adobe Illustrator",
+				"image"	: "../brand/adobe-illustrator.svg",
+				"url"	: "https://www.adobe.com/sea/products/illustrator"
 			}
 		],
 		"date"			: {
-			"start"		: "2020-06-18",
-			"end"		: "2020-06-30"
+			"start"		: "2020-07-02",
+			"end"		: "2020-07-02"
 		},
-		"publish"		: "https://merbabu.wunik.id/",
+		"publish"		: "https://facebook.com/Resellercamp/",
 		"screenshot"	: {
 			"src0" 		: {
-				"jpg"	: "1KdzThwWnD6nN8DLlP4nvnSDDbvdfNZs4",
-				"webp"	: "1doWHH7usoVsMyrvwyB_-kGcDg-xPdm5i"
+				"jpg"	: "1HlVf_H1FaqrV6COu1-HR879GdCnj7Bqz",
+				"webp"	: "1wOKTigGBcbRKrkaFde41YkOSl8hcfunz"
 			},
 			"src1" 		: {
-				"jpg"	: "1_fAX7hj89gNJCWl-t5C-8Mv1oiJTdPQf",
-				"webp"	: "1DpuSjEAyABI-_D9N2l5KsiGQf4252BHq"
+				"jpg"	: "17wJoF462lQYzbFRpgoSri57sxtlH69Sx",
+				"webp"	: "1fE7k1dzvA5L_HjKypBcfH41NiooFJ78W"
 			},
 			"src2" 		: {
-				"jpg"	: "1gpAVExJ7_qYD-OtbSj9_GyW2pSoCvM8l",
-				"webp"	: "1BVOGDFHIVokV1F-paWbfU2Z-EV6138R4"
+				"jpg"	: "1glq3WPJEF5id5KLeqF5iWHiA-fqwkYME",
+				"webp"	: "1Yx7K3FCS8GdLtnbBA2JrN4xvAd54DYuv"
 			},
 			"src3" 		: {
 				"jpg"	: "10biAte9SwCuDS63vU3GY-SpTx5VVGRUV",
@@ -361,7 +403,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#9",
+		"id"			: "#10",
 		"title"			: "Kelimutu",
 		"description"	: "<p>One of <a target='_blank' href='https://wunik.id/'>Wunik</a> themes.</p>",
 		"category"		: "Website",
@@ -403,7 +445,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#10",
+		"id"			: "#11",
 		"title"			: "BBPOM Yogyakarta",
 		"description"	: "<p>Official website of an institution that oversees the distribution of medicines and food in Indonesia</p>",
 		"category"		: "Website",
@@ -445,7 +487,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#11",
+		"id"			: "#12",
 		"title"			: "Wunik",
 		"description"	: "<p>Logo design for a new brand that provide website management.</p>",
 		"category"		: "Logo",
@@ -487,7 +529,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#12",
+		"id"			: "#13",
 		"title"			: "SMP Kemala Bhayangkari",
 		"description"	: "<p>Official website one of the schools in Sidoarjo, Indonesia.</p>",
 		"category"		: "Website",
@@ -529,7 +571,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#13",
+		"id"			: "#14",
 		"title"			: "Kerjoo",
 		"description"	: "<p>An app for CLOUD and SaaS-based HR systems, which is one of the features we provide is employee attendance that can be done through mobile phone using the latest technology in real-time through GPS systems and face recognition biometric systems.</p><p>Now available on <a target='_blank' href='https://play.google.com/store/apps/details?id=com.kerjoo'>Google Play</a> and <a target='_blank' href='https://apps.apple.com/id/app/kerjoo/id1562259906'>AppStore</a>!</p>",
 		"category"		: "Mobile App",
@@ -571,7 +613,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#14",
+		"id"			: "#15",
 		"title"			: "Kama Visual",
 		"description"	: "<p>A creative agency studio that bridges brands to customers through creative visual messages.</p>",
 		"category"		: "Website",
@@ -613,7 +655,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#15",
+		"id"			: "#16",
 		"title"			: "Aksara Digital",
 		"description"	: "<p>A company based in Yogyakarta that provide one stop IT Solution services, such as website, apps and consulting.</p>",
 		"category"		: "Website",
@@ -655,7 +697,7 @@ var project =`[
 		}
 	},
 	{
-		"id"			: "#16",
+		"id"			: "#17",
 		"title"			: "SoKlin Koreavaganza",
 		"description"	: "<p>Consumer promo for the 3 new product variants with the Korean vibes. You can participating this promo through the official microsite, from June to December 2021. The prizes that can be won are matic motorbike and millions of rupiah.</p>",
 		"category"		: "Website",

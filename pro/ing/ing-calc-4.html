@@ -409,7 +409,7 @@
 
 		// Convert pt to cm: asknumbers.com/centimeters-to-points.aspx
 
-		// Vertikal (width: 15 cm)
+		// Vertikal (12,65 x 10 cm) - Margin 1,23 cm
 		function generatePDF1(element,action) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
@@ -418,9 +418,10 @@
 
 			doc.autoTable({
 				theme: 'plain',
+				margin: 30,
+				tableWidth: 356.5984253,
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontSize: 11,
 					halign: 'justify',
@@ -428,7 +429,7 @@
 				body: [
 					[
 						{ 
-							content: 'Informasi Nilai Gizi Vertikal',
+							content: 'Informasi Nilai Gizi - Vertikal',
 							styles: {
 								textColor: [170,170,170],
 								fontSize: 9,
@@ -449,42 +450,32 @@
 							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
 						},
 					],
-					[
-						{ 
-							content: 'Dimensi Tabel : 15 x 11 cm',
-							styles: {
-								textColor: [170,170,170],
-								fontSize: 9,
-							}
-						},
-					],
 				],
 			})
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 425.1968505,
+				margin: 35,
+				tableWidth: 356.5984253,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontStyle: 'bold',
 					fontSize: 11,
-				},
-				padding: {
-					top: 0,
-					right: 5,
-					bottom: 5,
-					left: 5,
+					cellPadding: {
+						top: 0,
+						right: 5,
+						bottom: 5,
+						left: 5,
+					},
 				},
 				body: [
 					[
 						{ 
 							content: 'INFORMASI NILAI GIZI',
-							styles: 
-							{
+							styles: {
 								fontSize: 15,
 								halign: 'center',
 								valign: 'bottom',
@@ -495,8 +486,7 @@
 					[
 						{ 
 							content: 'Takaran saji 20 gram (4 keping)',
-							styles: 
-							{
+							styles: {
 								fontStyle: 'normal',
 							},
 						},
@@ -504,8 +494,7 @@
 					[
 						{ 
 							content: '5 Sajian per kemasan',
-							styles: 
-							{
+							styles: {
 								fontStyle: 'normal',
 							},
 						},
@@ -515,12 +504,12 @@
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 425.1968505,
+				margin: 35,
+				tableWidth: 356.5984253,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontStyle: 'bold',
 					fontSize: 11,
@@ -535,42 +524,74 @@
 					[
 						{ 
 							content: 'Energi Total',
+							styles: {
+								cellPadding: {
+									top: 1,
+									right: 5,
+									bottom: 5,
+									left: 5,
+								},
+							},
 						},
 						{ 
 							content: '140 kkal',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
+								cellPadding: {
+									top: 1,
+									right: 5,
+									bottom: 5,
+									left: 5,
+								},
 							},
 						},
 					],
 				],
-				startY: doc.autoTableEndPosY(),
+				startY: doc.lastAutoTable.finalY,
 			})
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 425.1968505,
+				margin: 35,
+				tableWidth: 356.5984253,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontStyle: 'bold',
 					fontSize: 11,
+					cellPadding: {
+						top: 1.8,
+						right: 5,
+						bottom: 5,
+						left: 5,
+					},
 				},
 				body: [
 					[
 						{ 
 							content: '',
 							colSpan: 2,
+							styles: {
+								cellPadding: {
+									top: 5,
+									right: 5,
+									bottom: 5,
+									left: 5,
+								},
+							},
 						},
 						{ 
 							content: '% AKG *',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
+								cellPadding: {
+									top: 5,
+									right: 5,
+									bottom: 5,
+									left: 5,
+								},
 							},
 						},
 					],
@@ -580,15 +601,13 @@
 						},
 						{ 
 							content: '8 g',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '12 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
@@ -599,15 +618,13 @@
 						},
 						{ 
 							content: '4 g',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '19 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
@@ -618,15 +635,13 @@
 						},
 						{ 
 							content: '4 g',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '7 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
@@ -637,15 +652,13 @@
 						},
 						{ 
 							content: '12 g',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '4 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
@@ -656,15 +669,13 @@
 						},
 						{ 
 							content: '0 g',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '0 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
@@ -675,31 +686,29 @@
 						},
 						{ 
 							content: '270 mg',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 						{ 
 							content: '18 %',
-							styles: 
-							{
+							styles: {
 								halign: 'right',
 							},
 						},
 					],
 				],
-				startY: doc.autoTableEndPosY(),
+				startY: doc.lastAutoTable.finalY,
 			})
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 425.1968505,
+				margin: 35,
+				tableWidth: 356.5984253,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontStyle: 'bold',
 					fontSize: 11,
@@ -708,14 +717,13 @@
 					[
 						{ 
 							content: '* Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.',
-							styles: 
-							{
+							styles: {
 								fontStyle: 'italic',
 							},
 						},
 					],
 				],
-				startY: doc.autoTableEndPosY(),
+				startY: doc.lastAutoTable.finalY,
 			})
 
 			if ( action == 'print' ) {
@@ -728,7 +736,7 @@
 			}
 		}
 
-		// Tabular (width: 16 cm)
+		// Tabular (18,75 x 8,6 cm) - Margin 1,23 cm
 		function generatePDF2(element,action) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
@@ -737,9 +745,10 @@
 
 			doc.autoTable({
 				theme: 'plain',
+				margin: 30,
+				tableWidth: 529.5118112,
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontSize: 11,
 					halign: 'justify',
@@ -747,7 +756,7 @@
 				body: [
 					[
 						{ 
-							content: 'Informasi Nilai Gizi Tabular',
+							content: 'Informasi Nilai Gizi - Tabular',
 							styles: {
 								textColor: [170,170,170],
 								fontSize: 9,
@@ -768,23 +777,13 @@
 							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
 						},
 					],
-					[
-						{ 
-							content: 'Dimensi Tabel : 16 x 6,5 cm',
-							styles: {
-								textColor: [170,170,170],
-								fontSize: 9,
-							}
-						},
-					],
 				],
 			})
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 453.5433072,
 				styles: {
-					minCellHeight: 150,
+					minCellHeight: 197,
 				},
 				body: [
 					[
@@ -797,15 +796,23 @@
 
 					doc.autoTable({
 						theme: 'plain',
-						tableWidth: 113.3858268,
+						margin: {
+							left: 30,
+						},
+						tableWidth: 132.5,
 						tableLineWidth: 2,
 						tableLineColor: [0,0,0],
 						styles: {
 							textColor: [0,0,0],
-							fillColor: [255,255,255],
 							font: 'helvetica',
 							fontStyle: 'bold',
-							fontSize: 10.5,
+							fontSize: 11,
+							cellPadding: {
+								top: 7,
+								right: 10,
+								bottom: 0,
+								left: 10,
+							},
 						},
 						body: [
 							[
@@ -813,10 +820,10 @@
 									content: 'INFORMASI NILAI GIZI',
 									styles: 
 									{
-										fontSize: 14,
+										fontSize: 16,
 										halign: 'center',
-										valign: 'bottom',
-										minCellHeight: 45,
+										valign: 'middle',
+										minCellHeight: 65,
 									},
 								},
 							],
@@ -842,7 +849,7 @@
 								{ 
 									content: 'Energi Total 140 kkal',
 									styles: {
-										minCellHeight: 54,
+										minCellHeight: 85,
 									},
 								},
 							],
@@ -851,15 +858,23 @@
 
 					doc.autoTable({
 						theme: 'plain',
-						tableWidth: 170.0787402,
+						margin: {
+							left: 162.5,
+						},
+						tableWidth: 198.4251969,
 						tableLineWidth: 2,
 						tableLineColor: [0,0,0],
 						styles: {
 							textColor: [0,0,0],
-							fillColor: [255,255,255],
 							font: 'helvetica',
 							fontStyle: 'bold',
-							fontSize: 10,
+							fontSize: 10.5,
+							cellPadding: {
+								top: 10,
+								right: 5,
+								bottom: 10,
+								left: 5,
+							},
 						},
 						body: [
 							[
@@ -876,22 +891,21 @@
 							],
 						],
 						startY: data.cell.y,
-						margin: {
-							left: 153.7795276,
-						},
 					})
 
 					doc.autoTable({
 						theme: 'plain',
-						tableWidth: 170.0787402,
+						margin: {
+							left: 162.5,
+						},
+						tableWidth: 198.4251969,
 						tableLineWidth: 2,
 						tableLineColor: [0,0,0],
 						styles: {
 							textColor: [0,0,0],
-							fillColor: [255,255,255],
 							font: 'helvetica',
 							fontStyle: 'bold',
-							fontSize: 10,
+							fontSize: 10.5,
 						},
 						body: [
 							[
@@ -936,7 +950,7 @@
 								{ 
 									content: 'Protein',
 									styles: {
-										minCellHeight: 90,
+										minCellHeight: 125,
 									},
 								},
 								{ 
@@ -955,23 +969,28 @@
 								},
 							],
 						],
-						startY: data.cell.y + 22,
-						margin: {
-							left: 153.7795276,
-						},
+						startY: data.cell.y + 32,
 					})
 
 					doc.autoTable({
 						theme: 'plain',
-						tableWidth: 170.0787402,
+						margin: {
+							left: 361,
+						},
+						tableWidth: 198.4251969,
 						tableLineWidth: 2,
 						tableLineColor: [0,0,0],
 						styles: {
 							textColor: [0,0,0],
-							fillColor: [255,255,255],
 							font: 'helvetica',
 							fontStyle: 'bold',
-							fontSize: 10,
+							fontSize: 10.5,
+							cellPadding: {
+								top: 10,
+								right: 5,
+								bottom: 10,
+								left: 5,
+							},
 						},
 						body: [
 							[
@@ -988,22 +1007,21 @@
 							],
 						],
 						startY: data.cell.y,
-						margin: {
-							left: 323.8582678,
-						},
 					})
 
 					doc.autoTable({
 						theme: 'plain',
-						tableWidth: 170.0787402,
+						margin: {
+							left: 361,
+						},
+						tableWidth: 198.4251969,
 						tableLineWidth: 2,
 						tableLineColor: [0,0,0],
 						styles: {
 							textColor: [0,0,0],
-							fillColor: [255,255,255],
 							font: 'helvetica',
 							fontStyle: 'bold',
-							fontSize: 10,
+							fontSize: 10.5,
 						},
 						body: [
 							[
@@ -1048,7 +1066,7 @@
 								{ 
 									content: 'Garam (natrium)',
 									styles: {
-										minCellHeight: 90,
+										minCellHeight: 125,
 									},
 								},
 								{ 
@@ -1067,10 +1085,7 @@
 								},
 							],
 						],
-						startY: data.cell.y + 22,
-						margin: {
-							left: 323.8582678,
-						},
+						startY: data.cell.y + 32,
 					})
 
 				},
@@ -1078,28 +1093,26 @@
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 453.9433072,
+				margin: 30,
+				tableWidth: 529.5118112,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
-					fontStyle: 'bold',
+					fontStyle: 'italic',
 					fontSize: 11,
+					halign: 'justify',
+					cellPadding: 10,
 				},
 				body: [
 					[
 						{ 
 							content: '* Persen AKG berdasarkan kebutuhan energi 2150 kkal. Kebutuhan energi Anda mungkin lebih tinggi atau lebih rendah.',
-							styles: 
-							{
-								fontStyle: 'italic',
-							},
 						},
 					],
 				],
-				startY: doc.autoTableEndPosY(),
+				startY: doc.lastAutoTable.finalY,
 			})
 
 			if ( action == 'print' ) {
@@ -1112,7 +1125,7 @@
 			}
 		}
 
-		// Linier (width: 14,5 cm)
+		// Linier (15,55 x 4,9 cm) - Margin 1,23 cm
 		function generatePDF3(element,action) {
 			let parent = element.closest('.tab-pane')
 				table = parent.querySelector('table')
@@ -1121,9 +1134,10 @@
 
 			doc.autoTable({
 				theme: 'plain',
+				margin: 30,
+				tableWidth: 438.8031497,
 				styles: {
 					textColor: [0,0,0],
-					fillColor: [255,255,255],
 					font: 'helvetica',
 					fontSize: 11,
 					halign: 'justify',
@@ -1131,7 +1145,7 @@
 				body: [
 					[
 						{ 
-							content: 'Informasi Nilai Gizi Linier',
+							content: 'Informasi Nilai Gizi - Linier',
 							styles: {
 								textColor: [170,170,170],
 								fontSize: 9,
@@ -1152,25 +1166,17 @@
 							content: 'Produk buah yang dibuat dari buah pisang (Musa sp.) yang diiris tipis dan digoreng, dengan atau tanpa penambahan garam, bumbu dan/atau perisa.',
 						},
 					],
-					[
-						{ 
-							content: 'Dimensi Tabel : 14,5 x 3,5 cm',
-							styles: {
-								textColor: [170,170,170],
-								fontSize: 9,
-							}
-						},
-					],
 				],
 			})
 
 			doc.autoTable({
 				theme: 'plain',
-				tableWidth: 411.0236222,
+				margin: 35,
+				tableWidth: 438.8031497,
 				tableLineWidth: 2,
 				tableLineColor: [0,0,0],
 				styles: {
-					minCellHeight: 100,
+					minCellHeight: 136.9133859,
 				},
 				body: [
 					[
@@ -1182,11 +1188,11 @@
 			})
 
 			let inputValue = document.querySelector('#pills-3-table td').innerHTML.replace(/<[^>]*>?/gm,'**')
-			let startX = 52
-			let startY = 182
-			const lineSpacing = 14
-			const fontSize = 11
-			const endX = 385
+			let startX = 47
+			let startY = 155
+			const lineSpacing = 20
+			const fontSize = 12.5
+			const endX = 400
 
 			doc.setFont('helvetica').setFontSize(fontSize).setFontStyle('normal')
 

@@ -1047,13 +1047,13 @@
 			top: 90px;
 		}
 		.modal-dialog-centered {
-			width: 1000px;
+			max-width: 1000px;
 			min-height: calc(100% - 3.5rem - 90px);
 		}
 	}
 
 	#formatING img {
-		max-height: 70vh;
+		max-height: calc(70vh - 4rem);
 	}
 
 	@media (max-width: 767px) {

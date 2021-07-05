@@ -1036,6 +1036,7 @@
 	}
 	@media (min-width: 576px) {
 		.modal-dialog-centered {
+			max-width: calc(100% - 3rem);
 			min-height: calc(100% - 3.5rem - 118px);
 		}
 	}
@@ -1046,8 +1047,13 @@
 			top: 90px;
 		}
 		.modal-dialog-centered {
+			width: 1000px;
 			min-height: calc(100% - 3.5rem - 90px);
 		}
+	}
+
+	#formatING img {
+		max-height: 70vh;
 	}
 
 	@media (max-width: 767px) {

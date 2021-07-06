@@ -851,6 +851,17 @@
 		margin-right: 1rem;
 	}
 	@media (min-width: 768px) {
+		.brand {
+			display: flex;
+			align-items: center;
+		}
+		.brand span {
+			display: block;
+			white-space: nowrap;
+			font-weight: 700;
+			font-size: 18px;
+			margin-right: .5rem;
+		}
 		.brand strong {
 			display: none;
 		}
@@ -861,6 +872,9 @@
 			top: .75rem;
 			display: flex;
 			align-items: center;
+		}
+		.brand span {
+			display: none;
 		}
 		.brand strong {
 			font-size: 1rem;
@@ -1079,4 +1093,34 @@
 	table[id^="pills-"] td[align="right"] {
 		min-width: 50px;
 		padding-left: 0;
+	}
+
+	.bg-main:before,
+	.bg-main:after {
+		content: '';
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.bg-main:before {
+		background-image: url(../img/bg-main.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center 90px;
+		z-index: -2;
+	}
+	.bg-main:after {
+		background-color: var(--white);
+		opacity: .9;
+		z-index: -1;
+	}
+	@media (max-width: 768px) {
+		.bg-main:before {
+			background-position: 85% 90px;
+		}
+	}
+	.bg-main article > .card {
+		background-color: rgba(255,255,255,.7);
 	}

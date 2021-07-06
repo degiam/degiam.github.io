@@ -21,7 +21,7 @@
 			$('.footer').html(content)
 			footer.addClass('d-md-none')
 		} else {
-			$('body').addClass('bg-light')
+			$('body').addClass('bg-main')
 		}
 	})
 

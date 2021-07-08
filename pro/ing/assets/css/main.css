@@ -1123,7 +1123,7 @@
 	}
 	.bg-main article > .card,
 	.bg-main article > .grid-card .card {
-		background-color: rgba(255,255,255,.85);
+		background-color: rgba(255,255,255,.95);
 	}
 	@media (max-width: 768px) {
 		.bg-main:before {
@@ -1139,6 +1139,6 @@
 		}
 		.bg-main article > .card,
 		.bg-main article > .grid-card .card {
-			background-color: rgba(255,255,255,.75);
+			background-color: rgba(255,255,255,.8);
 		}
 	}

@@ -1125,6 +1125,9 @@
 	.bg-main article > .grid-card .card {
 		background-color: rgba(255,255,255,.85);
 	}
+	.bg-main article > .card .list-group-item {
+		background-color: transparent;
+	}
 	@media (max-width: 768px) {
 		.bg-main:before {
 			background-image: url(../img/bg-portrait.jpg);

@@ -1118,12 +1118,12 @@
 	}
 	.bg-main:after {
 		background: rgb(255,255,255);
-		background: linear-gradient(90deg, rgba(255,255,255,.9) 50%, rgba(255,255,255,.25) 100%);
+		background: linear-gradient(90deg, rgba(255,255,255,.85) 50%, rgba(255,255,255,0) 100%);
 		z-index: -1;
 	}
 	.bg-main article > .card,
 	.bg-main article > .grid-card .card {
-		background-color: rgba(255,255,255,.75);
+		background-color: rgba(255,255,255,.85);
 	}
 	@media (max-width: 768px) {
 		.bg-main:before {
@@ -1136,5 +1136,9 @@
 		}
 		.bg-main article > h2 {
 			text-align: center;
+		}
+		.bg-main article > .card,
+		.bg-main article > .grid-card .card {
+			background-color: rgba(255,255,255,.75);
 		}
 	}

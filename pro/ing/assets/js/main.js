@@ -25,6 +25,11 @@
 		}
 	})
 
+// Tooltip
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
 // FAQ
 	$('[data-toggle="collapse"]').closest('ul').find('li').first().each(function(index) {
 		let list = $(this)

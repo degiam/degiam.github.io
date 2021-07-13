@@ -41,11 +41,10 @@
 /* Base */
 	:root {
 		--theme-1: #03a9f4;
-		--theme-2: #2196f3;
+		--theme-2: #1796dc;
 		--theme-3: #43ada7;
 		--theme-4: #9acac7;
 
-		--theme-base-dark: #c9e9f1;
 		--black: #333;
 
 		--font-theme: 'Oxygen', sans-serif;
@@ -196,6 +195,9 @@
 	.bg-theme-3 {
 		background-color: var(--theme-3);
 	}
+	.bg-theme-4 {
+		background-color: var(--theme-4);
+	}
 
 	.text-theme-1 {
 		color: var(--theme-1);
@@ -205,6 +207,9 @@
 	}
 	.text-theme-3 {
 		color: var(--theme-3);
+	}
+	.text-theme-4 {
+		color: var(--theme-4);
 	}
 
 	.badge-theme {
@@ -252,6 +257,10 @@
 /* Cursor */
 	.cursor-pointer {
 		cursor: pointer;
+	}
+	.cursor-zoomin {
+		cursor: -webkit-zoom-in;
+		cursor: zoom-in;
 	}
 
 /* Position */
@@ -1041,16 +1050,16 @@
 		}
 	}
 
-	.modal,
-	.modal > .close,
-	.modal-backdrop {
+	body:not(.welcome) .modal,
+	body:not(.welcome) .modal > .close,
+	body:not(.welcome) .modal-backdrop {
 		top: 118px;
 	}
-	.modal-dialog-centered {
+	body:not(.welcome) .modal-dialog-centered {
 		min-height: calc(100% - 1rem - 118px);
 	}
 	@media (min-width: 576px) {
-		.modal-dialog-centered {
+		body:not(.welcome) .modal-dialog-centered {
 			width: -moz-fit-content;
 			width: fit-content;
 			margin-left: auto;
@@ -1062,19 +1071,14 @@
 		}
 	}
 	@media (min-width: 768px) {
-		.modal,
-		.modal > .close,
-		.modal-backdrop {
+		body:not(.welcome) .modal,
+		body:not(.welcome) .modal > .close,
+		body:not(.welcome) .modal-backdrop {
 			top: 90px;
 		}
-		.modal-dialog-centered {
+		body:not(.welcome) .modal-dialog-centered {
 			max-width: 1000px;
 			min-height: calc(100% - 3.5rem - 90px);
-		}
-	}
-	@media (min-width: 992px) {
-		.modal-dialog-centered {
-			
 		}
 	}
 
@@ -1185,7 +1189,7 @@
 		background: rgba(255,255,255,.5);
 	}
 	.main-title .border {
-		border: 3px dashed var(--theme-base-dark) !important;
+		border: 3px dashed var(--theme-4) !important;
 	}
 	.main-title small {
 		position: absolute;
@@ -1227,9 +1231,12 @@
 		}
 	}
 
-	.position-sticky.top {
+	.sticky-menu {
 		top: 1.5rem;
 	}
-	.position-sticky .btn:hover {
-		background-color: var(--success) !important;
+	.sticky-menu .btn-primary:hover {
+		background-color: var(--theme-2) !important;
+	}
+	.sticky-menu .btn-primary.active {
+		background-color: var(--theme-3) !important;
 	}

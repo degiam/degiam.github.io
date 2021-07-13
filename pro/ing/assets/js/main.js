@@ -122,3 +122,33 @@
 	}
 	welcome()
 	$(window).resize(welcome)
+
+	$(window).scroll(function() {
+		let scrolled = $(window).scrollTop()
+			active = $('.sticky-menu .active')
+			classes = 'active'
+			id = '#content'
+		if ( scrolled <= $(id).offset().top ) {
+			active.toggleClass(classes)
+		}
+		if ( scrolled >= $(id + '-1').offset().top ) {
+			if ( scrolled >= $(id + '-2').offset().top ) {
+				if ( scrolled >= $(id + '-3').offset().top ) {
+					if ( scrolled >= $(id + '-4').offset().top - 1 ) {
+						active.toggleClass(classes)
+						$('.sticky-menu .btn[href="' + id + '-4"]').toggleClass(classes)
+					} else {
+						active.toggleClass(classes)
+						$('.sticky-menu .btn[href="' + id + '-3"]').toggleClass(classes)
+					}
+				} else {
+					active.toggleClass(classes)
+					$('.sticky-menu .btn[href="' + id + '-2"]').toggleClass(classes)
+				}
+			} else {
+				active.toggleClass(classes)
+				$('.sticky-menu .btn[href="' + id + '-1"]').toggleClass(classes)
+			}
+		}
+	})
+

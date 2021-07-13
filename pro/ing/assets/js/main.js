@@ -17,11 +17,13 @@
 		let footer = $('footer > div')
 			content = footer.html()
 
-		if ( $('body.inside').length < 1 ) {
+		if ( $('body.inside').length > 0 ) {
+			$('body').addClass('bg-main')
+		} else if ( $('body.welcome').length > 0 ) {
+			// do nothing
+		} else {
 			$('.footer').html(content)
 			footer.addClass('d-md-none')
-		} else {
-			$('body').addClass('bg-main')
 		}
 	})
 
@@ -103,3 +105,20 @@
 	}
 	iframeResponsive()
 	$(window).resize(iframeResponsive)
+
+// Welcome
+	function welcome() {
+		$('#welcome').each(function() {
+			let section = $(this)
+				screen = $(window)
+			if ( window.matchMedia('(min-width: 768px)').matches ) {
+				if ( section.height() < screen.height() ) {
+					section.css('min-height',screen.height()+'px')
+				}
+			} else {
+				section.removeAttr('style')
+			}
+		})
+	}
+	welcome()
+	$(window).resize(welcome)

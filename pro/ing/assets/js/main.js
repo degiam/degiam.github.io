@@ -86,3 +86,20 @@
 		$('.nav-link[id="' + pane.attr('id') + '-tab"]').addClass('active')
 		$('.custom-select option[value="' + (pane.attr('id').split('-'))[1] + '"]').attr('selected','true')
 	})
+
+// Iframe
+	function iframeResponsive() {
+		$('iframe').each(function() {
+			let iframe = $(this)
+				parent = iframe.parent()
+				ratio = (iframe.width()/iframe.height()).toFixed(2)
+			if ( iframe.attr('width') > parent.width() ) {
+				iframe.css('width',parent.width()+'px')
+				iframe.css('height',(parent.width()/ratio).toFixed(0)+'px')
+			} else {
+				iframe.removeAttr('style')
+			}
+		})
+	}
+	iframeResponsive()
+	$(window).resize(iframeResponsive)

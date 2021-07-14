@@ -128,13 +128,13 @@
 			active = $('.sticky-menu .active')
 			classes = 'active'
 			id = '#content'
-		if ( scrolled <= $(id).offset().top ) {
+		if ( scrolled <= $(id).offset().top - 150 ) {
 			active.toggleClass(classes)
 		}
-		if ( scrolled >= $(id + '-1').offset().top ) {
-			if ( scrolled >= $(id + '-2').offset().top ) {
-				if ( scrolled >= $(id + '-3').offset().top ) {
-					if ( scrolled >= $(id + '-4').offset().top - 1 ) {
+		if ( scrolled >= $(id + '-1').offset().top - 150 ) {
+			if ( scrolled >= $(id + '-2').offset().top - 100 ) {
+				if ( scrolled >= $(id + '-3').offset().top - 200 ) {
+					if ( scrolled >= $(id + '-4').offset().top - 300 ) {
 						active.toggleClass(classes)
 						$('.sticky-menu .btn[href="' + id + '-4"]').toggleClass(classes)
 					} else {
@@ -151,4 +151,3 @@
 			}
 		}
 	})
-

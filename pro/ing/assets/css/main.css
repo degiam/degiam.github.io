@@ -1198,6 +1198,7 @@
 		left: 0;
 		right: 0;
 		margin: auto;
+		min-width: 94px;
 		width: -moz-fit-content;
 		width: fit-content;
 	}

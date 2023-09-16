@@ -1,0 +1,4 @@
+User-Agent: *
+
+Host: https://degiam.github.io
+Sitemap: https://degiam.github.io/sitemap.xml

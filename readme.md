@@ -1,5 +1,7 @@
 # Degiam
 
-Frontend Developer
+Frontend Developer - UI/UX Designer
 
-Check my portfolio on [degiam.vercel.app](https://degiam.vercel.app/)
+Portfolio: [degiam.my.id](https://degiam.my.id/)
+
+Open Source App: [app.degiam.my.id](https://app.degiam.my.id/)
